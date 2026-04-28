@@ -1,0 +1,809 @@
+{
+  "id": "py-1-fundamentals",
+  "title": "Giriş ve Temel Sözdizimi (Fundamentals)",
+  "contentPath": "assets/python/lessons/py-1-fundamentals.txt",
+  "subtopics": [
+    {
+      "id": "1.1",
+      "title": "Python Dünyasına Giriş",
+      "items": [
+        "Python Kurulumu (CPython, Anaconda, VS Code, PyCharm)",
+        "Interactive Shell ve Terminal Kullanımı",
+        "PEP 8 Standartları (Kod Yazım Kuralları)"
+      ]
+    },
+    {
+      "id": "1.2",
+      "title": "Değişkenler ve Veri Tipleri",
+      "items": [
+        "Sayılar: int, float, complex",
+        "Metinler: str (String)",
+        "Mantıksal: bool (True, False)",
+        "Tip Belirleme ve Dönüşümü (Type Casting)"
+      ]
+    },
+    {
+      "id": "1.3",
+      "title": "Operatörler",
+      "items": [
+        "Aritmetik Operatörler (+, -, *, /, //, %, **)",
+        "Atama Operatörleri (+=, -=, vb.)",
+        "Karşılaştırma Operatörleri (==, !=, <, >, <=, >=)",
+        "Mantıksal Operatörler (and, or, not)",
+        "Aitlik ve Kimlik Operatörleri (in, is)"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "index": 1,
+      "id": "py-1.1-1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] CPython mimarisinde GIL (Global Interpreter Lock) tam olarak ne işe yarar?",
+      "choices": [
+        "Kodun makine diline çevrilmesini engeller",
+        "Aynı anda sadece bir native thread'in bytecode çalıştırmasına izin verir",
+        "Bellekteki nesnelerin silinmesini sağlar",
+        "Python kütüphanelerini internetten indirir",
+        "Kodun farklı işletim sistemlerinde çalışmasını sağlar"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 2,
+      "id": "py-1.1-2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Python kodunun '.pyc' uzantılı bir dosyaya dönüştürülmüş haline ne ad verilir?",
+      "choices": ["Kaynak Kod", "Binary Kod", "Bytecode", "Assembly", "Makine Dili"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 3,
+      "id": "py-1.1-3",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] CPython implementasyonu hangi programlama dili ile yazılmıştır?",
+      "choices": ["Python", "C++", "C", "Java", "Rust"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 4,
+      "id": "py-1.1-4",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] GIL nedeniyle Python hangi tür işlemlerde (CPU-bound) çok çekirdekli performans veremez?",
+      "choices": ["Dosya okuma", "Ağ istekleri", "Karmaşık matematiksel hesaplamalar", "Veritabanı bağlantısı", "Kullanıcıdan girdi alma"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 5,
+      "id": "py-1.1-5",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] İşletim sistemindeki 'PATH' değişkenine Python'un eklenmesinin temel amacı nedir?",
+      "choices": [
+        "Python'un daha hızlı çalışmasını sağlamak",
+        "Terminalin Python yorumlayıcısının yerini bulabilmesini sağlamak",
+        "Bellek yönetimini optimize etmek",
+        "Kütüphane çakışmalarını önlemek",
+        "Bytecode üretimini hızlandırmak"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 6,
+      "id": "py-1.1-6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Aşağıdakilerden hangisi bir Python 'implementasyonu' değildir?",
+      "choices": ["PyPy", "Jython", "IronPython", "Anaconda", "CPython"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "index": 7,
+      "id": "py-1.1-7",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Bytecode'u makine diline çevirip işlemciye gönderen yapı hangisidir?",
+      "choices": ["PATH", "Pypy", "Virtual Machine (Sanal Makine)", "Compiler", "Linker"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 8,
+      "id": "py-1.1-8",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] CPython'un bytecode dosyalarını sakladığı klasörün adı nedir?",
+      "choices": ["__bin__", "__pycache__", "__bytecode__", "__temp__", "__python__"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 9,
+      "id": "py-1.1-9",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Python'un 'High-Level' bir dil olması ne anlama gelir?",
+      "choices": [
+        "Sadece çok güçlü bilgisayarlarda çalışır",
+        "Donanım detaylarından uzak, insan diline yakın bir soyutlamaya sahiptir",
+        "İşlemci çekirdeklerini doğrudan kontrol eder",
+        "En pahalı programlama dilidir",
+        "Sadece gökyüzü bilimlerinde kullanılır"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 10,
+      "id": "py-1.1-10",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Derlenen diller (C++) ile yorumlanan diller (Python) arasındaki temel hız farkı nereden kaynaklanır?",
+      "choices": [
+        "Derlenen dillerin daha az yer kaplamasından",
+        "Yorumlanan dillerin kodu çalışma anında (runtime) satır satır işlemesinden",
+        "Python'un sadece internetle çalışmasından",
+        "C++'ın daha eski olmasından",
+        "Python'un sadece 64-bit olmasından"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 11,
+      "id": "py-1.1-11",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Python'un dil spesifikasyonu ile implementasyonu arasındaki farkı aşağıdakilerden hangisi açıklar?",
+      "choices": [
+        "Spesifikasyon kurallar bütünüdür, implementasyon bu kuralları çalıştıran yazılımdır",
+        "Hiçbir fark yoktur",
+        "Spesifikasyon sadece Windows içindir",
+        "Implementasyon kodun kendisidir",
+        "Spesifikasyon kütüphanelerdir"
+      ],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 12,
+      "id": "py-1.1-12",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] GIL, hangi durumlarda (I/O-bound) performans kaybına yol açmaz?",
+      "choices": [
+        "Matematiksel matris çarpımlarında",
+        "Veri madenciliğinde",
+        "Dosya okuma/yazma ve ağ trafiği sırasında",
+        "Görüntü işlemede",
+        "Şifre kırma işlemlerinde"
+      ],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 13,
+      "id": "py-1.1-13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] CPython dışında, JIT (Just-In-Time) derleme kullanarak Python'u hızlandıran implementasyon hangisidir?",
+      "choices": ["MicroPython", "PyPy", "Jython", "Stackless", "Brython"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 14,
+      "id": "py-1.1-14",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Python kodunun taşınabilir (portable) olmasını sağlayan temel katman hangisidir?",
+      "choices": ["PATH değişkeni", "Bytecode ve Sanal Makine yapısı", "İşlemcinin markası", "RAM hızı", ".py uzantısı"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 15,
+      "id": "py-1.1-15",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Interpreter (Yorumlayıcı), hata ayıklamayı nasıl kolaylaştırır?",
+      "choices": [
+        "Hata olan satıra gelince durup rapor verdiği için",
+        "Hataları otomatik düzelttiği için",
+        "Kodun hepsini bitirmeden hata vermediği için",
+        "Bilgisayarı kapatıp açtığı için",
+        "Hata olan dosyayı sildiği için"
+      ],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 16,
+      "id": "py-1.1-16",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Python kodunu çalıştıran terminale ne ad verilir?",
+      "choices": ["Python Home", "Interactive Shell", "PyCommand", "ByteConsole", "Python Root"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 17,
+      "id": "py-1.1-17",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Aşağıdakilerden hangisi bir ortam değişkenidir (Environment Variable)?",
+      "choices": ["GIL", "PATH", "Dunder", "Interning", "Duck"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 18,
+      "id": "py-1.1-18",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Native Thread nedir?",
+      "choices": [
+        "Python'da yazılmış bir fonksiyondur",
+        "İşletim sistemi seviyesindeki iş parçacığıdır",
+        "Bir değişken ismidir",
+        "Sadece C++'ta olan bir yapıdır",
+        "Bir tür veritabanıdır"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 19,
+      "id": "py-1.1-19",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Multi-core işlemcilerde Python'un verimli çalışması için GIL engelini aşan yöntem nedir?",
+      "choices": [
+        "Daha fazla RAM takmak",
+        "Multiprocessing (Çoklu İşlem) kullanmak",
+        "Daha hızlı bir ekran kartı almak",
+        "Kodları tek satıra yazmak",
+        "Sadece 'for' döngüsü kullanmak"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 20,
+      "id": "py-1.1-20",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.1 Python Dünyasına Giriş: Mimari ve CPython] Python dilinin resmi yaratıcısı kimdir?",
+      "choices": ["Dennis Ritchie", "Linus Torvalds", "Guido van Rossum", "Bjarne Stroustrup", "James Gosling"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+
+    {
+      "index": 21,
+      "id": "py-1.2-1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Python'daki 'Small Integer Caching' mekanizması hangi sayı aralığını kapsar?",
+      "choices": ["0 ile 100", "-5 ile 256", "-128 ile 127", "1 ile 1000", "Sadece pozitif sayılar"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 22,
+      "id": "py-1.2-2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Python'da her şeyin bir nesne (object) olması ne anlama gelir?",
+      "choices": [
+        "Bellekteki her verinin bir adres, tip ve referans sayacı taşıyan bir yapı olması",
+        "Kodların sadece nesne şeklinde yazılması zorunluluğu",
+        "Verilerin sadece sayılardan oluşması",
+        "Her değişkenin bir isminin olması",
+        "Kodun çok yavaş çalışması"
+      ],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 23,
+      "id": "py-1.2-3",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Reference Counting (Referans Sayma) sistemi ne işe yarar?",
+      "choices": [
+        "Değişkenlerin kaç karakterden oluştuğunu sayar",
+        "Bir nesnenin kaç farklı değişken tarafından kullanıldığını takip ederek bellek temizliği yapar",
+        "Kodun kaç saniyede çalıştığını ölçer",
+        "İşlemci çekirdeklerini sayar",
+        "Hataları numaralandırır"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 24,
+      "id": "py-1.2-4",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] String Interning mekanizmasının temel amacı nedir?",
+      "choices": [
+        "Metinleri şifrelemek",
+        "Metinleri büyük harfe çevirmek",
+        "Aynı metinlerin bellekte tek bir kopya olarak tutulup tasarruf sağlanması",
+        "Metinleri veritabanına kaydetmek",
+        "Metinlerin uzunluğunu sınırlamak"
+      ],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 25,
+      "id": "py-1.2-5",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Python'da stringlerin 'Immutable' (Değiştirilemez) olması neyi ifade eder?",
+      "choices": [
+        "Bir stringin içeriğinin oluşturulduktan sonra bellekte doğrudan değiştirilememesini",
+        "Stringlerin asla silinememesini",
+        "Stringlerin sadece rakam içerebilmesini",
+        "Stringlerin her yerden erişilebilir olmasını",
+        "String isminin değiştirilememesini"
+      ],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 26,
+      "id": "py-1.2-6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Duck Typing ilkesi aşağıdakilerden hangisiylye özetlenir?",
+      "choices": [
+        "Nesnenin tipi değil, davranışları (metotları) önemlidir",
+        "Her nesne bir ördek sınıfından türemelidir",
+        "Sadece kuş türleri Python'da tanımlanabilir",
+        "Değişkenler çalışma anında tip değiştiremez",
+        "Bellek yönetimi sadece ördekler tarafından yapılır"
+      ],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 27,
+      "id": "py-1.2-7",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] a = 300; b = 300; print(a is b) ifadesinin çıktısı neden 'False' olur?",
+      "choices": [
+        "300 sayısı Küçük Sayı Önbelleği (Small Integer Caching) dışında olduğu için farklı adreslere atanırlar",
+        "Python 300 sayısını sevmediği için",
+        "Sayılar asla aynı adreste olamaz",
+        "'is' operatörü hatalı olduğu için",
+        "Bellek dolu olduğu için"
+      ],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 28,
+      "id": "py-1.2-8",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Bir nesnenin bellekteki benzersiz adresini öğrenmek için hangi fonksiyon kullanılır?",
+      "choices": ["type()", "address()", "id()", "loc()", "mem()"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 29,
+      "id": "py-1.2-9",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Python 3'teki stringler varsayılan olarak hangi formatta kodlanır?",
+      "choices": ["ASCII", "Unicode (UTF-8)", "Binary", "Hexadecimal", "Win-1254"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 30,
+      "id": "py-1.2-10",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Dinamik Yazım (Dynamic Typing) özelliğinin tanımı hangisidir?",
+      "choices": [
+        "Değişken tipinin kod yazılırken belirtilmesi zorunluluğu",
+        "Değişken tipinin çalışma anında (runtime) belirlenmesi ve değişebilmesi",
+        "Değişkenlerin sadece sayı olabilmesi",
+        "Belleğin statik olarak ayrılması",
+        "Değişkenlerin isminin değiştirilememesi"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 31,
+      "id": "py-1.2-11",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] PyObject yapısında bir tamsayı (int), neden C'deki ham bir integer'dan daha fazla yer kaplar?",
+      "choices": [
+        "İçinde renk bilgisi tuttuğu için",
+        "Yanında referans sayacı ve tip bilgisini de barındırdığı için",
+        "Python daha yavaş olduğu için",
+        "Daha büyük göründüğü için",
+        "İşlemciye daha yakın olduğu için"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 32,
+      "id": "py-1.2-12",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Garbage Collector (Çöp Toplayıcı) ne zaman devreye girer?",
+      "choices": [
+        "Bilgisayar kapandığında",
+        "Referans sayacı sıfıra düşen nesneleri temizlemek için",
+        "Kod her bittiğinde",
+        "İnternet kesildiğinde",
+        "Sadece hatalı kodlarda"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 33,
+      "id": "py-1.2-13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Python'daki tam sayıların (integers) büyüklük sınırı nedir?",
+      "choices": ["32 bit", "64 bit", "Bellek kapasitesi yettiği sürece sınırsız (Arbitrary Precision)", "2 milyar", "1 terrabyte"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 34,
+      "id": "py-1.2-14",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] s = 'merhaba'; s[0] = 'M' işlemi neden hata verir?",
+      "choices": [
+        "Stringler değiştirilemez (immutable) olduğu için",
+        "'M' harfi büyük olduğu için",
+        "İndeks 0 kullanılamaz olduğu için",
+        "Tırnak işaretleri yanlış olduğu için",
+        "Bellek dolu olduğu için"
+      ],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 35,
+      "id": "py-1.2-15",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Referans sayacı sıfıra düşmeyen ancak birbirini gösteren nesneleri temizleyen sistem nedir?",
+      "choices": ["Reference Counting", "Cyclic Garbage Collector", "GIL", "Interpreter", "Bytecode"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 36,
+      "id": "py-1.2-16",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Aşağıdakilerden hangisi Python'un yerleşik veri tiplerinden (built-in types) biri değildir?",
+      "choices": ["int", "str", "bool", "struct", "float"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "index": 37,
+      "id": "py-1.2-17",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] x = 10; y = x atamasında bellekte ne olur?",
+      "choices": [
+        "10 değeri kopyalanır",
+        "y değişkeni de bellekteki aynı 10 nesnesini göstermeye başlar",
+        "Yeni bir 10 nesnesi oluşturulur",
+        "x silinir",
+        "Hiçbir şey olmaz"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 38,
+      "id": "py-1.2-18",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] NoneType verisi Python'da neyi temsil eder?",
+      "choices": ["Sıfırı", "Hata durumunu", "Değerin yokluğunu/boşluğu", "Sonsuzluğu", "Yanlış (False) değerini"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 39,
+      "id": "py-1.2-19",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] isinstance(x, int) fonksiyonu ne işe yarar?",
+      "choices": ["x'i integer'a çevirir", "x'in integer olup olmadığını kontrol eder", "x'in değerini yazdırır", "x'in adresini verir", "x'i siler"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 40,
+      "id": "py-1.2-20",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.2 Değişkenler ve Bellek Yönetimi (Memory Layer)] Değişken isimlendirmede kullanılan 'snake_case' kuralı hangisidir?",
+      "choices": ["KullaniciAdi", "kullanici_adi", "kullaniciAdi", "KULLANICI_ADI", "kullanici-adi"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+
+    {
+      "index": 41,
+      "id": "py-1.3-1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Python'da 'a + b' işlemi yapıldığında arka planda hangi dunder metot çağrılır?",
+      "choices": ["a.__plus__(b)", "a.__sum__(b)", "a.__add__(b)", "a.__and__(b)", "a.__calc__(b)"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 42,
+      "id": "py-1.3-2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Operator Overloading (Operatör Aşırı Yüklemesi) nedir?",
+      "choices": [
+        "Operatörlerin çok hızlı çalışmasıdır",
+        "Standart operatörlerin (+, -, *) özel sınıflarda farklı işlevler kazanmasını sağlamaktır",
+        "Operatörlerin hata vermesidir",
+        "Sadece sayıları toplamaktır",
+        "Operatörlerin belleği doldurmasıdır"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 43,
+      "id": "py-1.3-3",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] '0 or 42' işleminin sonucu Python'da neden 42 döner?",
+      "choices": [
+        "42 her zaman doğrudur",
+        "'or' operatörü ilk True bulduğu değeri (veya son değerlendirilen objeyi) döndürdüğü için",
+        "Python sayılarda 'or' yapamaz",
+        "0 sayısı yok sayıldığı için",
+        "Hatalı bir işlemdir"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 44,
+      "id": "py-1.3-4",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Aşağıdaki operatörlerden hangisi bit düzeyinde (bitwise) 'Sola Kaydırma' işlemini yapar?",
+      "choices": [">>", "<<", "&", "|", "^"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 45,
+      "id": "py-1.3-5",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Short-circuit Evaluation (Kısa Devre Değerlendirme) nedir?",
+      "choices": [
+        "Elektrik kesintisidir",
+        "Mantıksal işlemlerde sonucun belli olmasıyla geri kalan koşulların kontrol edilmemesidir",
+        "Kodun en kısa yoldan yazılmasıdır",
+        "Sadece 'if' kullanmaktır",
+        "Fonksiyonların kısa olmasıdır"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 46,
+      "id": "py-1.3-6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] 'True and \"Merhaba\"' işleminin sonucu nedir?",
+      "choices": ["True", "Merhaba", "False", "None", "Error"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 47,
+      "id": "py-1.3-7",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] 'is' operatörü ile '==' operatörü arasındaki fark nedir?",
+      "choices": [
+        "Fark yoktur",
+        "'==' değerleri kıyaslar, 'is' bellekteki adresleri (kimlikleri) kıyaslar",
+        "'is' daha yavaştır",
+        "'==' sadece sayılar içindir",
+        "'is' sadece stringler içindir"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 48,
+      "id": "py-1.3-8",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Bit düzeyinde 'XOR' işlemi yapan operatör hangisidir?",
+      "choices": ["&", "|", "^", "~", "<<"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 49,
+      "id": "py-1.3-9",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Sayıyı 2 ile çarpmanın donanım seviyesindeki en hızlı yolu hangisidir?",
+      "choices": ["x * 2", "x + x", "x << 1", "x ** 1", "x += x"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 50,
+      "id": "py-1.3-10",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Aşağıdakilerden hangisi bir 'Dunder' (Double Underscore) metodudur?",
+      "choices": ["_init_", "__init__", "init", "__init", "_init"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 51,
+      "id": "py-1.3-11",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Mantıksal 'not' operatörü ne döner?",
+      "choices": [
+        "Her zaman sayı",
+        "İfadenin tersi olan Boolean değerini",
+        "Hiçbir şey",
+        "Hata",
+        "String"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 52,
+      "id": "py-1.3-12",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] a = [1]; b = [1]; a == b ve a is b sonuçları sırasıyla nedir?",
+      "choices": ["True, True", "True, False", "False, True", "False, False", "Error, Error"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 53,
+      "id": "py-1.3-13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] a *= 5 ifadesinin uzun yazımı hangisidir?",
+      "choices": ["a = 5", "a = a * 5", "a = 5 * 5", "a = a + 5", "a = a ** 5"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 54,
+      "id": "py-1.3-14",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Bitwise 'AND' (&) operatörü hangi amaçla kullanılır?",
+      "choices": [
+        "Sayıları toplamak için",
+        "Belirli bitleri maskelemek/filtrelemek için",
+        "Sayıları bölmek için",
+        "Koşulları birleştirmek için",
+        "Listeleri birleştirmek için"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 55,
+      "id": "py-1.3-15",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Walrus Operatörü (:=) ne işe yarar?",
+      "choices": [
+        "Sadece sayıları karşılaştırır",
+        "Bir ifade içinde hem atama hem de değerlendirme yapmayı sağlar",
+        "Kodları siler",
+        "Döngüleri durdurur",
+        "Yeni bir dosya açar"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 56,
+      "id": "py-1.3-16",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Aşağıdakilerden hangisi operatör önceliğinde (precedence) en üsttedir?",
+      "choices": ["+", "*", "** (Üs alma)", "==", "and"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 57,
+      "id": "py-1.3-17",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Dunder metotların bir diğer adı nedir?",
+      "choices": ["Private methods", "Magic methods", "Hidden methods", "Static methods", "Global methods"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 58,
+      "id": "py-1.3-18",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] 2 ** 1000 işleminin Python'da hatasız yapılabilmesinin sebebi nedir?",
+      "choices": [
+        "İşlemcinin çok güçlü olması",
+        "Python'un 'Arbitrary Precision' tam sayı yapısı",
+        "Sayının aslında küçük olması",
+        "Windows'un desteği",
+        "Şans"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 59,
+      "id": "py-1.3-19",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] in operatörü hangi dunder metodu tetikler?",
+      "choices": ["__in__", "__contains__", "__has__", "__find__", "__search__"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 60,
+      "id": "py-1.3-20",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[1.3 Operatörler ve Dunder Metotlar] Bit düzeyinde 1010 (10) sayısını 1011 (11) ile AND (&) işlemine sokarsak sonuç ne olur?",
+      "choices": ["11", "10 (1010)", "1", "0", "21"],
+      "answerIndex": 1,
+      "explanation": ""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "451031100693",
+    "project_id": "software-38",
+    "storage_bucket": "software-38.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451031100693:android:a74e0e698ab725d5a78d1c",
+        "android_client_info": {
+          "package_name": "com.softwarelesson"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451031100693-t6evqi3a3qgr5qhjlodbvei82u1b7dcv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softwarelesson",
+            "certificate_hash": "65dfd08c8cb9f58ba14f28c5a2429fceaf55fd69"
+          }
+        },
+        {
+          "client_id": "451031100693-nqpqqd2q19n2pak18iqhkau9tbrtl3i3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe15otYsBoZxnCXCdc1-TZ9tZ5qvHOEGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "451031100693-nqpqqd2q19n2pak18iqhkau9tbrtl3i3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+

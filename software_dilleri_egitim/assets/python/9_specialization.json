@@ -1,0 +1,32 @@
+{
+  "id": "py-9-specialization",
+  "title": "Uygulama Alanları ve Uzmanlaşma (Seçmeli)",
+  "subtopics": [
+    {
+      "id": "9.1",
+      "title": "Web Geliştirme",
+      "items": ["Django, Flask, FastAPI"]
+    },
+    {
+      "id": "9.2",
+      "title": "Veri Bilimi",
+      "items": ["NumPy, Pandas, Matplotlib, Seaborn"]
+    },
+    {
+      "id": "9.3",
+      "title": "Yapay Zeka",
+      "items": ["Scikit-Learn, TensorFlow, PyTorch"]
+    },
+    {
+      "id": "9.4",
+      "title": "Otomasyon",
+      "items": ["Selenium, BeautifulSoup, PyAutoGUI"]
+    },
+    {
+      "id": "9.5",
+      "title": "Veritabanı",
+      "items": ["SQLite, PostgreSQL (SQLAlchemy veya Django ORM ile)"]
+    }
+  ],
+  "questions": []
+}

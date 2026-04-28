@@ -1,0 +1,490 @@
+{
+  "id": "py-2-control-flow",
+  "title": "Akış Kontrol Mekanizmaları (Control Flow)",
+  "subtopics": [
+    {
+      "id": "2.1",
+      "title": "Koşullu Durumlar",
+      "items": [
+        "if Yapısı",
+        "elif ve else Kontrolleri",
+        "İç İçe (Nested) Koşullar",
+        "Ternary Operators (Tek satırlık if)"
+      ]
+    },
+    {
+      "id": "2.2",
+      "title": "Döngüler (Loops)",
+      "items": [
+        "while Döngüsü",
+        "for Döngüsü",
+        "range() ve enumerate() Fonksiyonları",
+        "Döngü Kontrolü: break, continue, pass",
+        "zip() ile Paralel Döngüler"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "index": 1,
+      "id": "py-2.1-1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Python'da bir 'if' bloğunun sonuna hangi karakter konulmalıdır?",
+      "choices": [";", ".", ":", "->", "!"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 2,
+      "id": "py-2.1-2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Birden fazla koşulu kontrol etmek için kullanılan anahtar kelime hangisidir?",
+      "choices": ["else if", "elseif", "elif", "if else", "case"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 3,
+      "id": "py-2.1-3",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Hiçbir koşul sağlanmadığında çalışacak olan blok hangisidir?",
+      "choices": ["default", "finally", "else", "except", "last"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 4,
+      "id": "py-2.1-4",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Ternary operator (Tek satırlık if) kullanımı hangisinde doğrudur?",
+      "choices": [
+        "x = 5 if True else 10",
+        "x = if True then 5 else 10",
+        "x = 5 ? True : 10",
+        "x = True ? 5 : 10",
+        "x = if(True, 5, 10)"
+      ],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 5,
+      "id": "py-2.1-5",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Aşağıdaki kodun çıktısı nedir?\nx = 10\nif x > 5:\n    if x < 15:\n        print('A')\n    else:\n        print('B')",
+      "choices": ["A", "B", "AB", "Hata verir", "Hiçbir şey yazmaz"],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 6,
+      "id": "py-2.1-6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Mantıksal 'and' operatörü kullanıldığında sonucun True olması için ne gereklidir?",
+      "choices": [
+        "En az bir koşulun True olması",
+        "Tüm koşulların True olması",
+        "Tüm koşulların False olması",
+        "Sadece ilk koşulun True olması",
+        "Koşulların farklı olması"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 7,
+      "id": "py-2.1-7",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] if 0: ifadesi için hangisi doğrudur?",
+      "choices": [
+        "Koşul True olarak kabul edilir",
+        "Sözdizimi hatası verir",
+        "Koşul False olarak kabul edilir",
+        "Program durur",
+        "Kullanıcıdan girdi bekler"
+      ],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 8,
+      "id": "py-2.1-8",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] if 'Python': ifadesi için hangisi doğrudur?",
+      "choices": [
+        "False kabul edilir",
+        "True kabul edilir",
+        "Hata verir",
+        "Sadece 'P' harfini kontrol eder",
+        "'None' döndürür"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 9,
+      "id": "py-2.1-9",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Bir if bloğunun içindeki kodun çalışması neye bağlıdır?",
+      "choices": [
+        "Parantezlere",
+        "Girintilemeye (Indentation)",
+        "Süslü parantezlere",
+        "Tırnak işaretlerine",
+        "Satır numarasına"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 10,
+      "id": "py-2.1-10",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Aşağıdaki ifadelerden hangisi 'Short-circuit' (Kısa devre) mantığına uygundur?",
+      "choices": [
+        "or işleminde ilk ifade True ise ikinciye bakılmaz",
+        "and işleminde ilk ifade True ise ikinciye bakılmaz",
+        "if her zaman else ile bitmelidir",
+        "elif her zaman if'ten önce gelmelidir",
+        "not operatörü iki kez kullanılmalıdır"
+      ],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 11,
+      "id": "py-2.1-11",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] x = 5; y = 10\n'Y büyük' if y > x else 'X büyük' ifadesinin sonucu nedir?",
+      "choices": ["X büyük", "Y büyük", "True", "False", "10"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 12,
+      "id": "py-2.1-12",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Hangi veri tipi bir if sorgusunda 'Falsy' (Yanlış kabul edilen) değildir?",
+      "choices": ["0", "[] (Boş liste)", "None", "' ' (Bir boşluk içeren string)", "'' (Boş string)"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "index": 13,
+      "id": "py-2.1-13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Bir if yapısında kaç adet 'elif' bloğu bulunabilir?",
+      "choices": ["Sadece 1", "En fazla 10", "Hiç bulunamaz", "Sınırsız sayıda", "Else varsa bulunamaz"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "index": 14,
+      "id": "py-2.1-14",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] if x == 5 or y == 10: ifadesinde x=5 ve y=20 ise sonuç nedir?",
+      "choices": ["True", "False", "None", "Error", "5"],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 15,
+      "id": "py-2.1-15",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Aşağıdaki kodun çıktısı nedir?\na = 2; b = 3\nif a + b == 5: print('Ok')",
+      "choices": ["Ok", "Hata verir", "5", "True", "Hiçbir şey"],
+      "answerIndex": 0,
+      "explanation": ""
+    },
+    {
+      "index": 16,
+      "id": "py-2.1-16",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] İç içe if (Nested if) kullanırken dikkat edilmesi gereken en önemli kural nedir?",
+      "choices": [
+        "Her if için bir else olmalıdır",
+        "Girintileme seviyeleri doğru ayarlanmalıdır",
+        "En fazla 2 seviye olabilir",
+        "Parantez kullanılmalıdır",
+        "elif kullanılamaz"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 17,
+      "id": "py-2.1-17",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] x = True; y = False\nif x and not y: print('Çalıştı')\nÇıktı nedir?",
+      "choices": ["Hiçbir şey", "Çalıştı", "False", "Error", "True"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 18,
+      "id": "py-2.1-18",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Match-Case yapısı Python'un hangi versiyonu ile gelmiştir?",
+      "choices": ["2.7", "3.5", "3.8", "3.10", "3.12"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "index": 19,
+      "id": "py-2.1-19",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] if a := 5 > 3: ifadesindeki ':=' operatörünün adı nedir?",
+      "choices": ["Assignment", "Comparison", "Walrus Operatörü", "Ternary", "Lambda"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 20,
+      "id": "py-2.1-20",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.1 Koşullu Durumlar] Koşullu durumlarda 'değilse' kontrolü yapan operatör hangisidir?",
+      "choices": ["!!", "not", "reverse", "tilde (~)", "!="],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+
+    {
+      "index": 21,
+      "id": "py-2.2-1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Belli bir koşul True olduğu sürece çalışan döngü hangisidir?",
+      "choices": ["for", "do-while", "while", "repeat", "foreach"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 22,
+      "id": "py-2.2-2",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] range(5) fonksiyonu hangi sayıları üretir?",
+      "choices": ["1, 2, 3, 4, 5", "0, 1, 2, 3, 4", "0, 1, 2, 3, 4, 5", "1, 2, 3, 4", "5, 4, 3, 2, 1"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 23,
+      "id": "py-2.2-3",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Döngüyü tamamen sonlandırmak için hangi anahtar kelime kullanılır?",
+      "choices": ["stop", "exit", "continue", "break", "pass"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "index": 24,
+      "id": "py-2.2-4",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Döngünün o anki adımını atlayıp bir sonraki adıma geçmesini sağlayan komut hangisidir?",
+      "choices": ["skip", "next", "continue", "break", "pass"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 25,
+      "id": "py-2.2-5",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Aşağıdaki kodun çıktısı nedir?\nfor i in range(1, 10, 2):\n    print(i, end=' ')",
+      "choices": ["1 2 3 4 5 6 7 8 9", "1 3 5 7 9", "2 4 6 8", "1 10 2", "1 2 5 10"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 26,
+      "id": "py-2.2-6",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] enumerate() fonksiyonu ne döndürür?",
+      "choices": ["Sadece elemanları", "Sadece indeksleri", "(indeks, eleman) çiftlerini", "Listenin uzunluğunu", "Ters çevrilmiş listeyi"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 27,
+      "id": "py-2.2-7",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] İki veya daha fazla listeyi aynı anda dönmek (paralel iterasyon) için hangisi kullanılır?",
+      "choices": ["merge()", "combine()", "group()", "zip()", "parallel()"],
+      "answerIndex": 3,
+      "explanation": ""
+    },
+    {
+      "index": 28,
+      "id": "py-2.2-8",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Kodun sözdizimi açısından orada olması gereken ama hiçbir işlem yapmayan komut hangisidir?",
+      "choices": ["null", "void", "pass", "break", "continue"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 29,
+      "id": "py-2.2-9",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] while True: ifadesi ne tür bir döngü oluşturur?",
+      "choices": ["Hatalı döngü", "Sonsuz döngü", "Hiç çalışmayan döngü", "Tek seferlik döngü", "Veritabanı döngüsü"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 30,
+      "id": "py-2.2-10",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] range(10, 0, -2) ifadesinin ilk ve son üretilen değerleri nelerdir?",
+      "choices": ["10 ve 0", "10 ve 2", "8 ve 0", "10 ve -2", "9 ve 1"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 31,
+      "id": "py-2.2-11",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Python'daki 'for' döngüsü temel olarak neyin üzerinde çalışır?",
+      "choices": ["Sadece sayılar", "Sadece dosyalar", "Iterables (Yinelenebilir nesneler)", "Sadece sözlükler", "Mantıksal koşullar"],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 32,
+      "id": "py-2.2-12",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] for...else yapısında 'else' bloğu ne zaman çalışır?",
+      "choices": [
+        "Döngü 'break' ile bittiğinde",
+        "Döngü normal bir şekilde tamamlandığında",
+        "Döngü hiç çalışmadığında",
+        "Her iterasyonda",
+        "Hata oluştuğunda"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 33,
+      "id": "py-2.2-13",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Aşağıdaki kod kaç kez 'Merhaba' yazar?\ni = 0\nwhile i < 3:\n    print('Merhaba')\n    i += 1",
+      "choices": ["2", "3", "4", "Sonsuz", "0"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 34,
+      "id": "py-2.2-14",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] for x in 'Python': print(x) kodu ne çıktı verir?",
+      "choices": ["Python", "P y t h o n (alt alta)", "6", "Error", "P"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 35,
+      "id": "py-2.2-15",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] range(len(liste)) kullanımı neyi amaçlar?",
+      "choices": [
+        "Listenin elemanlarını toplamayı",
+        "Liste indeksleri üzerinde dönmeyi",
+        "Listeyi silmeyi",
+        "Listenin kopyasını oluşturmayı",
+        "Listenin tipini değiştirmeyi"
+      ],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 36,
+      "id": "py-2.2-16",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Nested (iç içe) döngülerde 'break' komutu hangi döngüyü sonlandırır?",
+      "choices": [
+        "Tüm döngüleri",
+        "Sadece en dıştaki döngüyü",
+        "Sadece bulunduğu en içteki döngüyü",
+        "Programı",
+        "Hiçbirini"
+      ],
+      "answerIndex": 2,
+      "explanation": ""
+    },
+    {
+      "index": 37,
+      "id": "py-2.2-17",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] x = [1, 2]; y = ['a', 'b']\nzip(x, y) sonucu hangisine benzer?",
+      "choices": ["[1, 2, 'a', 'b']", "[(1, 'a'), (2, 'b')]", "[[1, 'a'], [2, 'b']]", "{1: 'a', 2: 'b'}", "(1, 2, 'a', 'b')"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 38,
+      "id": "py-2.2-18",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Döngü içinde bir listenin elemanlarını değiştirirken hangisi daha güvenlidir?",
+      "choices": ["for x in liste:", "for i in range(len(liste)):", "while x in liste:", "liste.foreach()", "continue"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 39,
+      "id": "py-2.2-19",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Aşağıdaki kodun çıktısı nedir?\nfor i in range(3):\n    if i == 1: continue\n    print(i)",
+      "choices": ["0 1 2", "0 2", "1", "0 1", "2"],
+      "answerIndex": 1,
+      "explanation": ""
+    },
+    {
+      "index": 40,
+      "id": "py-2.2-20",
+      "type": "mcq",
+      "difficulty": "easy",
+      "prompt": "[2.2 Döngüler] Python'da 'do-while' döngüsü var mıdır?",
+      "choices": ["Evet, vardır", "Hayır, ama while ile simüle edilebilir", "Sadece Python 2'de vardır", "Sadece kütüphane ile eklenir", "Sadece sayılar için vardır"],
+      "answerIndex": 1,
+      "explanation": ""
+    }
+  ]
+}

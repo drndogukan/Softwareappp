@@ -1,0 +1,3375 @@
+{
+  "version": 1,
+  "languages": [
+    {
+      "id": "c",
+      "name": "C",
+      "description": "Sistem programlama icin temel dil. Bellek ve performans odakli.",
+      "topics": [
+        {
+          "id": "c-baslangic",
+          "title": "Giris ve Tarihce",
+          "contentMarkdown": "### C nedir?\nC, Dennis Ritchie tarafindan gelistirilmis, dusuk seviyeye yakin, hizli ve tasinabilir bir programlama dilidir.\n\n### Nerelerde kullanilir?\n- Isletim sistemleri\n- Gommulu sistemler\n- Suruculer\n\n### Ilk ornek\n```c\n#include <stdio.h>\nint main(){\n  printf(\"Merhaba C!\\n\");\n  return 0;\n}\n```",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "C dili ilk olarak kim tarafindan gelistirilmistir?",
+              "choices": [
+                "Bjarne Stroustrup",
+                "Dennis Ritchie",
+                "James Gosling",
+                "Guido van Rossum"
+              ],
+              "answerIndex": 1,
+              "explanation": "C, Dennis Ritchie tarafindan gelistirilmistir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C dili genellikle sistem programlamada kullanilir.",
+              "answerBool": true,
+              "explanation": "Evet. OS, driver, embedded gibi alanlarda yaygindir."
+            },
+            {
+              "id": "q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "C kodlarinda giris noktasi (entry point) hangi fonksiyondur?",
+              "choices": [
+                "start()",
+                "run()",
+                "main()",
+                "init()"
+              ],
+              "answerIndex": 2,
+              "explanation": "C programlari main() fonksiyonundan baslar."
+            },
+            {
+              "id": "q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "printf fonksiyonu hangi kutuphaneden gelir?",
+              "choices": [
+                "stdlib.h",
+                "stdio.h",
+                "string.h",
+                "math.h"
+              ],
+              "answerIndex": 1,
+              "explanation": "printf, stdio.h icindedir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C dili 'garbage collection' zorunlu olarak icerir.",
+              "answerBool": false,
+              "explanation": "Hayir. Bellek yonetimi genellikle manuel (malloc/free) yapilir."
+            },
+            {
+              "id": "q6",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Asagidakilerden hangisi C icin dogrudur?",
+              "choices": [
+                "Her zaman OOP zorunludur",
+                "Pointer kavrami vardir",
+                "Sadece web icindir",
+                "Yorum satiri yoktur"
+              ],
+              "answerIndex": 1,
+              "explanation": "C'de pointerlar temel kavramlardandir."
+            },
+            {
+              "id": "q7",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "C dilinde satir sonu yorum hangisidir?",
+              "choices": [
+                "<!-- -->",
+                "//",
+                "#",
+                ";;"
+              ],
+              "answerIndex": 1,
+              "explanation": "// tek satir yorumdur (C99+ ve C++)."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "C, derlenen (compiled) bir dildir.",
+              "answerBool": true,
+              "explanation": "Genellikle GCC/Clang gibi derleyicilerle makine koduna derlenir."
+            },
+            {
+              "id": "q9",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "C'de standart cikis akisi hangisidir?",
+              "choices": [
+                "stdin",
+                "stdout",
+                "stderr",
+                "stdlog"
+              ],
+              "answerIndex": 1,
+              "explanation": "Standart cikis stdout'tur."
+            },
+            {
+              "id": "q10",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "C programi genelde ______ fonksiyonundan baslar.",
+              "answerText": "main",
+              "explanation": "Giris noktasi main() fonksiyonudur."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris ve Tarihce', C diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "C öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "C ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-c-giris-ve-tarihce-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "description": "Okunabilirligi yuksek, genis ekosistemli, populer bir dil.",
+      "topics": [
+        {
+          "id": "py-degiskenler",
+          "title": "Degiskenler ve Veri Tipleri",
+          "contentMarkdown": "### Degiskenler\nPython'da degisken tanimlamak icin tip belirtmek zorunda degilsiniz.\n\n```python\nx = 10\nname = \"Ada\"\npi = 3.14\nis_ok = True\n```\n\n### Temel tipler\n- int\n- float\n- str\n- bool\n- list / dict / tuple / set\n",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Python'da degisken tanimlamak icin tip belirtmek zorunlu mudur?",
+              "choices": [
+                "Evet",
+                "Hayir"
+              ],
+              "answerIndex": 1,
+              "explanation": "Python dinamik tipli bir dildir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "str tipi metin (yazi) ifade eder.",
+              "answerBool": true,
+              "explanation": "Evet, str string tipidir."
+            },
+            {
+              "id": "q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Asagidaki hangisi liste tipidir?",
+              "choices": [
+                "(1,2,3)",
+                "[1,2,3]",
+                "{1,2,3}",
+                "\"1,2,3\""
+              ],
+              "answerIndex": 1,
+              "explanation": "Kose parantez list'i gosterir."
+            },
+            {
+              "id": "q4",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Python'da boolean dogru degeri ______ seklinde yazilir.",
+              "answerText": "True",
+              "explanation": "Dogru deger True'dur (T buyuk)."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Python'da sayilar ve metinler ayni operatorlerle her zaman toplanabilir.",
+              "answerBool": false,
+              "explanation": "int + str gibi toplama TypeError verir."
+            },
+            {
+              "id": "q6",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "type(x) ne ise yarar?",
+              "choices": [
+                "x'i yazdirir",
+                "x'in tipini dondurur",
+                "x'i sifirlar",
+                "x'i kopyalar"
+              ],
+              "answerIndex": 1,
+              "explanation": "type, tip bilgisini verir."
+            },
+            {
+              "id": "q7",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Asagidakilerden hangisi dict (sozluk) ornegidir?",
+              "choices": [
+                "{\"a\": 1}",
+                "[\"a\", 1]",
+                "(\"a\", 1)",
+                "{1,2,3}"
+              ],
+              "answerIndex": 0,
+              "explanation": "Anahtar:deger yapisi dict'tir."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Python'da degisken isimleri buyuk/kucuk harfe duyarlidir.",
+              "answerBool": true,
+              "explanation": "x ve X farkli degiskenlerdir."
+            },
+            {
+              "id": "q9",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Asagidakilerden hangisi tuple'dir?",
+              "choices": [
+                "[1,2]",
+                "(1,2)",
+                "{\"a\":1}",
+                "{1,2}"
+              ],
+              "answerIndex": 1,
+              "explanation": "Tuple parantez ile gosterilir."
+            },
+            {
+              "id": "q10",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Python'da bos liste ______ seklinde olusturulabilir.",
+              "answerText": "[]",
+              "explanation": "Bos liste [] ile olusturulur."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Degiskenler ve Veri Tipleri', Python diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Python dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Python öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Python ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-python-degiskenler-ve-veri-tipleri-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "description": "Web'in dili. Tarayici ve Node.js tarafinda calisir.",
+      "topics": [
+        {
+          "id": "js-syntax",
+          "title": "Temel Sozdizimi (Syntax)",
+          "contentMarkdown": "### Degiskenler\n```js\nlet x = 1;\nconst name = \"Ali\";\nvar old = true;\n```\n\n### Fonksiyon\n```js\nfunction add(a,b){\n  return a+b;\n}\n```\n",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Degeri degismeyen degisken icin hangisi tercih edilir?",
+              "choices": [
+                "let",
+                "const",
+                "var",
+                "static"
+              ],
+              "answerIndex": 1,
+              "explanation": "const yeniden atamayi engeller."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "JavaScript tarayicida calisabilir.",
+              "answerBool": true,
+              "explanation": "Evet, tarayici JS motoru ile calisir."
+            },
+            {
+              "id": "q3",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "JS'de esitsizlik operatoru (strict) ______ seklindedir.",
+              "answerText": "!==",
+              "explanation": "Strict esitsizlik !== kullanir."
+            },
+            {
+              "id": "q4",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Asagidakilerden hangisi function ifadesidir?",
+              "choices": [
+                "add = (a,b) => a+b",
+                "a+b",
+                "return x",
+                "if (x) {}"
+              ],
+              "answerIndex": 0,
+              "explanation": "Arrow function bir fonksiyon ifadesidir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "JavaScript'te noktalivirgul (;) her zaman zorunludur.",
+              "answerBool": false,
+              "explanation": "ASI nedeniyle bircok durumda zorunlu degil, ama tercih edilebilir."
+            },
+            {
+              "id": "q6",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Hangisi blok kapsamli degiskendir?",
+              "choices": [
+                "var",
+                "let",
+                "function",
+                "className"
+              ],
+              "answerIndex": 1,
+              "explanation": "let blok scope'a sahiptir."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "const ile tanimlanan obje icerigi degistirilemez.",
+              "answerBool": false,
+              "explanation": "const sadece referansi sabitler; icerik degisebilir."
+            },
+            {
+              "id": "q8",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "JS'de konsola yazdirmak icin hangisi kullanilir?",
+              "choices": [
+                "print()",
+                "echo",
+                "console.log()",
+                "System.out.println()"
+              ],
+              "answerIndex": 2,
+              "explanation": "console.log() yaygindir."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "JavaScript'te NaN, Number tipindedir.",
+              "answerBool": true,
+              "explanation": "typeof NaN === 'number'."
+            },
+            {
+              "id": "q10",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Hangisi string birlestirme operatorudur?",
+              "choices": [
+                "+",
+                "&&",
+                "===",
+                "=>"
+              ],
+              "answerIndex": 0,
+              "explanation": "+ stringleri birlestirebilir."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Temel Sozdizimi (Syntax)', JavaScript diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "JavaScript dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "JavaScript öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "JavaScript ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-javascript-temel-sozdizimi-syntax-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cpp",
+      "name": "C++",
+      "description": "C uzerine OOP ve modern ozellikler ekleyen guclu bir dil.",
+      "topics": [
+        {
+          "id": "cpp-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### C++\nC++; performans, OOP ve template gibi ozellikleriyle bilinir.\n\nBu konu bir baslangic sayfasidir. Icerigi genisletmek icin `assets/content/catalog.json` dosyasina yeni basliklar ekleyin.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++ derlenen (compiled) bir dildir.",
+              "answerBool": true,
+              "explanation": "Genellikle derleyici ile makine koduna derlenir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++ sadece web gelistirme icindir.",
+              "answerBool": false,
+              "explanation": "Oyun, sistem, masaustu ve daha fazlasinda kullanilir."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++'ta sinif (class) kavrami vardir.",
+              "answerBool": true,
+              "explanation": "OOP icin class kullanilir."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++'ta pointer kavrami yoktur.",
+              "answerBool": false,
+              "explanation": "Pointerlar C++'ta da vardir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "STL, C++ standart kutuphanesinin bir parcasidir.",
+              "answerBool": true,
+              "explanation": "STL konteynerler ve algoritmalar sunar."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++'ta overloading mumkundur.",
+              "answerBool": true,
+              "explanation": "Fonksiyon/operator overloading vardir."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++'ta 'new/delete' ile dinamik bellek yonetimi yapilabilir.",
+              "answerBool": true,
+              "explanation": "Dinamik bellek ayirma/serbest birakma icin kullanilir."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++'ta namespace kullanimi vardir.",
+              "answerBool": true,
+              "explanation": "Isim cakismalarini azaltir."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++'ta RAII yaklasimi yaygindir.",
+              "answerBool": true,
+              "explanation": "Kaynak yonetiminde (ctor/dtor) kullanilir."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++ sadece 8-bit veri tiplerini destekler.",
+              "answerBool": false,
+              "explanation": "Birden fazla veri tipi ve boyut vardir."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', C++ diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "C++ dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "C++ öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "C++ ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-c-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "description": "JVM uzerinde calisan, OOP odakli, yaygin kurumsal dil.",
+      "topics": [
+        {
+          "id": "java-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### Java\nJava, \"write once run anywhere\" yaklasimiyla JVM uzerinde calisir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java bytecode JVM uzerinde calisir.",
+              "answerBool": true,
+              "explanation": "Java kodu bytecode'a derlenir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java, garbage collector kullanabilir.",
+              "answerBool": true,
+              "explanation": "Bellek yonetimi GC ile yapilir."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java'da class kavrami vardir.",
+              "answerBool": true,
+              "explanation": "OOP temellidir."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java'da 'public static void main' yaygin giris noktasidir.",
+              "answerBool": true,
+              "explanation": "Uygulama genelde main ile baslar."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java sadece fonksiyonel programlama icindir.",
+              "answerBool": false,
+              "explanation": "OOP ana akimdir; fonksiyonel ozellikler de vardir."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java'da interface vardir.",
+              "answerBool": true,
+              "explanation": "Soyutlama icin kullanilir."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java'da exception mekanizmasi vardir.",
+              "answerBool": true,
+              "explanation": "Try/catch ile yonetilir."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java kodu genelde yorumlanarak (interpret) calisir, hic derlenmez.",
+              "answerBool": false,
+              "explanation": "Bytecode'a derlenir; JIT ile optimize olabilir."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java'da paket (package) yapisi vardir.",
+              "answerBool": true,
+              "explanation": "Kod organizasyonu saglar."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java sadece Android icindir.",
+              "answerBool": false,
+              "explanation": "Sunucu, masaustu, Android vb. alanlarda kullanilir."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', Java diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Java dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Java öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Java ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-java-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dart",
+      "name": "Dart",
+      "description": "Flutter'in dili. AOT/JIT ile calisabilir.",
+      "topics": [
+        {
+          "id": "dart-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### Dart\nDart, Flutter ile UI gelistirmede kullanilan modern bir dildir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Flutter uygulamalari Dart ile gelistirilebilir.",
+              "answerBool": true,
+              "explanation": "Flutter'in ana dili Dart'tir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart statik tip destekler.",
+              "answerBool": true,
+              "explanation": "Tip sistemi vardir (type inference ile)."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart'ta async/await vardir.",
+              "answerBool": true,
+              "explanation": "Asenkron kod icin kullanilir."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart sadece tarayicida calisir.",
+              "answerBool": false,
+              "explanation": "VM/Native ve web hedefleri vardir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart'ta null safety vardir.",
+              "answerBool": true,
+              "explanation": "Null-safety dili guclendirir."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart'ta class ve mixin yapilari vardir.",
+              "answerBool": true,
+              "explanation": "OOP + mixin destekler."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart'ta paket yonetimi pub ile yapilir.",
+              "answerBool": true,
+              "explanation": "pub.dev ekosistemi vardir."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart'ta 'final' degisken bir kez atanir.",
+              "answerBool": true,
+              "explanation": "final yeniden atamayi engeller."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart'ta List ve Map gibi koleksiyonlar vardir.",
+              "answerBool": true,
+              "explanation": "Temel koleksiyon tipleri mevcuttur."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart'ta sadece senkron kod yazilabilir.",
+              "answerBool": false,
+              "explanation": "Future/Stream ile asenkron programlama vardir."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', Dart diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Dart dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Dart öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Dart ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-dart-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "swift",
+      "name": "Swift",
+      "description": "Apple ekosistemi icin modern bir dil.",
+      "topics": [
+        {
+          "id": "swift-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### Swift\nSwift, iOS/macOS gelistirmede kullanilan modern bir dildir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift, iOS uygulamalarinda yaygin kullanilir.",
+              "answerBool": true,
+              "explanation": "Apple platformlarinda ana dillerden biridir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift, null safety benzeri optional yapisini icerir.",
+              "answerBool": true,
+              "explanation": "Optional ile nil yonetimi yapilir."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift sadece Android icindir.",
+              "answerBool": false,
+              "explanation": "Apple platformlarina odaklidir."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift'te class ve struct vardir.",
+              "answerBool": true,
+              "explanation": "Deger/Referans tipleri bulunur."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift'te fonksiyonlar birinci sinif vatandastir.",
+              "answerBool": true,
+              "explanation": "Fonksiyonlar degiskenlere atanabilir."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift'te generics vardir.",
+              "answerBool": true,
+              "explanation": "Tip guvenli genel kod yazilabilir."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift dilinde hata yonetimi icin try/catch kullanilabilir.",
+              "answerBool": true,
+              "explanation": "throw/try ile hata yonetilir."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift'te paket yonetimi hic yoktur.",
+              "answerBool": false,
+              "explanation": "Swift Package Manager vardir."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift'te protokoller (protocol) vardir.",
+              "answerBool": true,
+              "explanation": "Soyutlama icin kullanilir."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift derlenen bir dildir.",
+              "answerBool": true,
+              "explanation": "Native koda derlenir."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', Swift diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Swift dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Swift öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Swift ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-swift-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kotlin",
+      "name": "Kotlin",
+      "description": "JVM uzerinde calisan, Android icin populer modern dil.",
+      "topics": [
+        {
+          "id": "kotlin-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### Kotlin\nKotlin, Java ile uyumlu, daha modern soz dizimi sunan bir dildir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin JVM uzerinde calisabilir.",
+              "answerBool": true,
+              "explanation": "Kotlin bytecode uretebilir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin Android'de yaygin kullanilir.",
+              "answerBool": true,
+              "explanation": "Resmi olarak onerilen dillerden biridir."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin'de null safety vardir.",
+              "answerBool": true,
+              "explanation": "Nullable tipler ile kontrol saglanir."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin sadece iOS icindir.",
+              "answerBool": false,
+              "explanation": "JVM/Native/JS hedefleri vardir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin Java kodlariyla birlikte calisabilir.",
+              "answerBool": true,
+              "explanation": "Interoperability vardir."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin'de data class vardir.",
+              "answerBool": true,
+              "explanation": "Veri tasima siniflarini kolaylastirir."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin coroutines sunar.",
+              "answerBool": true,
+              "explanation": "Asenkron islemleri kolaylastirir."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin'de extension function yoktur.",
+              "answerBool": false,
+              "explanation": "Extension function vardir."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin statik tipli bir dildir.",
+              "answerBool": true,
+              "explanation": "Tip sistemi ve inference vardir."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin sadece script dilidir.",
+              "answerBool": false,
+              "explanation": "Uygulama gelistirmede de kullanilir."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', Kotlin diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Kotlin dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Kotlin öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Kotlin ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-kotlin-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "description": "Sunucu tarafli web gelistirmede yaygin dil.",
+      "topics": [
+        {
+          "id": "php-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### PHP\nPHP, web sunucularinda backend gelistirmede kullanilir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP sunucu tarafli calisabilir.",
+              "answerBool": true,
+              "explanation": "Backend'de kullanilir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP sadece derlenen bir dildir.",
+              "answerBool": false,
+              "explanation": "Genelde yorumlanir/bytecode'a cevrilebilir."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP ile HTML icine kod gomulebilir.",
+              "answerBool": true,
+              "explanation": "Tarihi olarak bu sekilde kullanimi yaygindir."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP'de degiskenler genelde $ ile baslar.",
+              "answerBool": true,
+              "explanation": "$x gibi."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP sadece mobil uygulama icindir.",
+              "answerBool": false,
+              "explanation": "Web backend'te yaygindir."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP'de OOP desteklenir.",
+              "answerBool": true,
+              "explanation": "Class yapisi vardir."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Composer, PHP ekosisteminde paket yonetimidir.",
+              "answerBool": true,
+              "explanation": "Composer yaygindir."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP ile MySQL gibi veritabanlarina baglanilabilir.",
+              "answerBool": true,
+              "explanation": "PDO/MySQLi vb."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP'de hata/exception mekanizmasi yoktur.",
+              "answerBool": false,
+              "explanation": "Exception ve hata yonetimi vardir."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP sadece Windows'ta calisir.",
+              "answerBool": false,
+              "explanation": "Linux/Windows/macOS'ta calisabilir."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', PHP diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "PHP dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "PHP öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "PHP ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-php-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruby",
+      "name": "Ruby",
+      "description": "Okunabilir, dinamik tipli, Ruby on Rails ile populer.",
+      "topics": [
+        {
+          "id": "ruby-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### Ruby\nRuby, sade sozdizimi ve Rails ekosistemi ile bilinir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby dinamik tipli bir dildir.",
+              "answerBool": true,
+              "explanation": "Tipler runtime'da belirlenir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby on Rails, Ruby ile gelistirilir.",
+              "answerBool": true,
+              "explanation": "Rails Ruby framework'udur."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby sadece derlenen bir dildir.",
+              "answerBool": false,
+              "explanation": "Genelde yorumlanir."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby'de her sey bir nesnedir denir.",
+              "answerBool": true,
+              "explanation": "OOP yaklasimi yaygindir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby'de bloklar ve iterator'lar vardir.",
+              "answerBool": true,
+              "explanation": "do..end / { } bloklari vardir."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby sadece mobil icindir.",
+              "answerBool": false,
+              "explanation": "Web/backend ve script icin kullanilir."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "RubyGems paket yonetimini saglar.",
+              "answerBool": true,
+              "explanation": "gem ekosistemi."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby'de sinif (class) kavrami vardir.",
+              "answerBool": true,
+              "explanation": "OOP destekler."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby'de exception mekanizmasi vardir.",
+              "answerBool": true,
+              "explanation": "begin/rescue ile."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby sadece Windows'ta calisir.",
+              "answerBool": false,
+              "explanation": "Coklu platformda calisir."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', Ruby diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Ruby dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Ruby öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Ruby ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-ruby-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "description": "Basit, hizli, concurrency odakli modern dil.",
+      "topics": [
+        {
+          "id": "go-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### Go\nGo (Golang), goroutine ve channel yapilariyla concurrency'i kolaylastirir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go derlenen bir dildir.",
+              "answerBool": true,
+              "explanation": "Native ikili dosya uretebilir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go'nun paket yonetimi vardir.",
+              "answerBool": true,
+              "explanation": "Go modules kullanilir."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Goroutine, Go'da eszamanlilik icin kullanilir.",
+              "answerBool": true,
+              "explanation": "Lightweight thread benzeri."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go sadece front-end icindir.",
+              "answerBool": false,
+              "explanation": "Backend, CLI, servislerde yaygindir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go'da channel yapisi vardir.",
+              "answerBool": true,
+              "explanation": "Goroutine'ler arasi iletisim icin."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go, basit sozdizimi hedefler.",
+              "answerBool": true,
+              "explanation": "Tasarim hedeflerinden biri."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go'da interface vardir.",
+              "answerBool": true,
+              "explanation": "Duck typing benzeri kullanim."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go'da garbage collector bulunabilir.",
+              "answerBool": true,
+              "explanation": "Bellek GC ile yonetilir."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go sadece Linux'ta calisir.",
+              "answerBool": false,
+              "explanation": "Coklu platform hedefler."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go, Google icinde baslamistir.",
+              "answerBool": true,
+              "explanation": "Google'da gelistirilmeye baslanmistir."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', Go diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Go dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Go öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Go ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-go-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rust",
+      "name": "Rust",
+      "description": "Bellek guvenligi ve performansi birlestiren modern sistem dili.",
+      "topics": [
+        {
+          "id": "rust-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### Rust\nRust, ownership/borrow model ile bellek guvenligini hedefler.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust bellek guvenligini hedefler.",
+              "answerBool": true,
+              "explanation": "Ownership modeli ile."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust derlenen bir dildir.",
+              "answerBool": true,
+              "explanation": "Native koda derlenir."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust'ta borrow checker kavrami vardir.",
+              "answerBool": true,
+              "explanation": "Referans guvenligi saglar."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust sadece web tasarim icindir.",
+              "answerBool": false,
+              "explanation": "Sistem, wasm, backend vb."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Cargo Rust paket yoneticisidir.",
+              "answerBool": true,
+              "explanation": "cargo build/test/run."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust'ta macro sistemi vardir.",
+              "answerBool": true,
+              "explanation": "macro_rules ve proc macro."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust, data race'leri azaltmayi hedefler.",
+              "answerBool": true,
+              "explanation": "Tip sistemiyle."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust'ta pattern matching vardir.",
+              "answerBool": true,
+              "explanation": "match ifadesi."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust sadece Windows'ta calisir.",
+              "answerBool": false,
+              "explanation": "Coklu platformda calisir."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust'ta ownership tek bir sahiplik ilkesine dayanir.",
+              "answerBool": true,
+              "explanation": "Bir degerin tek sahibi olur."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', Rust diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Rust dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Rust öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Rust ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-rust-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r",
+      "name": "R",
+      "description": "Istatistik ve veri analizi icin populer bir dil.",
+      "topics": [
+        {
+          "id": "r-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### R\nR, veri analizi ve istatistik icin yaygin kullanilir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R, veri analizi ve istatistikte kullanilir.",
+              "answerBool": true,
+              "explanation": "Temel amac budur."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R sadece oyun gelistirme icindir.",
+              "answerBool": false,
+              "explanation": "Veri analizi odaklidir."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R'de veri cercevesi (data frame) kavrami vardir.",
+              "answerBool": true,
+              "explanation": "Veri yapilarindan biridir."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R'de vektorler yaygin kullanilir.",
+              "answerBool": true,
+              "explanation": "R'nin temel veri yapilarindandir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R paket ekosistemi yoktur.",
+              "answerBool": false,
+              "explanation": "CRAN gibi paket depolari vardir."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R, grafik/plot uretiminde gucludur.",
+              "answerBool": true,
+              "explanation": "ggplot2 vb."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R genelde yorumlanir.",
+              "answerBool": true,
+              "explanation": "Interpreter tabanli calisma yaygindir."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R sadece mobil cihazlarda calisir.",
+              "answerBool": false,
+              "explanation": "Masaustu/sunucu vb."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R'de fonksiyonlar vardir.",
+              "answerBool": true,
+              "explanation": "Fonksiyonel yaklasim yaygin."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R, istatistiksel modelleme icin kullanilabilir.",
+              "answerBool": true,
+              "explanation": "Regression vb."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', R diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "R dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "R öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "R ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-r-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "matlab",
+      "name": "MATLAB",
+      "description": "Sayisal hesaplama ve muhendislikte kullanilan ortam/dil.",
+      "topics": [
+        {
+          "id": "matlab-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### MATLAB\nMATLAB, matris tabanli sayisal hesaplamada yaygindir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB matris islemlerinde gucludur.",
+              "answerBool": true,
+              "explanation": "Temel odagi budur."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB sadece web icindir.",
+              "answerBool": false,
+              "explanation": "Sayisal hesaplamaya odaklidir."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB'da script ve fonksiyon dosyalari vardir.",
+              "answerBool": true,
+              "explanation": "m dosyalari yaygindir."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB grafik cizimi yapabilir.",
+              "answerBool": true,
+              "explanation": "Plot fonksiyonlari vardir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB'da toolbox kavrami vardir.",
+              "answerBool": true,
+              "explanation": "Ek paketler/araç setleri."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB tamamen ucretsiz bir yazilimdir.",
+              "answerBool": false,
+              "explanation": "Genelde lisanslidir."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB, Simulink ile birlikte kullanilabilir.",
+              "answerBool": true,
+              "explanation": "Model tabanli tasarim."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB'da diziler 1'den indekslenir.",
+              "answerBool": true,
+              "explanation": "1-based indexing."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB'da for/while donguleri vardir.",
+              "answerBool": true,
+              "explanation": "Kontrol yapilari mevcut."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB sadece Android'de calisir.",
+              "answerBool": false,
+              "explanation": "Masaustunde yaygindir."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', MATLAB diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "MATLAB dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "MATLAB öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "MATLAB ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-matlab-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        },
+        {
+          "id": "matlab-degiskenler",
+          "title": "Degiskenler ve Temel Komutlar",
+          "contentMarkdown": "### Değişkenler\nMATLAB'da değişken ataması `=` ile yapılır. Noktalı virgül (`;`) komut penceresine yazdırmayı engeller.\n\nÖrnek:\n- `a = 5;`\n- `b = a + 2`",
+          "questions": [
+            { "id": "q1", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da degisken atamasi '=' ile yapilir.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q2", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da ';' kullanmak sonucu ekrana yazdirmayi engeller.", "answerBool": true, "explanation": "Noktali virgül çıktıyı bastırır." },
+            { "id": "q3", "type": "mcq", "difficulty": "easy", "prompt": "MATLAB'da calisma alanindaki degiskenleri listelemek icin hangisi kullanilir?", "choices": ["who", "clear", "help", "plot"], "answerIndex": 0, "explanation": "`who/whos` değişkenleri listeler." },
+            { "id": "q4", "type": "mcq", "difficulty": "easy", "prompt": "Komut penceresini temizlemek icin hangi komut kullanilir?", "choices": ["clc", "cls", "clean", "reset"], "answerIndex": 0, "explanation": "Komut penceresini `clc` temizler." },
+            { "id": "q5", "type": "mcq", "difficulty": "easy", "prompt": "Bir degiskeni silmek (workspaceden kaldirmak) icin hangisi kullanilir?", "choices": ["clear", "who", "save", "load"], "answerIndex": 0, "explanation": "`clear` değişkenleri siler." },
+            { "id": "q6", "type": "tf", "difficulty": "easy", "prompt": "MATLAB isimleri buyuk/kucuk harfe duyarsizdir.", "answerBool": false, "explanation": "Fonksiyon/degisken isimleri case-sensitive'dir." },
+            { "id": "q7", "type": "fill", "difficulty": "easy", "prompt": "MATLAB'da yardim almak icin ______ komutu kullanilir.", "answerText": "help", "explanation": "`help` temel yardım sağlar." },
+            { "id": "q8", "type": "mcq", "difficulty": "medium", "prompt": "Degiskenin boyutunu ogrenmek icin hangisi kullanilir?", "choices": ["size", "len", "count", "dim"], "answerIndex": 0, "explanation": "`size` matris/vektör boyutunu verir." },
+            { "id": "q9", "type": "tf", "difficulty": "medium", "prompt": "MATLAB'da sayilar varsayilan olarak double tipindedir.", "answerBool": true, "explanation": "Evet, çoğu sayı double olur." },
+            { "id": "q10", "type": "mcq", "difficulty": "easy", "prompt": "Asagidakilerden hangisi yorum satiri baslatir?", "choices": ["%", "//", "#", "--"], "answerIndex": 0, "explanation": "MATLAB yorumları `%` ile başlar." },
+            { "id": "q11", "type": "tf", "difficulty": "easy", "prompt": "`disp(x)` komutu ekrana yazdirma icin kullanilabilir.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q12", "type": "mcq", "difficulty": "medium", "prompt": "`format short` neyi degistirir?", "choices": ["Goruntuleme hassasiyeti", "Degisken tipi", "Dosya kaydetme", "Hiz"], "answerIndex": 0, "explanation": "Sayıların gösterim biçimini değiştirir." },
+            { "id": "q13", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da string ifadesi tek tirnakla yazilabilir.", "answerBool": true, "explanation": "Klasik char dizileri `'...'` ile." },
+            { "id": "q14", "type": "mcq", "difficulty": "medium", "prompt": "Bir script dosyasi genelde hangi uzanti ile kaydedilir?", "choices": [".m", ".py", ".java", ".txt"], "answerIndex": 0, "explanation": "MATLAB dosyaları `.m` uzantılıdır." },
+            { "id": "q15", "type": "tf", "difficulty": "medium", "prompt": "`save` komutu degiskenleri dosyaya kaydedebilir.", "answerBool": true, "explanation": "Evet, MAT dosyası vs." },
+            { "id": "q16", "type": "mcq", "difficulty": "easy", "prompt": "Asagidakilerden hangisi bir sayi dizisi olusturur?", "choices": ["1:5", "1..5", "range(1,5)", "[1-5]"], "answerIndex": 0, "explanation": "MATLAB'da `1:5` aralık üretir." },
+            { "id": "q17", "type": "tf", "difficulty": "hard", "prompt": "`a = 1:2:9` ifadesi 1,3,5,7,9 uretir.", "answerBool": true, "explanation": "Adım 2." },
+            { "id": "q18", "type": "fill", "difficulty": "medium", "prompt": "Bir degiskenin ayrintili bilgisini gormek icin ______ komutu kullanilir.", "answerText": "whos", "explanation": "`whos` daha detaylıdır." },
+            { "id": "q19", "type": "mcq", "difficulty": "medium", "prompt": "MATLAB'da komut calistirirken satir sonuna `...` koymak ne yapar?", "choices": ["Satiri devam ettirir", "Hata verir", "Yoruma cevirir", "Satiri bitirir"], "answerIndex": 0, "explanation": "Devam satırı." },
+            { "id": "q20", "type": "tf", "difficulty": "medium", "prompt": "MATLAB'da `clear all` komutu tum degiskenleri temizler.", "answerBool": true, "explanation": "Evet." }
+          ]
+        },
+        {
+          "id": "matlab-matrisler",
+          "title": "Matrisler ve Indeksleme",
+          "contentMarkdown": "### Matrisler\nMATLAB'ın kalbi matrislerdir.\n- Matris oluşturma: `A = [1 2; 3 4]`\n- Indeksleme: `A(1,2)`\n- Dilimleme: `A(:,1)`",
+          "questions": [
+            { "id": "q1", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da matrisler köşeli parantez ile olusturulabilir.", "answerBool": true, "explanation": "`[ ]` kullanılır." },
+            { "id": "q2", "type": "mcq", "difficulty": "easy", "prompt": "`A(1,1)` neyi ifade eder?", "choices": ["1. satır 1. sütun", "1. sütun 1. satır", "Son eleman", "Tüm satırlar"], "answerIndex": 0, "explanation": "1-based indeks." },
+            { "id": "q3", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da indeksleme 0'dan baslar.", "answerBool": false, "explanation": "1'den başlar." },
+            { "id": "q4", "type": "mcq", "difficulty": "easy", "prompt": "Bir matriste tüm satırları seçmek için hangi sembol kullanılır?", "choices": [":", "*", "#", "%"], "answerIndex": 0, "explanation": "`:` tümünü seçer." },
+            { "id": "q5", "type": "mcq", "difficulty": "medium", "prompt": "`A(:,2)` neyi verir?", "choices": ["2. sütun", "2. satır", "Tüm elemanlar", "Köşegen"], "answerIndex": 0, "explanation": "Tüm satırlar, 2. sütun." },
+            { "id": "q6", "type": "tf", "difficulty": "easy", "prompt": "`A(2,:)` ifadesi 2. satiri secmek icin kullanilir.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q7", "type": "mcq", "difficulty": "medium", "prompt": "Matris boyutunu veren fonksiyon hangisidir?", "choices": ["size", "shape", "dim", "count"], "answerIndex": 0, "explanation": "`size(A)`." },
+            { "id": "q8", "type": "tf", "difficulty": "medium", "prompt": "`length(A)` her zaman satır sayısını döndürür.", "answerBool": false, "explanation": "En büyük boyutu döndürür." },
+            { "id": "q9", "type": "mcq", "difficulty": "easy", "prompt": "Birim matris (identity) olusturmak icin hangisi kullanilir?", "choices": ["eye", "ones", "zeros", "unit"], "answerIndex": 0, "explanation": "`eye(n)`." },
+            { "id": "q10", "type": "mcq", "difficulty": "easy", "prompt": "Sifir matrisi olusturmak icin hangisi kullanilir?", "choices": ["zeros", "eye", "rand", "diag"], "answerIndex": 0, "explanation": "`zeros(m,n)`." },
+            { "id": "q11", "type": "tf", "difficulty": "easy", "prompt": "`ones(2,3)` 2x3 boyutunda 1'lerden olusan matris üretir.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q12", "type": "mcq", "difficulty": "medium", "prompt": "Eleman bazli carpma icin hangi operator kullanilir?", "choices": [".*", "*", "x", "mul"], "answerIndex": 0, "explanation": "`.` eleman-bazlı işlemleri belirtir." },
+            { "id": "q13", "type": "tf", "difficulty": "medium", "prompt": "`A*B` eleman bazli carpma yapar.", "answerBool": false, "explanation": "`A*B` matris çarpımıdır." },
+            { "id": "q14", "type": "mcq", "difficulty": "medium", "prompt": "Eleman bazli us alma icin hangisi kullanilir?", "choices": [".^", "^", "**", "pow"], "answerIndex": 0, "explanation": "`.^`." },
+            { "id": "q15", "type": "tf", "difficulty": "medium", "prompt": "`A'` ifadesi matrisi transpoze eder.", "answerBool": true, "explanation": "Konjugat transpoz (real için transpoz)." },
+            { "id": "q16", "type": "fill", "difficulty": "easy", "prompt": "NxN birim matrisi olusturan fonksiyon ______ dir.", "answerText": "eye", "explanation": "`eye`." },
+            { "id": "q17", "type": "mcq", "difficulty": "hard", "prompt": "`diag([1 2 3])` ne üretir?", "choices": ["Köşegeni 1,2,3 olan matris", "Tüm elemanları 1 olan matris", "Rastgele matris", "Sıfır vektör"], "answerIndex": 0, "explanation": "Köşegen matrisi." },
+            { "id": "q18", "type": "tf", "difficulty": "hard", "prompt": "`A(end,end)` son satır son sütun elemanını verir.", "answerBool": true, "explanation": "`end` son indeksi temsil eder." },
+            { "id": "q19", "type": "mcq", "difficulty": "medium", "prompt": "Bir vektörü sütun vektöre çevirmek için sık kullanılan yöntem hangisidir?", "choices": ["(:)", "[]", "{}", "||"], "answerIndex": 0, "explanation": "`v(:)` sütun yapar." },
+            { "id": "q20", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da `rand(2,2)` 2x2 rastgele sayilardan olusan matris uretir.", "answerBool": true, "explanation": "Evet." }
+          ]
+        },
+        {
+          "id": "matlab-kontrol",
+          "title": "Kosullar ve Donguler",
+          "contentMarkdown": "### Kontrol yapıları\n- `if / elseif / else / end`\n- `for / end`\n- `while / end`\n\nMantıksal operatörler: `&&`, `||`, `~`",
+          "questions": [
+            { "id": "q1", "type": "mcq", "difficulty": "easy", "prompt": "MATLAB'da if bloğu nasıl biter?", "choices": ["end", "}", "endif", "stop"], "answerIndex": 0, "explanation": "`end` ile biter." },
+            { "id": "q2", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da `elseif` anahtar kelimesi kullanilabilir.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q3", "type": "mcq", "difficulty": "easy", "prompt": "Döngü kurmak için hangisi kullanılabilir?", "choices": ["for", "while", "ikisi de", "hiçbiri"], "answerIndex": 2, "explanation": "İkisi de var." },
+            { "id": "q4", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da `for i=1:5` ifadesi 5 kez calisir.", "answerBool": true, "explanation": "1,2,3,4,5." },
+            { "id": "q5", "type": "mcq", "difficulty": "medium", "prompt": "Mantiksal degil (NOT) operatoru hangisidir?", "choices": ["~", "!", "not", "^"], "answerIndex": 0, "explanation": "`~`." },
+            { "id": "q6", "type": "mcq", "difficulty": "medium", "prompt": "Kısa devre VE (AND) operatörü hangisidir?", "choices": ["&&", "&", "and", "ve"], "answerIndex": 0, "explanation": "Kısa devre `&&`." },
+            { "id": "q7", "type": "tf", "difficulty": "medium", "prompt": "`&` operatörü eleman bazlı AND için kullanılabilir.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q8", "type": "mcq", "difficulty": "medium", "prompt": "Kısa devre VEYA (OR) operatörü hangisidir?", "choices": ["||", "|", "or", "veya"], "answerIndex": 0, "explanation": "`||`." },
+            { "id": "q9", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da `switch` yapısı vardır.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q10", "type": "mcq", "difficulty": "easy", "prompt": "Bir döngüden çıkmak için kullanılan ifade hangisidir?", "choices": ["break", "exit", "stop", "return"], "answerIndex": 0, "explanation": "`break` döngüyü kırar." },
+            { "id": "q11", "type": "tf", "difficulty": "medium", "prompt": "`continue` ifadesi döngüde bir sonraki iterasyona geçer.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q12", "type": "mcq", "difficulty": "medium", "prompt": "Bir fonksiyondan erken çıkmak için hangisi kullanılır?", "choices": ["return", "break", "continue", "stop"], "answerIndex": 0, "explanation": "`return` fonksiyondan çıkar." },
+            { "id": "q13", "type": "tf", "difficulty": "easy", "prompt": "`while true` sonsuz döngü oluşturabilir.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q14", "type": "fill", "difficulty": "easy", "prompt": "MATLAB'da kosullu yapinin basinda ______ kullanilir.", "answerText": "if", "explanation": "`if`." },
+            { "id": "q15", "type": "mcq", "difficulty": "hard", "prompt": "Bir koşulun doğru olup olmadığını test eden operatör hangisidir?", "choices": ["==", "=", ":=", "!="], "answerIndex": 0, "explanation": "Eşitlik `==`." },
+            { "id": "q16", "type": "tf", "difficulty": "hard", "prompt": "`=` karşılaştırma yapar.", "answerBool": false, "explanation": "`=` atama yapar." },
+            { "id": "q17", "type": "mcq", "difficulty": "medium", "prompt": "MATLAB'da eşit değil operatörü hangisidir?", "choices": ["~=", "!=", "<>", "not"], "answerIndex": 0, "explanation": "`~=`." },
+            { "id": "q18", "type": "tf", "difficulty": "medium", "prompt": "MATLAB'da vektör karşılaştırması eleman bazlı olabilir.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q19", "type": "mcq", "difficulty": "medium", "prompt": "`for i = 1:2:7` kaç iterasyon yapar?", "choices": ["4", "3", "5", "2"], "answerIndex": 0, "explanation": "1,3,5,7 => 4 iterasyon." },
+            { "id": "q20", "type": "tf", "difficulty": "easy", "prompt": "MATLAB'da blok yapıları genellikle `end` ile kapatılır.", "answerBool": true, "explanation": "Evet." }
+          ]
+        },
+        {
+          "id": "matlab-plot",
+          "title": "Grafik Cizimi (Plot)",
+          "contentMarkdown": "### Plot\nMATLAB grafik çizimi için güçlüdür.\n- `plot(x,y)`\n- `title`, `xlabel`, `ylabel`\n- `grid on`, `legend`",
+          "questions": [
+            { "id": "q1", "type": "mcq", "difficulty": "easy", "prompt": "Basit bir çizgi grafiği çizmek için hangi fonksiyon kullanılır?", "choices": ["plot", "print", "lineplot", "draw"], "answerIndex": 0, "explanation": "`plot`." },
+            { "id": "q2", "type": "tf", "difficulty": "easy", "prompt": "`plot(x,y)` x ve y vektörlerini kullanarak grafik çizer.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q3", "type": "mcq", "difficulty": "easy", "prompt": "Grafiğe başlık eklemek için hangisi kullanılır?", "choices": ["title", "head", "name", "caption"], "answerIndex": 0, "explanation": "`title('...')`." },
+            { "id": "q4", "type": "mcq", "difficulty": "easy", "prompt": "X ekseni etiketi için hangisi kullanılır?", "choices": ["xlabel", "ylabel", "xname", "axisx"], "answerIndex": 0, "explanation": "`xlabel`." },
+            { "id": "q5", "type": "mcq", "difficulty": "easy", "prompt": "Y ekseni etiketi için hangisi kullanılır?", "choices": ["ylabel", "xlabel", "yname", "axisy"], "answerIndex": 0, "explanation": "`ylabel`." },
+            { "id": "q6", "type": "tf", "difficulty": "easy", "prompt": "`grid on` ızgara çizgilerini açar.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q7", "type": "mcq", "difficulty": "medium", "prompt": "Birden fazla eğriyi aynı grafikte tutmak için hangisi kullanılır?", "choices": ["hold on", "keep", "stay", "lock"], "answerIndex": 0, "explanation": "`hold on`." },
+            { "id": "q8", "type": "tf", "difficulty": "medium", "prompt": "`hold off` sonradan çizimleri ayrı grafiğe döndürür.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q9", "type": "mcq", "difficulty": "medium", "prompt": "Grafikte açıklama kutusu (legend) eklemek için hangisi kullanılır?", "choices": ["legend", "label", "note", "desc"], "answerIndex": 0, "explanation": "`legend`." },
+            { "id": "q10", "type": "tf", "difficulty": "easy", "prompt": "`figure` yeni bir pencere açabilir.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q11", "type": "mcq", "difficulty": "medium", "prompt": "Nokta grafiği (scatter) için sık kullanılan fonksiyon hangisidir?", "choices": ["scatter", "dots", "point", "cloud"], "answerIndex": 0, "explanation": "`scatter`." },
+            { "id": "q12", "type": "mcq", "difficulty": "medium", "prompt": "Sütun grafiği için hangisi kullanılır?", "choices": ["bar", "col", "histline", "stack"], "answerIndex": 0, "explanation": "`bar`." },
+            { "id": "q13", "type": "tf", "difficulty": "medium", "prompt": "`subplot` tek pencerede çoklu grafik yerleşimi sağlar.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q14", "type": "mcq", "difficulty": "hard", "prompt": "Logaritmik eksenli grafik için hangisi kullanılabilir?", "choices": ["semilogy", "linearplot", "loggrid", "expplot"], "answerIndex": 0, "explanation": "`semilogy` / `semilogx`." },
+            { "id": "q15", "type": "tf", "difficulty": "easy", "prompt": "`plot` sadece tek çizgi çizebilir.", "answerBool": false, "explanation": "Birden fazla çizgi çizilebilir." },
+            { "id": "q16", "type": "fill", "difficulty": "easy", "prompt": "Grafikte açıklama kutusu ekleyen fonksiyon ______ dir.", "answerText": "legend", "explanation": "`legend`." },
+            { "id": "q17", "type": "mcq", "difficulty": "medium", "prompt": "Grafiğe kırmızı renk vermek için çizimde hangi renk kısaltması kullanılabilir?", "choices": ["r", "red", "k", "g"], "answerIndex": 0, "explanation": "MATLAB renk kısaltması `r`." },
+            { "id": "q18", "type": "tf", "difficulty": "medium", "prompt": "`plot(x,y,'LineWidth',2)` çizgi kalınlığını artırır.", "answerBool": true, "explanation": "Evet." },
+            { "id": "q19", "type": "mcq", "difficulty": "medium", "prompt": "Grafiği dosyaya kaydetmek için hangisi kullanılabilir?", "choices": ["saveas", "commit", "exportcode", "store"], "answerIndex": 0, "explanation": "`saveas`." },
+            { "id": "q20", "type": "tf", "difficulty": "hard", "prompt": "MATLAB'da grafik çizimi sonuçları görselleştirmek için kullanılır.", "answerBool": true, "explanation": "Evet." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "description": "JavaScript'e tip guvenligi ekleyen superset dil.",
+      "topics": [
+        {
+          "id": "ts-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### TypeScript\nTypeScript, JavaScript uzerine statik tip ekler.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript, JavaScript'in bir superset'idir.",
+              "answerBool": true,
+              "explanation": "JS kodu TS'de calisabilir."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript kodu genelde JavaScript'e derlenir.",
+              "answerBool": true,
+              "explanation": "tsc ile."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript'te interface vardir.",
+              "answerBool": true,
+              "explanation": "Tip tanimi icin."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript, browser'da dogrudan calisir (derlemeden).",
+              "answerBool": false,
+              "explanation": "Genelde JS'e cevrilir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript'te generics vardir.",
+              "answerBool": true,
+              "explanation": "Genel tipler."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript sadece backend icindir.",
+              "answerBool": false,
+              "explanation": "Frontend/backend'de kullanilir."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript, daha iyi IDE desteği saglayabilir.",
+              "answerBool": true,
+              "explanation": "Tip bilgisi autocomplete verir."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript'te union type vardir.",
+              "answerBool": true,
+              "explanation": "A | B seklinde."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript'te type inference vardir.",
+              "answerBool": true,
+              "explanation": "Tipi tahmin edebilir."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript, JavaScript'ten daha az guvenli kod yazmayi hedefler.",
+              "answerBool": false,
+              "explanation": "Daha guvenli hedefler."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', TypeScript diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "TypeScript dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "TypeScript öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "TypeScript ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-typescript-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sql",
+      "name": "SQL",
+      "description": "Iliskisel veritabani sorgulama dili.",
+      "topics": [
+        {
+          "id": "sql-baslangic",
+          "title": "Giris (Baslangic)",
+          "contentMarkdown": "### SQL\nSQL, veriyi sorgulamak ve yonetmek icin kullanilir.\n\nBu konu bir baslangic sayfasidir.",
+          "questions": [
+            {
+              "id": "q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "SQL, veritabani sorgulamada kullanilir.",
+              "answerBool": true,
+              "explanation": "SELECT vb."
+            },
+            {
+              "id": "q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "SELECT, SQL'de veri okumak icin kullanilir.",
+              "answerBool": true,
+              "explanation": "Okuma icin."
+            },
+            {
+              "id": "q3",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "WHERE, filtreleme icin kullanilir.",
+              "answerBool": true,
+              "explanation": "Kosul belirler."
+            },
+            {
+              "id": "q4",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "SQL bir programlama dili gibi her zaman dongu zorunlu icerir.",
+              "answerBool": false,
+              "explanation": "Temel SQL deklaratiftir."
+            },
+            {
+              "id": "q5",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "JOIN, tablolar arasi birlestirme yapabilir.",
+              "answerBool": true,
+              "explanation": "Iliskisel bag."
+            },
+            {
+              "id": "q6",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "INSERT, veri eklemek icindir.",
+              "answerBool": true,
+              "explanation": "Ekleme."
+            },
+            {
+              "id": "q7",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "UPDATE, veri guncellemek icindir.",
+              "answerBool": true,
+              "explanation": "Guncelleme."
+            },
+            {
+              "id": "q8",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "DELETE, veri silmek icindir.",
+              "answerBool": true,
+              "explanation": "Silme."
+            },
+            {
+              "id": "q9",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "SQL sadece tek bir veritabaninda vardir.",
+              "answerBool": false,
+              "explanation": "MySQL, Postgres, SQL Server vb."
+            },
+            {
+              "id": "q10",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "GROUP BY, gruplama icin kullanilir.",
+              "answerBool": true,
+              "explanation": "Aggregate ile."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q1",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "Bu konu 'Giris (Baslangic)', SQL diliyle ilgilidir.",
+              "answerBool": true,
+              "explanation": "Evet, konu başlığı bu dili anlatır."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q2",
+              "type": "tf",
+              "difficulty": "easy",
+              "prompt": "SQL dili ile ilgili kaynak kod genellikle düz metin dosyalarda tutulur.",
+              "answerBool": true,
+              "explanation": "Çoğu dilde kaynak kod metin dosyalarındadır."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q3",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "SQL öğrenirken en temel adım hangisidir?",
+              "choices": [
+                "Temel sözdizimi",
+                "Önce mikrodenetleyici tasarlamak",
+                "Önce kernel yazmak",
+                "Önce kriptografi geliştirmek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Önce temel sözdizimi ve kavramlar öğrenilir."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q4",
+              "type": "mcq",
+              "difficulty": "easy",
+              "prompt": "Bir programlama dilini öğrenirken hangisi en faydalıdır?",
+              "choices": [
+                "Bol pratik yapmak",
+                "Sadece video izlemek",
+                "Sadece kitap kapağı okumak",
+                "Hiç hata yapmamak"
+              ],
+              "answerIndex": 0,
+              "explanation": "Pratik, kalıcılığı artırır."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q5",
+              "type": "fill",
+              "difficulty": "easy",
+              "prompt": "Bir programı çalıştırmak için genelde önce kaynak kod ______ edilir.",
+              "answerText": "derlenir",
+              "explanation": "Birçok dilde önce derleme/çeviri adımı vardır (interpret edilenlerde bile)."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q6",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "SQL ile ilgili soruları çözerken hata mesajlarını okumak faydalıdır.",
+              "answerBool": true,
+              "explanation": "Hata mesajları problemi hızlı bulmaya yardım eder."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q7",
+              "type": "mcq",
+              "difficulty": "medium",
+              "prompt": "Kod yazarken en iyi alışkanlıklardan biri hangisidir?",
+              "choices": [
+                "Küçük parçalara bölmek",
+                "Her şeyi tek dosyada yazmak",
+                "Değişken adlarını rastgele seçmek",
+                "Hiç test etmemek"
+              ],
+              "answerIndex": 0,
+              "explanation": "Parçalara bölmek bakım ve hata ayıklamayı kolaylaştırır."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q8",
+              "type": "tf",
+              "difficulty": "medium",
+              "prompt": "Bir konuyu tekrar çalışmak için düşük skor iyi bir sinyaldir.",
+              "answerBool": true,
+              "explanation": "Düşük skor, o konuda pratik ihtiyacını gösterir."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q9",
+              "type": "mcq",
+              "difficulty": "hard",
+              "prompt": "Aşağıdakilerden hangisi en iyi öğrenme yaklaşımıdır?",
+              "choices": [
+                "Konu + mini proje + quiz döngüsü",
+                "Sadece ezber",
+                "Sadece kopyala/yapıştır",
+                "Sadece sınav"
+              ],
+              "answerIndex": 0,
+              "explanation": "Döngüsel öğrenme (okuma+uygulama+test) etkilidir."
+            },
+            {
+              "id": "auto-sql-giris-baslangic-q10",
+              "type": "fill",
+              "difficulty": "medium",
+              "prompt": "Quiz sonuçlarına göre eksik olunan konulara ______ yapmak gelişimi hızlandırır.",
+              "answerText": "tekrar",
+              "explanation": "Eksik konulara tekrar yapmak öğrenmeyi güçlendirir."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

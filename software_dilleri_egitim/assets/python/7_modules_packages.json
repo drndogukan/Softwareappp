@@ -1,0 +1,24 @@
+{
+  "id": "py-7-modules-packages",
+  "title": "Modüller ve Paketler",
+  "subtopics": [
+    {
+      "id": "7.1",
+      "title": "Kütüphane Kullanımı",
+      "items": [
+        "import ve from ... import ... kullanımı",
+        "Standart Kütüphaneler (os, sys, math, datetime, random)"
+      ]
+    },
+    {
+      "id": "7.2",
+      "title": "Paket Yönetimi",
+      "items": [
+        "PIP (Package Installer for Python)",
+        "Sanal Ortam Oluşturma (venv, virtualenv)",
+        "requirements.txt Dosyası"
+      ]
+    }
+  ],
+  "questions": []
+}

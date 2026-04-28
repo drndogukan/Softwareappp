@@ -1,0 +1,31 @@
+{
+  "id": "py-6-oop",
+  "title": "Nesne Yönelimli Programlama (OOP)",
+  "subtopics": [
+    {
+      "id": "6.1",
+      "title": "Sınıf ve Nesne Temelleri",
+      "items": [
+        "class Tanımlama",
+        "__init__ (Constructor) ve self Kavramı",
+        "Instance (Örnek) vs Class (Sınıf) Değişkenleri"
+      ]
+    },
+    {
+      "id": "6.2",
+      "title": "OOP Prensipleri",
+      "items": [
+        "Kalıtım (Inheritance): Alt Sınıflar, super() Kullanımı",
+        "Kapsülleme (Encapsulation): Private/Protected Üyeler (_, __)",
+        "Çok Biçimlilik (Polymorphism): Metot Ezme (Overriding)",
+        "Soyutlama (Abstraction): ABC Modülü ve Abstract Methods"
+      ]
+    },
+    {
+      "id": "6.3",
+      "title": "Magic (Dunder) Metotlar",
+      "items": ["__str__, __repr__, __len__, __add__ vb."]
+    }
+  ],
+  "questions": []
+}

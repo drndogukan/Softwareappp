@@ -1,0 +1,32 @@
+{
+  "id": "py-8-advanced-topics",
+  "title": "İleri Seviye Python Konuları",
+  "subtopics": [
+    {
+      "id": "8.1",
+      "title": "Comprehensions",
+      "items": ["List, Dictionary ve Set Comprehensions"]
+    },
+    {
+      "id": "8.2",
+      "title": "Üreteçler (Generators & Iterators)",
+      "items": ["yield Anahtar Kelimesi", "Iterators ve __next__"]
+    },
+    {
+      "id": "8.3",
+      "title": "Dekoratörler (Decorators)",
+      "items": ["Fonksiyon Sarıcılar", "@property, @staticmethod, @classmethod"]
+    },
+    {
+      "id": "8.4",
+      "title": "Fonksiyonel Araçlar",
+      "items": ["itertools ve functools modülleri"]
+    },
+    {
+      "id": "8.5",
+      "title": "Multithreading ve Multiprocessing",
+      "items": ["Eşzamanlılık ve Paralel Programlama Giriş"]
+    }
+  ],
+  "questions": []
+}

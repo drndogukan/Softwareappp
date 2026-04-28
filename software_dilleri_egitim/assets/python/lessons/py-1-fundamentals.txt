@@ -1,0 +1,40 @@
+### Giriş ve Temel Sözdizimi (Fundamentals)
+
+#### 1.1 Python Dünyasına Giriş
+- Python Kurulumu (CPython, Anaconda, VS Code, PyCharm)
+- Interactive Shell ve Terminal Kullanımı
+- PEP 8 Standartları (Kod Yazım Kuralları)
+
+#### 1.2 Değişkenler ve Veri Tipleri
+- Sayılar: int, float, complex
+- Metinler: str (String)
+- Mantıksal: bool (True, False)
+- Tip Belirleme ve Dönüşümü (Type Casting)
+
+#### 1.3 Operatörler
+- Aritmetik Operatörler (+, -, *, /, //, %, **)
+- Atama Operatörleri (+=, -=, vb.)
+- Karşılaştırma Operatörleri (==, !=, <, >, <=, >=)
+- Mantıksal Operatörler (and, or, not)
+- Aitlik ve Kimlik Operatörleri (in, is)
+
+---
+
+### Python Under the Hood — Mühendislik Notları
+
+#### Bellek Yönetimi
+- **Detay**: Reference Counting & GC
+- **Mühendislik Notu**: Döngüsel referanslar için Garbage Collector devreye girer.
+
+#### Sayı Sınırı
+- **Detay**: Arbitrary Precision
+- **Mühendislik Notu**: 2**1000 işlemini hatasız yapar.
+
+#### Kimlik Kontrolü
+- **Detay**: id(obj) Fonksiyonu
+- **Mühendislik Notu**: Her objenin bellekteki eşsiz adresini verir.
+
+#### Mantıksal Kısalık
+- **Detay**: Short-Circuit Evaluation
+- **Mühendislik Notu**: if func1() or func2(): func1 True ise func2 asla çalışmaz.
+

@@ -1,0 +1,27 @@
+{
+  "id": "py-5-exceptions-files",
+  "title": "Hata Yönetimi ve Dosya İşlemleri",
+  "subtopics": [
+    {
+      "id": "5.1",
+      "title": "İstisnalar (Exceptions)",
+      "items": [
+        "Hata Türleri (SyntaxError, ValueError, TypeError vb.)",
+        "try-except-else-finally Blokları",
+        "Hata Fırlatma (raise)",
+        "Kendi Hata Sınıfını Oluşturma"
+      ]
+    },
+    {
+      "id": "5.2",
+      "title": "Dosya Yönetimi",
+      "items": [
+        "Dosya Açma Modları (r, w, a, rb, wb)",
+        "with open() Kullanımı (Context Managers)",
+        "Okuma/Yazma İşlemleri (read, write, readlines)",
+        "JSON ve CSV Dosyalarıyla Çalışma"
+      ]
+    }
+  ],
+  "questions": []
+}

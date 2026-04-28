@@ -1,0 +1,35 @@
+{
+  "id": "py-3-data-structures",
+  "title": "Veri Yapıları (Data Structures)",
+  "subtopics": [
+    {
+      "id": "3.1",
+      "title": "Listeler (Lists)",
+      "items": [
+        "Listelere Eleman Ekleme/Silme/Güncelleme",
+        "List Slicing (Dilimleme)",
+        "Liste Metotları (append, extend, pop, sort, vb.)"
+      ]
+    },
+    {
+      "id": "3.2",
+      "title": "Demetler (Tuples)",
+      "items": ["Değiştirilemezlik (Immutability) Kavramı", "Tuple Unpacking (Paket Açma)"]
+    },
+    {
+      "id": "3.3",
+      "title": "Sözlükler (Dictionaries)",
+      "items": [
+        "Anahtar-Değer (Key-Value) Mantığı",
+        "Sözlük Metotları (keys, values, items, get)",
+        "İç İçe Sözlükler"
+      ]
+    },
+    {
+      "id": "3.4",
+      "title": "Kümeler (Sets)",
+      "items": ["Benzersiz Elemanlar", "Küme İşlemleri (Kesişim, Birleşim, Fark)"]
+    }
+  ],
+  "questions": []
+}

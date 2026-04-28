@@ -1,0 +1,1195 @@
+<!doctype html>
+<html lang="tr">
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>C Diline Giriş ve C Dilinin Tarihi &#8211; Mustafa Yemural</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Mustafa Yemural &raquo; akışı" href="https://www.mustafayemural.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Mustafa Yemural &raquo; yorum akışı" href="https://www.mustafayemural.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Mustafa Yemural &raquo; C Diline Giriş ve C Dilinin Tarihi yorum akışı" href="https://www.mustafayemural.com/c-my000001/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.mustafayemural.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mustafayemural.com%2Fc-my000001%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.mustafayemural.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mustafayemural.com%2Fc-my000001%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='blocksy-dynamic-global-css' href='https://www.mustafayemural.com/wp-content/uploads/blocksy/css/global.css?ver=69414' media='all' />
+<style id='wp-block-library-inline-css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<link rel='stylesheet' id='github-repo-card-block-style-css' href='https://www.mustafayemural.com/wp-content/plugins/GitHub-Repo-Card-Block-main/style.css?ver=1.2.2' media='all' />
+<link rel='stylesheet' id='fontawesome-free-css' href='https://www.mustafayemural.com/wp-content/plugins/getwid/vendors/fontawesome-free/css/all.min.css?ver=5.5.0' media='all' />
+<link rel='stylesheet' id='slick-css' href='https://www.mustafayemural.com/wp-content/plugins/getwid/vendors/slick/slick/slick.min.css?ver=1.9.0' media='all' />
+<link rel='stylesheet' id='slick-theme-css' href='https://www.mustafayemural.com/wp-content/plugins/getwid/vendors/slick/slick/slick-theme.min.css?ver=1.9.0' media='all' />
+<link rel='stylesheet' id='mp-fancybox-css' href='https://www.mustafayemural.com/wp-content/plugins/getwid/vendors/mp-fancybox/jquery.fancybox.min.css?ver=3.5.7-mp.1' media='all' />
+<link rel='stylesheet' id='getwid-blocks-css' href='https://www.mustafayemural.com/wp-content/plugins/getwid/assets/css/blocks.style.css?ver=2.1.3' media='all' />
+<style id='getwid-blocks-inline-css'>
+.wp-block-getwid-section .wp-block-getwid-section__wrapper .wp-block-getwid-section__inner-wrapper{max-width: 1300px;}
+/*# sourceURL=getwid-blocks-inline-css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--palette-color-1: var(--theme-palette-color-1, #007f5f);--wp--preset--color--palette-color-2: var(--theme-palette-color-2, #55a630);--wp--preset--color--palette-color-3: var(--theme-palette-color-3, #365951);--wp--preset--color--palette-color-4: var(--theme-palette-color-4, #192c27);--wp--preset--color--palette-color-5: var(--theme-palette-color-5, #E6F0EE);--wp--preset--color--palette-color-6: var(--theme-palette-color-6, #F2F7F6);--wp--preset--color--palette-color-7: var(--theme-palette-color-7, #FBFCFC);--wp--preset--color--palette-color-8: var(--theme-palette-color-8, #ffffff);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--juicy-peach: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);--wp--preset--gradient--young-passion: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);--wp--preset--gradient--true-sunset: linear-gradient(to right, #fa709a 0%, #fee140 100%);--wp--preset--gradient--morpheus-den: linear-gradient(to top, #30cfd0 0%, #330867 100%);--wp--preset--gradient--plum-plate: linear-gradient(135deg, #667eea 0%, #764ba2 100%);--wp--preset--gradient--aqua-splash: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);--wp--preset--gradient--love-kiss: linear-gradient(to top, #ff0844 0%, #ffb199 100%);--wp--preset--gradient--new-retrowave: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);--wp--preset--gradient--plum-bath: linear-gradient(to top, #cc208e 0%, #6713d2 100%);--wp--preset--gradient--high-flight: linear-gradient(to right, #0acffe 0%, #495aff 100%);--wp--preset--gradient--teen-party: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);--wp--preset--gradient--fabled-sunset: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);--wp--preset--gradient--arielle-smile: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);--wp--preset--gradient--itmeo-branding: linear-gradient(180deg, #2af598 0%, #009efd 100%);--wp--preset--gradient--deep-blue: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);--wp--preset--gradient--strong-bliss: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);--wp--preset--gradient--sweet-period: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);--wp--preset--gradient--purple-division: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);--wp--preset--gradient--cold-evening: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);--wp--preset--gradient--mountain-rock: linear-gradient(to right, #868f96 0%, #596164 100%);--wp--preset--gradient--desert-hump: linear-gradient(to top, #c79081 0%, #dfa579 100%);--wp--preset--gradient--ethernal-constance: linear-gradient(to top, #09203f 0%, #537895 100%);--wp--preset--gradient--happy-memories: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);--wp--preset--gradient--grown-early: linear-gradient(to top, #0ba360 0%, #3cba92 100%);--wp--preset--gradient--morning-salad: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);--wp--preset--gradient--night-call: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);--wp--preset--gradient--mind-crawl: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);--wp--preset--gradient--angel-care: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);--wp--preset--gradient--juicy-cake: linear-gradient(to top, #e14fad 0%, #f9d423 100%);--wp--preset--gradient--rich-metal: linear-gradient(to right, #d7d2cc 0%, #304352 100%);--wp--preset--gradient--mole-hall: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);--wp--preset--gradient--cloudy-knoxville: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);--wp--preset--gradient--soft-grass: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);--wp--preset--gradient--saint-petersburg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);--wp--preset--gradient--everlasting-sky: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);--wp--preset--gradient--kind-steel: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);--wp--preset--gradient--over-sun: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);--wp--preset--gradient--premium-white: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);--wp--preset--gradient--clean-mirror: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);--wp--preset--gradient--wild-apple: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);--wp--preset--gradient--snow-again: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);--wp--preset--gradient--confident-cloud: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);--wp--preset--gradient--glass-water: linear-gradient(to top, #dfe9f3 0%, white 100%);--wp--preset--gradient--perfect-white: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: clamp(22px, 1.375rem + ((1vw - 3.2px) * 0.625), 30px);--wp--preset--font-size--x-large: clamp(30px, 1.875rem + ((1vw - 3.2px) * 1.563), 50px);--wp--preset--font-size--xx-large: clamp(45px, 2.813rem + ((1vw - 3.2px) * 2.734), 80px);--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: var(--theme-block-max-width);--wp--style--global--wide-size: var(--theme-block-wide-max-width); }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: var(--theme-content-spacing); margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: var(--theme-content-spacing); }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: var(--theme-content-spacing);margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: var(--theme-content-spacing);margin-block-end: 0;}:root :where(.is-layout-flex){gap: var(--theme-content-spacing);}:root :where(.is-layout-grid){gap: var(--theme-content-spacing);}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){font-style: inherit;font-weight: inherit;letter-spacing: inherit;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-palette-color-1-color{color: var(--wp--preset--color--palette-color-1) !important;}.has-palette-color-2-color{color: var(--wp--preset--color--palette-color-2) !important;}.has-palette-color-3-color{color: var(--wp--preset--color--palette-color-3) !important;}.has-palette-color-4-color{color: var(--wp--preset--color--palette-color-4) !important;}.has-palette-color-5-color{color: var(--wp--preset--color--palette-color-5) !important;}.has-palette-color-6-color{color: var(--wp--preset--color--palette-color-6) !important;}.has-palette-color-7-color{color: var(--wp--preset--color--palette-color-7) !important;}.has-palette-color-8-color{color: var(--wp--preset--color--palette-color-8) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-palette-color-1-background-color{background-color: var(--wp--preset--color--palette-color-1) !important;}.has-palette-color-2-background-color{background-color: var(--wp--preset--color--palette-color-2) !important;}.has-palette-color-3-background-color{background-color: var(--wp--preset--color--palette-color-3) !important;}.has-palette-color-4-background-color{background-color: var(--wp--preset--color--palette-color-4) !important;}.has-palette-color-5-background-color{background-color: var(--wp--preset--color--palette-color-5) !important;}.has-palette-color-6-background-color{background-color: var(--wp--preset--color--palette-color-6) !important;}.has-palette-color-7-background-color{background-color: var(--wp--preset--color--palette-color-7) !important;}.has-palette-color-8-background-color{background-color: var(--wp--preset--color--palette-color-8) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-palette-color-1-border-color{border-color: var(--wp--preset--color--palette-color-1) !important;}.has-palette-color-2-border-color{border-color: var(--wp--preset--color--palette-color-2) !important;}.has-palette-color-3-border-color{border-color: var(--wp--preset--color--palette-color-3) !important;}.has-palette-color-4-border-color{border-color: var(--wp--preset--color--palette-color-4) !important;}.has-palette-color-5-border-color{border-color: var(--wp--preset--color--palette-color-5) !important;}.has-palette-color-6-border-color{border-color: var(--wp--preset--color--palette-color-6) !important;}.has-palette-color-7-border-color{border-color: var(--wp--preset--color--palette-color-7) !important;}.has-palette-color-8-border-color{border-color: var(--wp--preset--color--palette-color-8) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-juicy-peach-gradient-background{background: var(--wp--preset--gradient--juicy-peach) !important;}.has-young-passion-gradient-background{background: var(--wp--preset--gradient--young-passion) !important;}.has-true-sunset-gradient-background{background: var(--wp--preset--gradient--true-sunset) !important;}.has-morpheus-den-gradient-background{background: var(--wp--preset--gradient--morpheus-den) !important;}.has-plum-plate-gradient-background{background: var(--wp--preset--gradient--plum-plate) !important;}.has-aqua-splash-gradient-background{background: var(--wp--preset--gradient--aqua-splash) !important;}.has-love-kiss-gradient-background{background: var(--wp--preset--gradient--love-kiss) !important;}.has-new-retrowave-gradient-background{background: var(--wp--preset--gradient--new-retrowave) !important;}.has-plum-bath-gradient-background{background: var(--wp--preset--gradient--plum-bath) !important;}.has-high-flight-gradient-background{background: var(--wp--preset--gradient--high-flight) !important;}.has-teen-party-gradient-background{background: var(--wp--preset--gradient--teen-party) !important;}.has-fabled-sunset-gradient-background{background: var(--wp--preset--gradient--fabled-sunset) !important;}.has-arielle-smile-gradient-background{background: var(--wp--preset--gradient--arielle-smile) !important;}.has-itmeo-branding-gradient-background{background: var(--wp--preset--gradient--itmeo-branding) !important;}.has-deep-blue-gradient-background{background: var(--wp--preset--gradient--deep-blue) !important;}.has-strong-bliss-gradient-background{background: var(--wp--preset--gradient--strong-bliss) !important;}.has-sweet-period-gradient-background{background: var(--wp--preset--gradient--sweet-period) !important;}.has-purple-division-gradient-background{background: var(--wp--preset--gradient--purple-division) !important;}.has-cold-evening-gradient-background{background: var(--wp--preset--gradient--cold-evening) !important;}.has-mountain-rock-gradient-background{background: var(--wp--preset--gradient--mountain-rock) !important;}.has-desert-hump-gradient-background{background: var(--wp--preset--gradient--desert-hump) !important;}.has-ethernal-constance-gradient-background{background: var(--wp--preset--gradient--ethernal-constance) !important;}.has-happy-memories-gradient-background{background: var(--wp--preset--gradient--happy-memories) !important;}.has-grown-early-gradient-background{background: var(--wp--preset--gradient--grown-early) !important;}.has-morning-salad-gradient-background{background: var(--wp--preset--gradient--morning-salad) !important;}.has-night-call-gradient-background{background: var(--wp--preset--gradient--night-call) !important;}.has-mind-crawl-gradient-background{background: var(--wp--preset--gradient--mind-crawl) !important;}.has-angel-care-gradient-background{background: var(--wp--preset--gradient--angel-care) !important;}.has-juicy-cake-gradient-background{background: var(--wp--preset--gradient--juicy-cake) !important;}.has-rich-metal-gradient-background{background: var(--wp--preset--gradient--rich-metal) !important;}.has-mole-hall-gradient-background{background: var(--wp--preset--gradient--mole-hall) !important;}.has-cloudy-knoxville-gradient-background{background: var(--wp--preset--gradient--cloudy-knoxville) !important;}.has-soft-grass-gradient-background{background: var(--wp--preset--gradient--soft-grass) !important;}.has-saint-petersburg-gradient-background{background: var(--wp--preset--gradient--saint-petersburg) !important;}.has-everlasting-sky-gradient-background{background: var(--wp--preset--gradient--everlasting-sky) !important;}.has-kind-steel-gradient-background{background: var(--wp--preset--gradient--kind-steel) !important;}.has-over-sun-gradient-background{background: var(--wp--preset--gradient--over-sun) !important;}.has-premium-white-gradient-background{background: var(--wp--preset--gradient--premium-white) !important;}.has-clean-mirror-gradient-background{background: var(--wp--preset--gradient--clean-mirror) !important;}.has-wild-apple-gradient-background{background: var(--wp--preset--gradient--wild-apple) !important;}.has-snow-again-gradient-background{background: var(--wp--preset--gradient--snow-again) !important;}.has-confident-cloud-gradient-background{background: var(--wp--preset--gradient--confident-cloud) !important;}.has-glass-water-gradient-background{background: var(--wp--preset--gradient--glass-water) !important;}.has-perfect-white-gradient-background{background: var(--wp--preset--gradient--perfect-white) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-xx-large-font-size{font-size: var(--wp--preset--font-size--xx-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='post_hit_counter-frontend-css' href='https://www.mustafayemural.com/wp-content/plugins/post-hit-counter/assets/css/frontend.css?ver=1.3.2' media='all' />
+<link rel='stylesheet' id='ub-extension-style-css-css' href='https://www.mustafayemural.com/wp-content/plugins/ultimate-blocks/src/extensions/style.css?ver=6.9.4' media='all' />
+<style id='md-style-inline-css'>
+ .katex-container { margin: 25px !important; text-align: center; } .katex-container.katex-inline { display: inline-block !important; background: none !important; margin: 0 !important; padding: 0 !important; } pre .katex-container { font-size: 1.4em !important; } .katex-inline { background: none !important; margin: 0 3px; } code.kb-btn { display: inline-block; color: #666; font: bold 9pt arial; text-decoration: none; text-align: center; padding: 2px 5px; margin: 0 5px; background: #eff0f2; -moz-border-radius: 4px; border-radius: 4px; border-top: 1px solid #f5f5f5; -webkit-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9, 0 1px 2px #333; -moz-box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9, 0 1px 2px #333; box-shadow: inset 0 0 20px #e8e8e8, 0 1px 0 #c3c3c3, 0 1px 0 #c9c9c9, 0 1px 2px #333; text-shadow: 0px 1px 0px #f5f5f5; } 
+/*# sourceURL=md-style-inline-css */
+</style>
+<link rel='stylesheet' id='eztoc-css' href='https://www.mustafayemural.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css?ver=2.0.82.2' media='all' />
+<style id='eztoc-inline-css'>
+div#ez-toc-container .ez-toc-title {font-size: 100%;}div#ez-toc-container .ez-toc-title {font-weight: 500;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-size: 95%;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}div#ez-toc-container {background: #878787;border: 1px solid #ddd;width: 100%;}div#ez-toc-container p.ez-toc-title , #ez-toc-container .ez_toc_custom_title_icon , #ez-toc-container .ez_toc_custom_toc_icon {color: #999;}div#ez-toc-container ul.ez-toc-list a {color: #428bca;}div#ez-toc-container ul.ez-toc-list a:hover {color: #2a6496;}div#ez-toc-container ul.ez-toc-list a:visited {color: #428bca;}.ez-toc-counter nav ul li a::before {color: ;}.ez-toc-box-title {font-weight: bold; margin-bottom: 10px; text-align: center; text-transform: uppercase; letter-spacing: 1px; color: #666; padding-bottom: 5px;position:absolute;top:-4%;left:5%;background-color: inherit;transition: top 0.3s ease;}.ez-toc-box-title.toc-closed {top:-25%;}
+.ez-toc-container-direction {direction: ltr;}.ez-toc-counter ul {direction: ltr;counter-reset: item ;}.ez-toc-counter nav ul li a::before {content: counter(item, disc) '  ';margin-right: .2em; counter-increment: item;flex-grow: 0;flex-shrink: 0;float: left; }.ez-toc-widget-direction {direction: ltr;}.ez-toc-widget-container ul {direction: ltr;counter-reset: item ;}.ez-toc-widget-container nav ul li a::before {content: counter(item, disc) '  ';margin-right: .2em; counter-increment: item;flex-grow: 0;flex-shrink: 0;float: left; }
+/*# sourceURL=eztoc-inline-css */
+</style>
+<link rel='stylesheet' id='blocksy-fonts-font-source-google-css' href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&#038;display=swap' media='all' />
+<link rel='stylesheet' id='ct-main-styles-css' href='https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/main.min.css?ver=2.1.38' media='all' />
+<link rel='stylesheet' id='ct-page-title-styles-css' href='https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/page-title.min.css?ver=2.1.38' media='all' />
+<link rel='stylesheet' id='ct-sidebar-styles-css' href='https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/sidebar.min.css?ver=2.1.38' media='all' />
+<link rel='stylesheet' id='ct-comments-styles-css' href='https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/comments.min.css?ver=2.1.38' media='all' />
+<link rel='stylesheet' id='ct-getwid-styles-css' href='https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/getwid.min.css?ver=2.1.38' media='all' />
+<link rel='stylesheet' id='ct-related-posts-styles-css' href='https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/related-posts.min.css?ver=2.1.38' media='all' />
+<link rel='stylesheet' id='post_hit_counter-widget-css' href='https://www.mustafayemural.com/wp-content/plugins/post-hit-counter/assets/css/widget.css?ver=1.3.2' media='all' />
+<link rel='stylesheet' id='wpdiscuz-frontend-css-css' href='https://www.mustafayemural.com/wp-content/plugins/wpdiscuz/themes/default/style.css?ver=7.6.54' media='all' />
+<style id='wpdiscuz-frontend-css-inline-css'>
+ #wpdcom .wpd-blog-administrator .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-administrator .wpd-comment-author, #wpdcom .wpd-blog-administrator .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-administrator .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-administrator{border-left:3px solid #00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-administrator .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-administrator .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-administrator .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-editor .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-editor .wpd-comment-author, #wpdcom .wpd-blog-editor .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-editor .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-editor{border-left:3px solid #00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-editor .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-editor .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-editor .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-author .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-author .wpd-comment-author, #wpdcom .wpd-blog-author .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-author .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-author .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-author .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-author .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-contributor .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-contributor .wpd-comment-author, #wpdcom .wpd-blog-contributor .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-contributor .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-contributor .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-contributor .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-contributor .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-subscriber .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-subscriber .wpd-comment-author, #wpdcom .wpd-blog-subscriber .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-subscriber .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-subscriber .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom .wpd-blog-post_author .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-post_author .wpd-comment-author, #wpdcom .wpd-blog-post_author .wpd-comment-author a{color:#00B38F}#wpdcom .wpd-blog-post_author .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-post_author .wpd-avatar img{border-color:#00B38F}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply .wpd-comment-wrap.wpd-blog-post_author{border-left:3px solid #00B38F}#wpdcom.wpd-layout-2 .wpd-comment .wpd-blog-post_author .wpd-avatar img{border-bottom-color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-post_author .wpd-comment-subheader{border-top:1px dashed #00B38F}#wpdcom.wpd-layout-3 .wpd-reply .wpd-blog-post_author .wpd-comment-right{border-left:1px solid #00B38F}#wpdcom .wpd-blog-guest .wpd-comment-label{color:#ffffff;background-color:#00B38F;border:none}#wpdcom .wpd-blog-guest .wpd-comment-author, #wpdcom .wpd-blog-guest .wpd-comment-author a{color:#00B38F}#wpdcom.wpd-layout-3 .wpd-blog-guest .wpd-comment-subheader{border-top:1px dashed #00B38F}#comments, #respond, .comments-area, #wpdcom.wpd-dark{background:#111111;color:#CCCCCC}#wpdcom .ql-editor > *{color:#000000}#wpdcom .ql-editor::before{opacity:1;color:#DDDDDD}#wpdcom .ql-toolbar{border:1px solid #D1D1D1;border-top:none}#wpdcom .ql-container{background:#999999;border:1px solid #D1D1D1;border-bottom:none}#wpdcom .wpd-form-row .wpdiscuz-item input[type="text"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="email"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="url"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="color"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="date"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="datetime"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="datetime-local"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="month"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="number"], #wpdcom .wpd-form-row .wpdiscuz-item input[type="time"], #wpdcom textarea, #wpdcom select{background:#999999;border:1px solid #D1D1D1;color:#000000}#wpdcom.wpd-dark .wpdiscuz-item.wpd-field-select select.wpdiscuz_select, #wpdcom.wpd-dark select{background:#999999!important;border:1px solid #D1D1D1!important;color:#000000!important}#wpdcom .wpd-form-row .wpdiscuz-item textarea{border:1px solid #D1D1D1}#wpdcom input::placeholder, #wpdcom textarea::placeholder, #wpdcom input::-moz-placeholder, #wpdcom textarea::-webkit-input-placeholder{opacity:1;color:#DDDDDD}#wpdcom .wpd-comment-text{color:#CCCCCC}.lity-wrap .wpd-item a{color:#666}.lity-wrap .wpd-item a:hover{color:#222}.wpd-inline-shortcode.wpd-active{background-color:#666}#wpdcom .wpd-thread-head .wpd-thread-info{border-bottom:2px solid #00B38F}#wpdcom .wpd-thread-head .wpd-thread-info.wpd-reviews-tab svg{fill:#00B38F}#wpdcom .wpd-thread-head .wpdiscuz-user-settings{border-bottom:2px solid #00B38F}#wpdcom .wpd-thread-head .wpdiscuz-user-settings:hover{color:#00B38F}#wpdcom .wpd-comment .wpd-follow-link:hover{color:#00B38F}#wpdcom .wpd-comment-status .wpd-sticky{color:#00B38F}#wpdcom .wpd-thread-filter .wpdf-active{color:#00B38F;border-bottom-color:#00B38F}#wpdcom .wpd-comment-info-bar{border:1px dashed #33c3a6;background:#e6f8f4}#wpdcom .wpd-comment-info-bar .wpd-current-view i{color:#00B38F}#wpdcom .wpd-filter-view-all:hover{background:#00B38F}#wpdcom .wpdiscuz-item .wpdiscuz-rating > label{color:#DDDDDD}#wpdcom .wpdiscuz-item .wpdiscuz-rating:not(:checked) > label:hover, .wpdiscuz-rating:not(:checked) > label:hover ~ label{}#wpdcom .wpdiscuz-item .wpdiscuz-rating > input ~ label:hover, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label{color:#FFED85}#wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover, #wpdcom .wpdiscuz-item .wpdiscuz-rating > label:hover ~ input:checked ~ label, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked + label:hover ~ label, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover ~ label, .wpd-custom-field .wcf-active-star, #wpdcom .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label{color:#FFD700}#wpd-post-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-star{fill:#DDDDDD}#wpd-post-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-active{fill:#FFD700}#wpd-post-rating .wpd-rating-wrap .wpd-rate-starts svg .wpd-star{fill:#DDDDDD}#wpd-post-rating .wpd-rating-wrap .wpd-rate-starts:hover svg .wpd-star{fill:#FFED85}#wpd-post-rating.wpd-not-rated .wpd-rating-wrap .wpd-rate-starts svg:hover ~ svg .wpd-star{fill:#DDDDDD}.wpdiscuz-post-rating-wrap .wpd-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-star{fill:#DDDDDD}.wpdiscuz-post-rating-wrap .wpd-rating .wpd-rating-wrap .wpd-rating-stars svg .wpd-active{fill:#FFD700}#wpdcom .wpd-comment .wpd-follow-active{color:#ff7a00}#wpdcom .page-numbers{color:#555;border:#555 1px solid}#wpdcom span.current{background:#555}#wpdcom.wpd-layout-1 .wpd-new-loaded-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6}#wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6}#wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment.wpd-reply > .wpd-comment-wrap > .wpd-comment-right{background:transparent}#wpdcom.wpd-layout-2 .wpd-new-loaded-comment.wpd-comment.wpd-reply > .wpd-comment-wrap{background:#FFFAD6}#wpdcom.wpd-layout-3 .wpd-new-loaded-comment.wpd-comment > .wpd-comment-wrap > .wpd-comment-right{background:#FFFAD6}#wpdcom .wpd-follow:hover i, #wpdcom .wpd-unfollow:hover i, #wpdcom .wpd-comment .wpd-follow-active:hover i{color:#00B38F}#wpdcom .wpdiscuz-readmore{cursor:pointer;color:#00B38F}.wpd-custom-field .wcf-pasiv-star, #wpcomm .wpdiscuz-item .wpdiscuz-rating > label{color:#DDDDDD}.wpd-wrapper .wpd-list-item.wpd-active{border-top:3px solid #00B38F}#wpdcom.wpd-layout-2 .wpd-comment.wpd-reply.wpd-unapproved-comment .wpd-comment-wrap{border-left:3px solid #FFFAD6}#wpdcom.wpd-layout-3 .wpd-comment.wpd-reply.wpd-unapproved-comment .wpd-comment-right{border-left:1px solid #FFFAD6}#wpdcom .wpd-prim-button{background-color:#07B290;color:#FFFFFF}#wpdcom .wpd_label__check i.wpdicon-on{color:#07B290;border:1px solid #83d9c8}#wpd-bubble-wrapper #wpd-bubble-all-comments-count{color:#1DB99A}#wpd-bubble-wrapper > div{background-color:#1DB99A}#wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message{background-color:#1DB99A}#wpd-bubble-wrapper > #wpd-bubble #wpd-bubble-add-message::before{border-left-color:#1DB99A;border-right-color:#1DB99A}#wpd-bubble-wrapper.wpd-right-corner > #wpd-bubble #wpd-bubble-add-message::before{border-left-color:#1DB99A;border-right-color:#1DB99A}.wpd-inline-icon-wrapper path.wpd-inline-icon-first{fill:#1DB99A}.wpd-inline-icon-count{background-color:#1DB99A}.wpd-inline-icon-count::before{border-right-color:#1DB99A}.wpd-inline-form-wrapper::before{border-bottom-color:#1DB99A}.wpd-inline-form-question{background-color:#1DB99A}.wpd-inline-form{background-color:#1DB99A}.wpd-last-inline-comments-wrapper{border-color:#1DB99A}.wpd-last-inline-comments-wrapper::before{border-bottom-color:#1DB99A}.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments{background:#1DB99A}.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:hover,.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:active,.wpd-last-inline-comments-wrapper .wpd-view-all-inline-comments:focus{background-color:#1DB99A}#wpdcom .ql-snow .ql-tooltip[data-mode="link"]::before{content:"Enter link:"}#wpdcom .ql-snow .ql-tooltip.ql-editing a.ql-action::after{content:"Kaydet"}.comments-area{width:auto}
+/*# sourceURL=wpdiscuz-frontend-css-inline-css */
+</style>
+<link rel='stylesheet' id='wpdiscuz-fa-css' href='https://www.mustafayemural.com/wp-content/plugins/wpdiscuz/assets/third-party/font-awesome-5.13.0/css/fa.min.css?ver=7.6.54' media='all' />
+<link rel='stylesheet' id='wpdiscuz-combo-css-css' href='https://www.mustafayemural.com/wp-content/plugins/wpdiscuz/assets/css/wpdiscuz-combo.min.css?ver=6.9.4' media='all' />
+<link rel='stylesheet' id='wp-featherlight-css' href='https://www.mustafayemural.com/wp-content/plugins/wp-featherlight/css/wp-featherlight.min.css?ver=1.3.4' media='all' />
+<link rel='stylesheet' id='enlighterjs-css' href='https://www.mustafayemural.com/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=iJpADcYe187j3HO' media='all' />
+<script src="https://www.mustafayemural.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://www.mustafayemural.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.mustafayemural.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.mustafayemural.com/wp-json/wp/v2/posts/86" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.mustafayemural.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.4" />
+<link rel="canonical" href="https://www.mustafayemural.com/c-my000001/" />
+<link rel='shortlink' href='https://www.mustafayemural.com/?p=86' />
+<noscript><link rel='stylesheet' href='https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/no-scripts.min.css' type='text/css'></noscript>
+<link rel="icon" href="https://www.mustafayemural.com/wp-content/uploads/2025/05/cropped-my_logo_256_256-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.mustafayemural.com/wp-content/uploads/2025/05/cropped-my_logo_256_256-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.mustafayemural.com/wp-content/uploads/2025/05/cropped-my_logo_256_256-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.mustafayemural.com/wp-content/uploads/2025/05/cropped-my_logo_256_256-270x270.png" />
+		<style id="wp-custom-css">
+			.entry-content a {
+	font-weight: 600;
+	transition: color 750ms;
+	text-decoration: none;
+}
+
+.entry-content a:hover {
+	text-decoration: underline;
+}
+
+.entry-content li>code {
+	color: #f5f5f5;
+	background-color: #333333;
+	padding: 0px 5px;
+	border: 1px solid #333333;
+	border-radius: 5px;
+  font-family: monospace;
+}
+
+p>code {
+	color: #f5f5f5;
+	background-color: #333333;
+	padding: 0px 5px;
+	border: 1px solid #333333;
+	border-radius: 5px;
+  font-family: monospace;
+}
+
+span.inline-kw {
+	color: #f5f5f5;
+	background-color: #333333;
+	padding: 0px 5px;
+	border: 1px solid #333333;
+	border-radius: 5px;
+  font-family: monospace;
+}
+
+span.inline-id {
+	font-family: "Inconsolata";
+	font-style: italic;
+	padding: 0px 5px;
+}
+
+.output-panel {
+	margin-bottom: 25px !important;
+	background-color: #f4f4f4;
+	border: 2px solid #222233;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,.2);
+	box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+
+.output-panel-body {
+	color: #000000;
+	background-color: #f4f4f4;
+	font-size: 16px;
+	font-family: "Courier New";
+	overflow: hidden;
+	text-align: left;
+	font-style: italic;
+	padding: 15px;
+}
+
+.output-panel-header {
+	background-color: #222233;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	font-family: "Courier New";
+	padding: 10px 15px;
+	font-weight: bold;
+	content: "FDF";
+}
+
+.generic-table{
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #111;
+}
+
+.generic-table tr:nth-child(even) 
+{
+	background-color: #323C50;
+}
+
+.generic-table tr:nth-child(odd) 
+{
+	background-color: #2C3446;
+}
+
+.generic-table th{
+	border: 1px solid #111;
+	padding: 4px 15px;
+	color: #FB667A;
+	background-color: #222233;
+	border: 1px solid #111;
+}
+
+.generic-table td{
+	border: 1px solid #111;
+	padding: 4px 15px;
+	color: #ffffff;
+	border: 1px solid #111;
+}
+
+.generic-table thead>tr>th{
+ 	text-align: center;
+}
+
+.generic-table tbody>tr>td {
+	text-align: center;
+}
+
+kbd {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.1em 0.5em;
+    margin: 0 0.1em;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    background-color: #f7f7f7;
+}
+
+.github-repo-card {
+  background-color: #111111;
+}
+
+.github-repo-card .repo-stat .stat-icon {
+	filter: invert(90%);
+}		</style>
+			</head>
+
+
+<body class="wp-singular post-template-default single single-post postid-86 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-blocksy wp-featherlight-captions" data-link="type-2" data-prefix="single_blog_post" data-header="type-1" data-footer="type-1" itemscope="itemscope" itemtype="https://schema.org/Blog">
+
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a><div class="ct-drawer-canvas" data-location="start">
+		<div id="search-modal" class="ct-panel" data-behaviour="modal" role="dialog" aria-label="Search modal" inert>
+			<div class="ct-panel-actions">
+				<button class="ct-toggle-close" data-type="type-1" aria-label="Close search modal">
+					<svg class="ct-icon" width="12" height="12" viewBox="0 0 15 15"><path d="M1 15a1 1 0 01-.71-.29 1 1 0 010-1.41l5.8-5.8-5.8-5.8A1 1 0 011.7.29l5.8 5.8 5.8-5.8a1 1 0 011.41 1.41l-5.8 5.8 5.8 5.8a1 1 0 01-1.41 1.41l-5.8-5.8-5.8 5.8A1 1 0 011 15z"/></svg>				</button>
+			</div>
+
+			<div class="ct-panel-content">
+				
+
+<form role="search" method="get" class="ct-search-form"  action="https://www.mustafayemural.com/" aria-haspopup="listbox" data-live-results="thumbs">
+
+	<input
+		type="search" class="modal-field"		placeholder="Search"
+		value=""
+		name="s"
+		autocomplete="off"
+		title="Search for..."
+		aria-label="Search for..."
+			>
+
+	<div class="ct-search-form-controls">
+		
+		<button type="submit" class="wp-element-button" data-button="icon" aria-label="Search button">
+			<svg class="ct-icon ct-search-button-content" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15"><path d="M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z"/></svg>
+			<span class="ct-ajax-loader">
+				<svg viewBox="0 0 24 24">
+					<circle cx="12" cy="12" r="10" opacity="0.2" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2"/>
+
+					<path d="m12,2c5.52,0,10,4.48,10,10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+						<animateTransform
+							attributeName="transform"
+							attributeType="XML"
+							type="rotate"
+							dur="0.6s"
+							from="0 12 12"
+							to="360 12 12"
+							repeatCount="indefinite"
+						/>
+					</path>
+				</svg>
+			</span>
+		</button>
+
+		
+					<input type="hidden" name="ct_post_type" value="post:page">
+		
+		
+
+			</div>
+
+			<div class="screen-reader-text" aria-live="polite" role="status">
+			No results		</div>
+	
+</form>
+
+
+			</div>
+		</div>
+
+		<div id="offcanvas" class="ct-panel ct-header" data-behaviour="right-side" role="dialog" aria-label="Offcanvas modal" inert=""><div class="ct-panel-inner">
+				<div class="ct-panel-actions">
+					
+					
+				<button class="ct-toggle-close" data-type="type-1" aria-label="Close drawer">
+					<svg class="ct-icon" width="12" height="12" viewBox="0 0 15 15"><path d="M1 15a1 1 0 01-.71-.29 1 1 0 010-1.41l5.8-5.8-5.8-5.8A1 1 0 011.7.29l5.8 5.8 5.8-5.8a1 1 0 011.41 1.41l-5.8 5.8 5.8 5.8a1 1 0 01-1.41 1.41l-5.8-5.8-5.8 5.8A1 1 0 011 15z"/></svg>
+				</button>
+			
+				</div>
+			<div class="ct-panel-content" data-device="desktop"><div class="ct-panel-content-inner"></div></div><div class="ct-panel-content" data-device="mobile"><div class="ct-panel-content-inner">
+<nav
+	class="mobile-menu menu-container"
+	data-id="mobile-menu" data-interaction="click" data-toggle-type="type-1" data-submenu-dots="yes"	>
+
+	<ul><li class="page_item page-item-2393"><a href="https://www.mustafayemural.com/cmake-egitimi/" class="ct-menu-link">CMake Eğitimi</a></li><li class="page_item page-item-3190"><a href="https://www.mustafayemural.com/docker-egitimi/" class="ct-menu-link">Docker Eğitimi</a></li><li class="page_item page-item-76"><a href="https://www.mustafayemural.com/hakkinda/" class="ct-menu-link">HAKKINDA</a></li><li class="page_item page-item-1412"><a href="https://www.mustafayemural.com/programlama-sozlugu/" class="ct-menu-link">Programlama Sözlüğü</a></li><li class="page_item page-item-592"><a href="https://www.mustafayemural.com/projeler/" class="ct-menu-link">PROJELER</a></li><li class="page_item page-item-2277"><a href="https://www.mustafayemural.com/qt-egitimi/" class="ct-menu-link">Qt Eğitimi</a></li><li class="page_item page-item-109"><a href="https://www.mustafayemural.com/temel-c-egitimi/" class="ct-menu-link">Temel C Eğitimi</a></li><li class="page_item page-item-119"><a href="https://www.mustafayemural.com/temel-cpp-egitimi/" class="ct-menu-link">Temel C++ Eğitimi</a></li><li class="page_item page-item-331"><a href="https://www.mustafayemural.com/uml-egitimi/" class="ct-menu-link">UML Eğitimi</a></li></ul></nav>
+
+</div></div></div></div></div>
+<div id="main-container">
+	<header id="header" class="ct-header" data-id="type-1" itemscope="" itemtype="https://schema.org/WPHeader"><div data-device="desktop"><div data-row="top" data-column-set="2"><div class="ct-container-fluid"><div data-column="start" data-placements="1"><div data-items="primary">
+<div	class="site-branding"
+	data-id="logo"		itemscope="itemscope" itemtype="https://schema.org/Organization">
+
+			<a href="https://www.mustafayemural.com/" class="site-logo-container" rel="home" itemprop="url" ><img width="256" height="256" src="https://www.mustafayemural.com/wp-content/uploads/2025/05/my_logo_256_256.png" class="default-logo" alt="Mustafa Yemural" decoding="async" fetchpriority="high" srcset="https://www.mustafayemural.com/wp-content/uploads/2025/05/my_logo_256_256.png 256w, https://www.mustafayemural.com/wp-content/uploads/2025/05/my_logo_256_256-150x150.png 150w" sizes="(max-width: 256px) 100vw, 256px" /></a>	
+	</div>
+
+
+<div
+	class="ct-header-socials "
+	data-id="socials">
+
+	
+		<div class="ct-social-box" data-color="custom" data-icon-size="custom" data-icons-type="rounded:solid" >
+			
+			
+							
+				<a href="https://www.linkedin.com/in/mustafa-yemural/" data-network="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+					<span class="ct-icon-container">
+					<svg
+					width="20px"
+					height="20px"
+					viewBox="0 0 20 20"
+					aria-hidden="true">
+						<path d="M18.6,0H1.4C0.6,0,0,0.6,0,1.4v17.1C0,19.4,0.6,20,1.4,20h17.1c0.8,0,1.4-0.6,1.4-1.4V1.4C20,0.6,19.4,0,18.6,0z M6,17.1h-3V7.6h3L6,17.1L6,17.1zM4.6,6.3c-1,0-1.7-0.8-1.7-1.7s0.8-1.7,1.7-1.7c0.9,0,1.7,0.8,1.7,1.7C6.3,5.5,5.5,6.3,4.6,6.3z M17.2,17.1h-3v-4.6c0-1.1,0-2.5-1.5-2.5c-1.5,0-1.8,1.2-1.8,2.5v4.7h-3V7.6h2.8v1.3h0c0.4-0.8,1.4-1.5,2.8-1.5c3,0,3.6,2,3.6,4.5V17.1z"/>
+					</svg>
+				</span>				</a>
+							
+				<a href="https://github.com/myemural" data-network="github" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+					<span class="ct-icon-container">
+					<svg
+					width="20"
+					height="20"
+					viewBox="0 0 20 20"
+					aria-hidden="true">
+						<path d="M8.9,0.4C4.3,0.9,0.6,4.6,0.1,9.1c-0.5,4.7,2.2,8.9,6.3,10.5C6.7,19.7,7,19.5,7,19.1v-1.6c0,0-0.4,0.1-0.9,0.1c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C3.1,14.6,3,14.6,3,14.5c0-0.2,0.3-0.2,0.4-0.2c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C5.1,7.1,5,6.6,5,5.9c0-0.4,0-1,0.3-1.6c0,0,1.4,0,2.8,1.3C8.6,5.4,9.3,5.3,10,5.3s1.4,0.1,2,0.3c1.3-1.3,2.8-1.3,2.8-1.3C15,4.9,15,5.5,15,5.9c0,0.8-0.1,1.2-0.2,1.4c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3C20,4.4,14.9-0.3,8.9,0.4z"/>
+					</svg>
+				</span>				</a>
+			
+			
+					</div>
+
+	
+</div>
+</div></div><div data-column="end" data-placements="1"><div data-items="primary">
+<nav
+	id="header-menu-1"
+	class="header-menu-1 menu-container"
+	data-id="menu" data-interaction="hover"	data-menu="type-4"
+	data-dropdown="type-1:simple"		data-responsive="no"	itemscope="" itemtype="https://schema.org/SiteNavigationElement"	aria-label="TopMenu">
+
+	<ul id="menu-topmenu" class="menu"><li id="menu-item-1944" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-1944 animated-submenu-block"><a href="https://www.mustafayemural.com/category/programming/" class="ct-menu-link">PROGRAMLAMA<span class="ct-toggle-dropdown-desktop"><svg class="ct-icon" width="8" height="8" viewBox="0 0 15 15" aria-hidden="true"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg></span></a><button class="ct-toggle-dropdown-desktop-ghost" aria-label="Expand dropdown menu" aria-haspopup="true" aria-expanded="false"></button>
+<ul class="sub-menu">
+	<li id="menu-item-2420" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2420"><a href="https://www.mustafayemural.com/temel-c-egitimi/" class="ct-menu-link">Temel C Eğitimi</a></li>
+	<li id="menu-item-2419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2419"><a href="https://www.mustafayemural.com/temel-cpp-egitimi/" class="ct-menu-link">Temel C++ Eğitimi</a></li>
+	<li id="menu-item-2278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2278"><a href="https://www.mustafayemural.com/qt-egitimi/" class="ct-menu-link">Qt Eğitimi</a></li>
+	<li id="menu-item-2415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2415"><a href="https://www.mustafayemural.com/uml-egitimi/" class="ct-menu-link">UML Eğitimi</a></li>
+	<li id="menu-item-2421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2421"><a href="https://www.mustafayemural.com/programlama-sozlugu/" class="ct-menu-link">Programlama Sözlüğü</a></li>
+</ul>
+</li>
+<li id="menu-item-1945" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1945 animated-submenu-block"><a href="https://www.mustafayemural.com/category/tools/" class="ct-menu-link">ARAÇLAR<span class="ct-toggle-dropdown-desktop"><svg class="ct-icon" width="8" height="8" viewBox="0 0 15 15" aria-hidden="true"><path d="M2.1,3.2l5.4,5.4l5.4-5.4L15,4.3l-7.5,7.5L0,4.3L2.1,3.2z"/></svg></span></a><button class="ct-toggle-dropdown-desktop-ghost" aria-label="Expand dropdown menu" aria-haspopup="true" aria-expanded="false"></button>
+<ul class="sub-menu">
+	<li id="menu-item-2394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2394"><a href="https://www.mustafayemural.com/cmake-egitimi/" class="ct-menu-link">CMake Eğitimi</a></li>
+	<li id="menu-item-3192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3192"><a href="https://www.mustafayemural.com/docker-egitimi/" class="ct-menu-link">Docker Eğitimi</a></li>
+</ul>
+</li>
+<li id="menu-item-2965" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2965"><a href="https://www.mustafayemural.com/category/review/" class="ct-menu-link">İNCELEMELER</a></li>
+<li id="menu-item-3204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3204"><a href="https://www.mustafayemural.com/projeler/" class="ct-menu-link">PROJELER</a></li>
+<li id="menu-item-3175" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3175"><a href="https://www.mustafayemural.com/category/other/" class="ct-menu-link">DİĞER</a></li>
+<li id="menu-item-2414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2414"><a href="https://www.mustafayemural.com/hakkinda/" class="ct-menu-link">HAKKINDA</a></li>
+</ul></nav>
+
+
+<button
+	class="ct-header-search ct-toggle "
+	data-toggle-panel="#search-modal"
+	aria-controls="search-modal"
+	aria-label="Search"
+	data-label="left"
+	data-id="search">
+
+	<span class="ct-label ct-hidden-sm ct-hidden-md ct-hidden-lg" aria-hidden="true">Search</span>
+
+	<svg class="ct-icon" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15"><path d="M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z"/></svg></button>
+</div></div></div></div></div><div data-device="mobile"><div data-row="middle" data-column-set="2"><div class="ct-container-fluid"><div data-column="start" data-placements="1"><div data-items="primary">
+<div	class="site-branding"
+	data-id="logo"		>
+
+			<a href="https://www.mustafayemural.com/" class="site-logo-container" rel="home" itemprop="url" ><img width="256" height="256" src="https://www.mustafayemural.com/wp-content/uploads/2025/05/my_logo_256_256.png" class="default-logo" alt="Mustafa Yemural" decoding="async" srcset="https://www.mustafayemural.com/wp-content/uploads/2025/05/my_logo_256_256.png 256w, https://www.mustafayemural.com/wp-content/uploads/2025/05/my_logo_256_256-150x150.png 150w" sizes="(max-width: 256px) 100vw, 256px" /></a>	
+	</div>
+
+</div></div><div data-column="end" data-placements="1"><div data-items="primary">
+<button
+	class="ct-header-trigger ct-toggle "
+	data-toggle-panel="#offcanvas"
+	aria-controls="offcanvas"
+	data-design="simple"
+	data-label="right"
+	aria-label="Menu"
+	data-id="trigger">
+
+	<span class="ct-label ct-hidden-sm ct-hidden-md ct-hidden-lg" aria-hidden="true">Menu</span>
+
+	<svg class="ct-icon" width="18" height="14" viewBox="0 0 18 14" data-type="type-1" aria-hidden="true">
+		<rect y="0.00" width="18" height="1.7" rx="1"/>
+		<rect y="6.15" width="18" height="1.7" rx="1"/>
+		<rect y="12.3" width="18" height="1.7" rx="1"/>
+	</svg></button>
+</div></div></div></div></div></header>
+	<main id="main" class="site-main hfeed" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+
+		
+<div class="hero-section" data-type="type-2" data-parallax="desktop">
+			<figure>
+			<div class="ct-media-container"><img width="512" height="512" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1.png" class="attachment-full size-full" alt="" loading="lazy" decoding="async" srcset="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1.png 512w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1-300x300.png 300w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1-150x150.png 150w" sizes="auto, (max-width: 512px) 100vw, 512px" itemprop="image" /></div>		</figure>
+	
+			<header class="entry-header ct-container-narrow">
+			<h1 class="page-title" itemprop="headline">C Diline Giriş ve C Dilinin Tarihi</h1>		</header>
+	</div>
+
+
+
+	<div
+		class="ct-container"
+		data-sidebar="right"				data-vertical-spacing="top:bottom">
+
+		
+		
+	<article
+		id="post-86"
+		class="post-86 post type-post status-publish format-standard has-post-thumbnail hentry category-programming tag-ansi-c tag-brian-kernighan tag-c tag-c11 tag-c99 tag-dennis-ritchie tag-derleme tag-high-level-language tag-iso-c tag-kr-c tag-programlama tag-standart tag-unix tag-yorumlama tag-yuksek-seviyeli-dil">
+
+		
+		
+		
+		<div class="entry-content is-layout-flow">
+			<p>Günümüzde programlama kavramı birçok alan için vazgeçilmez hale gelmiştir. Oyun programlama, bulut bilişim (<em>cloud computing</em>), medikal görüntüleme, elektronik haberleşme, robotlar ve yapay zeka gibi günümüzün önde gelen konularında programlama en ön planda yer almaktadır. Eskiden programlama işlemini delikli kartlar ile yaparlardı. Bunun çok sıkıntı bir durum olması ve programlama işleminin sanal hale getirilmesi için assembly dilleri geliştirildi. Peki bu diller ne amaçla ve hangi platformlara hizmet etmek için kullanılmaktaydı?</p>
+<h3><span class="ez-toc-section" id="Programlama_Dillerinin_Gelisimi"></span>Programlama Dillerinin Gelişimi<span class="ez-toc-section-end"></span></h3>
+<p>Assembly dilini ilk duyduğum zamanlarda benim aklıma hep standart bir programlama dili gelirdi. 2000’li yıllardan sonra eline bilgisayar alan çoğu kişi Intel işlemcisine sahip bir bilgisayar kullanmıştır. AMD kullananlar olsa da onlar da alt tarafta Intel’in assembly dilini kullanmışlardır. Şimdi burada söylediğim &quot;<em>Intel’in assembly dili</em>&quot; tamlamasından anlayacağınız üzere assembly dilleri işlemci mimarisine özel dillerdir. ARM kendi mimarisini ve kendi assembly dilini kullanırken, Intel kendi assembly dilini kullanır. Siz bir Intel assembly dili ile yazılmış kodu ARM işlemciler üzerinde doğrudan derleyemezsiniz. Günümüz bilgisayar kullanıcıları Intel ve AMD işlemcilerini bilse de aslında işlemci piyasası bunlardan ibaret değildir. Çoğu elektronik cihazın sistemini oluşturan gömülü sistemler dediğimiz alan ARM, STM ve daha birçok firmanın işlemcisi ile çalışmalar yapmaktadır.</p>
+<div align="center">
+<figure>
+<a href="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_1.jpg"><img decoding="async" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_1.jpg" alt="İlk Programlama Aracı Olan Delikli Kartlar" style="width:100%; max-width:400px; height:auto;"></a><figcaption align="center"><b>Figür 1:</b> İlk Programlama Aracı Olan Delikli Kartlar<sup>[1]</sup></figcaption></figure>
+</div>
+<p>Delikli kartlardan sonra bilişim dünyasında her mimariye özel assembly dilleri ortaya çıkmaya başlamıştır. Assembly dillerinde genellikle İngilizce kısaltmalar kullanılır ve bu kısaltmalar işlemcide kullanılacak olan işlem kodunun (<em>opcode</em>) 1 ve 0’lardan meydana gelen karşılıklarına dönüştürülerek kullanılırlar. Fakat buradaki problem, her mimariye özel olan assembly dilinin farklı bir söz dizimine ve farklı komutlara sahip olmasıdır. Bu noktadan sonra bir şekilde assembly dillerine çevrilebilecek ve anlaşılabilir bir söz dizimine (<em>syntax</em>) sahip olacak diller geliştirilmeye başlanmıştır. Geliştirilen bu dillere <strong>yüksek seviyeli diller (high-level languages)</strong> adı verilmiştir. İşte C dili yüksek seviyeli diller ailesindendir. Bazı kaynaklarda bu diller orta, yüksek ve çok yüksek olarak ayrılmıştır.</p>
+<h3><span class="ez-toc-section" id="Yuksek_Seviyeli_Dillerin_Dusuk_Seviyeli_Dillere_Cevrilmesi"></span>Yüksek Seviyeli Dillerin Düşük Seviyeli Dillere Çevrilmesi<span class="ez-toc-section-end"></span></h3>
+<p>Yüksek seviyeli dillerin okunabilirliği ve yazılabilirliği assembly dillerinden oldukça yüksektir. Peki bu diller assembly diline nasıl çevrilir? Aslında iki metot vardır. İlk metodda yazılan bütün kodlar doğrudan assembly diline veya makine koduna (saf 1 ve 0’lardan meydana gelen kodlar) çevrilir. Daha sonra parçalar birbirine bağlanarak en son çalıştırılabilir bir kod elde edilir. Bu yöntemde kullanılan programlar <strong>derleyicilerdir (compilers)</strong>. Derleyiciler yazılan bütün kodu makine diline çeviren programlardır. Derleme sürecini şu figür ile özetleyebiliriz:</p>
+<div align="center">
+<figure>
+<a href="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_2.png"><img decoding="async" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_2.png" alt="Derleme Süreci" style="width:100%; max-width:400px; height:auto;"></a><figcaption align="center"><b>Figür 2:</b> Derleme Süreci<sup>[2]</sup></figcaption></figure>
+</div>
+<p>Şimdi burada bir başka problem daha ortaya çıkmaktadır. Çok fazla kaynak koda (<em>source code</em>) sahip olan programların derlenmesi çok uzun sürebilir. Bu gibi durumlar için <strong>yorumlayıcı (interpreter)</strong> adı verilen programlar geliştirilmiştir. Yorumlayıcılar kaynak kodu derlemeden doğrudan çalıştırmayı sağlayan programlardır. Fakat bu yöntem ile çalıştırılan programlar derlenmiş programdan daha yavaş çalışırlar. Çünkü her kod parçasının zamanı geldiğinde yorumlanıp makine diline dönüştürülmesi gerekir. C dili derleme mekanizmasını kullanır. Yorumlama sürecinin özeti şu şekildedir:</p>
+<div align="center">
+<figure>
+<a href="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_3.png"><img decoding="async" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_3.png" alt="Yorumlama Süreci" style="width:100%; max-width:400px; height:auto;"></a><figcaption align="center"><b>Figür 3:</b> Yorumlama Süreci<sup>[3]</sup></figcaption></figure>
+</div>
+<h3><span class="ez-toc-section" id="C_Programlama_Dili"></span>C Programlama Dili<span class="ez-toc-section-end"></span></h3>
+<p>Programlamanın geçmişinden, derleme ve yorumlama kavramlarında bahsettikten sonra biraz da C dilinden bahsedelim. C dili, BCPL ve B dillerinden türeyen bir dildir. Yani yüksek seviyeli dillerin ilki değildir. BCPL dili Martin Richards tarafından 1967 yılında işletim sistemlerini ve derleyicileri yazmak amacıyla geliştirilirken, B dili Ken Thompson tarafından 1970 yılında UNIX işletim sisteminin ilk sürümlerini yazmak için Bell Laboratuvarları’nda geliştirilmiştir. İşte B dilinden türetilen C dili ise Dennis Ritchie tarafından orijinal olarak 1972 yılında yine Bell Laboratuvarları’nda geliştirilmiştir.</p>
+<p>C dili ilk başlarda UNIX işletim sistemini daha kolay bir şekilde geliştirmek için tasarlanmıştır. Şu anda çoğu işletim sistemi ve derleyici C ve onun devamı olan C++ dili ile yazılmıştır. C dilinin en büyük özelliği geniş donanım yelpazesini destekleyen derleyicilerinin varlığı ve standartlar ile taşınabilir bir dil olmasıdır. İşletim sistemleri, gömülü sistemler ve iletişim sistemleri günümüzde hala bu dili kullanmaktadır. Bu nedenle bu ve benzer alanlarda uğraşan kişilerin bu dili bilmesi gereklidir.</p>
+<div align="center">
+<figure>
+<a href="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_4.jpg"><img decoding="async" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_4.jpg" alt="Dennis Ritchie" style="width:100%; max-width:400px; height:auto;"></a><figcaption align="center"><b>Figür 4:</b> Dennis Ritchie<sup>[4]</sup></figcaption></figure>
+</div>
+<h3><span class="ez-toc-section" id="C_Standartlari"></span>C Standartları<span class="ez-toc-section-end"></span></h3>
+<p>Şimdi de bu dilin standartlarından bahsedelim. C dili ilk çıktığından standart bir halde değildi. 1978 yılında Brian Kernighan ve Dennis Ritchie “<em>The C Programming Language</em>” isimli bir kitap yayınlamışlardır. Bu kitabı yayınladıklarından itibaren kullanılan C dili <strong>K&amp;R C</strong> olarak adlandırılmıştır. Bu isim kitap yazarlarının soyisimlerine nazaran konulmuştur. C dilinin bir kurum tarafından onaylanıp standartlaştırılması ise 1989 yılında olmuştur. American National Standards Institute (<em>ANSI</em>), C dilinin standartlaştırılmış halini içeren taslağı yayınlamış ve bu yıldan sonra kullanılan C dili <strong>ANSI C</strong> veya <strong>C89</strong> olarak adlandırılmıştır. Aynı standartlar 1990 yılında ISO tarafından <em>ISO/IEC 9899:1990</em> resmi adıyla kabul edilmiştir. Bu dil de <strong>ISO C</strong> veya <strong>C90</strong> olarak adlandırılmıştır. ANSI ve ISO C bu nedenle aynı standartları belirtmektedir.</p>
+<div align="center">
+<figure>
+<a href="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_5.jpg"><img decoding="async" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Fig_C_1_1_5.jpg" alt="Brian Kernighan" style="width:100%; max-width:400px; height:auto;"></a><figcaption align="center"><b>Figür 5:</b> Brian Kernighan<sup>[5]</sup></figcaption></figure>
+</div>
+<p>Bu yıllardan sonra da C’nin gelişimi durmamıştır. 1999 yılında yine ISO tarafından resmi adı <em>ISO/IEC 9899:1999</em> olan ve <strong>C99</strong> olarak adlandırılan bir standart yayınlanmıştır. Bu standart ile birkaç yeni anahtar kelime dile eklenmiş ve dile bazı yeni özellikler getirilmiştir. C dilinin bundan sonraki standartları ise 2011 yılında yayınlanan <strong>C11</strong>, 2018 yılında yayınlanan <strong>C17</strong> (veya <strong>C18</strong>) ve en son ise 2024 yılında yayınlanması planlanan <strong>C23</strong> olmuştur. C dilinin <strong>Embedded C (Gömülü C)</strong> olarak adlandırılan başka standardı da bulunmaktadır.</p>
+<p>C dili ile fonksiyonlardan meydana gelen modüler programlar yazılabilir. C dili nesne yönelimli bir dil değildir. Ondan sonra gelen C++ diline nesne yönelimli paradigma eklenmiştir (ancak o da tam olarak bir nesne yönelimli dil değildir). C dilinin yapısal paradigmada olması, yani fonksiyonlardan meydana gelmesi, yazdığınız kodun iç yapısının nasıl çalıştığını bilmek konusunda size bazı avantaj sağlayabilir. Fakat programı tasarlama, geliştirme ve hata ayıklama süreçlerinde size nesne yönelimli paradigmaya göre çeşitli dezavantajlar da getirir.</p>
+<p>C dilini kullanırken bu dili yazan kişilerin oluşturmuş olduğu kütüphanelerden yararlanırsınız. C&#8217;nin standart olarak gelen bu kütüphaneler topluluğuna <strong>C Standard Library (C Standart Kütüphanesi)</strong> adı verilir. Bu kütüphanelerde kullanabileceğiniz birçok hazır fonksiyon bulunmaktadır. Bu kütüphaneler C dilinin taşınabilir (<em>portable</em>) olmasındaki en büyük etmenlerden birisidir. C dili genel amaçlı bir dil olduğundan C Standart Kütüphanesi&#8217;nde yer alan fonksiyonlar genel amaçlara hizmet etmek amacıyla yazılmışlardır. Kendi yazdığınız fonksiyonlar ile bu kütüphanede yer alan çeşitli fonksiyonları kullanıp kendi amacınıza uygun porgramlar yazabilirsiniz.</p>
+<p>Bu bölümde C diline ve tarihine bir giriş yaptık. C dilini hangi ortamda yazıp derleyeceğiniz konusunu tamamen size bırakıyorum. Burada anlatarak tek bir sistemle ve tek bir derleyiciyle sizi kısıtlamak istemem. Bu konulara daha sonra makalelerimde yer verebilirim. Bundan sonra daha çok dile ve onun söz dizimine yoğunlaşmaya çalışacağım.</p>
+<h3><span class="ez-toc-section" id="Referanslar"></span>Referanslar<span class="ez-toc-section-end"></span></h3>
+<ol>
+<li><a href="https://www.flickr.com/photos/binaryape/5151286161">Used Punchcard by Pete Birkinshaw</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Compiled_Code_Flow_Diagram.svg">Compiled Code Flow Diagram</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Interpreted_Code_Flow_Diagram.svg">Interpreted Code Flow Diagram</a></li>
+<li><a href="https://c1.staticflickr.com/7/6097/6243497570_27eb22afac_b.jpg">Dennis Ritchie</a></li>
+<li><a href="http://core0.staticworld.net/images/idge/imported/imageapi/2014/10/08/19/slide_brian_kernighan-620×465-100507254-orig.jpg">Brian Kernighan</a></li>
+</ol>
+		</div>
+
+		
+		
+		
+		
+	</article>
+
+	
+		<aside class="ct-hidden-sm ct-hidden-md" data-type="type-3" id="sidebar" itemtype="https://schema.org/WPSideBar" itemscope="itemscope"><div class="ct-sidebar" data-sticky="sidebar"><div class="ct-widget is-layout-flow ez-toc" id="ezw_tco-2"><div id="ez-toc-widget-container" class="ez-toc-widget-container ez-toc-v2_0_82_2 ez-toc-widget counter-flat ez-toc-widget-container ez-toc-affix ez-toc-widget-direction">
+
+					<h3 class="widget-title">                                        <span class="ez-toc-title-container">
+                                        <style>
+                                    		#ezw_tco-2 .ez-toc-title{
+                                    		    font-size: 100%;
+												    		                                    font-weight: 500;
+												    		                                    color: #fb667a;
+                                    		}
+
+											#ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li a{
+															                                    font-size: 90%;
+															                                    font-weight: 400;
+															                                    color: #ffffff;
+
+											}
+                                            #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li.active{
+                                                    background-color: #333333;
+                                            }
+                                        </style>
+																				<span class="ez-toc-title-toggle">
+                                            
+												<span class="ez-toc-title " >İçindekiler</span>
+
+
+
+                                                                                        </span>
+                                        </span>
+
+					</h3>                                        					<nav>
+<ul class='ez-toc-list ez-toc-list-level-1 ' ><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-1" href="#Programlama_Dillerinin_Gelisimi" >Programlama Dillerinin Gelişimi</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-2" href="#Yuksek_Seviyeli_Dillerin_Dusuk_Seviyeli_Dillere_Cevrilmesi" >Yüksek Seviyeli Dillerin Düşük Seviyeli Dillere Çevrilmesi</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-3" href="#C_Programlama_Dili" >C Programlama Dili</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-4" href="#C_Standartlari" >C Standartları</a></li><li class='ez-toc-page-1'><a class="ez-toc-link ez-toc-heading-5" href="#Referanslar" >Referanslar</a></li></ul></nav>
+</div>
+</div></div></aside>
+			</div>
+
+
+		<div class="ct-related-posts-container ct-hidden-sm" >
+		<div class="ct-container-narrow">
+	
+		<div
+			class="ct-related-posts"
+					>
+			
+											<h3 class="ct-module-title">
+					İlgili Yazılar				</h3>
+							
+			
+			<div class="ct-related-posts-items" data-layout="grid">
+							
+				<article  itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div id="post-2721" class="post-2721 post type-post status-publish format-standard has-post-thumbnail hentry category-programming"><a class="ct-media-container" href="https://www.mustafayemural.com/c-my000052/" aria-label="C&#8217;de Dizilerin Kullanımına İlişkin Örnekler"><img width="512" height="512" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1.png" class="attachment-medium_large size-medium_large wp-post-image" alt="" loading="lazy" decoding="async" srcset="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1.png 512w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1-300x300.png 300w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1-150x150.png 150w" sizes="auto, (max-width: 512px) 100vw, 512px" itemprop="image" style="aspect-ratio: 1/1;" /></a><h4 class="related-entry-title"><a href="https://www.mustafayemural.com/c-my000052/" rel="bookmark">C&#8217;de Dizilerin Kullanımına İlişkin Örnekler</a></h4><ul class="entry-meta" data-type="simple:slash" data-id="0U88PJ" ><li class="meta-date" itemprop="datePublished"><time class="ct-meta-element-date" datetime="2021-09-19T14:00:40+00:00">Eylül 19, 2021</time></li></ul></div></article>
+							
+				<article  itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div id="post-2712" class="post-2712 post type-post status-publish format-standard has-post-thumbnail hentry category-programming"><a class="ct-media-container" href="https://www.mustafayemural.com/c-my000051/" aria-label="C&#8217;de Dizilere Giriş"><img width="512" height="512" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1.png" class="attachment-medium_large size-medium_large wp-post-image" alt="" loading="lazy" decoding="async" srcset="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1.png 512w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1-300x300.png 300w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1-150x150.png 150w" sizes="auto, (max-width: 512px) 100vw, 512px" itemprop="image" style="aspect-ratio: 1/1;" /></a><h4 class="related-entry-title"><a href="https://www.mustafayemural.com/c-my000051/" rel="bookmark">C&#8217;de Dizilere Giriş</a></h4><ul class="entry-meta" data-type="simple:slash" data-id="0U88PJ" ><li class="meta-date" itemprop="datePublished"><time class="ct-meta-element-date" datetime="2021-08-28T13:15:01+00:00">Ağustos 28, 2021</time></li><li class="meta-comments"><a href="https://www.mustafayemural.com/c-my000051/#comments">1 Comment</a></li></ul></div></article>
+							
+				<article  itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div id="post-2704" class="post-2704 post type-post status-publish format-standard has-post-thumbnail hentry category-programming"><a class="ct-media-container" href="https://www.mustafayemural.com/cpp-my000050/" aria-label="C++&#8217;ta Fonksiyonlar, Faaliyet Alanı ve Ömür"><img width="600" height="600" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_CPP_1.png" class="attachment-medium_large size-medium_large wp-post-image" alt="" loading="lazy" decoding="async" srcset="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_CPP_1.png 600w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_CPP_1-300x300.png 300w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_CPP_1-150x150.png 150w" sizes="auto, (max-width: 600px) 100vw, 600px" itemprop="image" style="aspect-ratio: 1/1;" /></a><h4 class="related-entry-title"><a href="https://www.mustafayemural.com/cpp-my000050/" rel="bookmark">C++&#8217;ta Fonksiyonlar, Faaliyet Alanı ve Ömür</a></h4><ul class="entry-meta" data-type="simple:slash" data-id="0U88PJ" ><li class="meta-date" itemprop="datePublished"><time class="ct-meta-element-date" datetime="2021-08-19T15:59:13+00:00">Ağustos 19, 2021</time></li><li class="meta-comments"><a href="https://www.mustafayemural.com/cpp-my000050/#comments">2 Comments</a></li></ul></div></article>
+							
+				<article  itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div id="post-2694" class="post-2694 post type-post status-publish format-standard has-post-thumbnail hentry category-programming"><a class="ct-media-container" href="https://www.mustafayemural.com/c-my000049/" aria-label="C&#8217;de Özyineleme"><img width="512" height="512" src="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1.png" class="attachment-medium_large size-medium_large wp-post-image" alt="" loading="lazy" decoding="async" srcset="https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1.png 512w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1-300x300.png 300w, https://www.mustafayemural.com/wp-content/uploads/2020/09/Cover_C_1-150x150.png 150w" sizes="auto, (max-width: 512px) 100vw, 512px" itemprop="image" style="aspect-ratio: 1/1;" /></a><h4 class="related-entry-title"><a href="https://www.mustafayemural.com/c-my000049/" rel="bookmark">C&#8217;de Özyineleme</a></h4><ul class="entry-meta" data-type="simple:slash" data-id="0U88PJ" ><li class="meta-date" itemprop="datePublished"><time class="ct-meta-element-date" datetime="2021-07-25T15:02:22+00:00">Temmuz 25, 2021</time></li></ul></div></article>
+						</div>
+
+			
+					</div>
+
+			</div>
+	</div>
+	
+	<div class="ct-comments-container"><div class="ct-container">    <div class="wpdiscuz_top_clearing"></div>
+    <div id='comments' class='comments-area'><div id='respond' style='width: 0;height: 0;clear: both;margin: 0;padding: 0;'></div><div id='wpd-post-rating' class='wpd-not-rated'>
+            <div class='wpd-rating-wrap'>
+            <div class='wpd-rating-left'></div>
+            <div class='wpd-rating-data'>
+                <div class='wpd-rating-value'>
+                    <span class='wpdrv'>5</span>
+                    <span class='wpdrc'>3</span>
+                    <span class='wpdrt'>votes</span></div>
+                <div class='wpd-rating-title'>Article Rating</div>
+                <div class='wpd-rating-stars'><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star wpd-active' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star wpd-active' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star wpd-active' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star wpd-active' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star wpd-active' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg></div><div class='wpd-rate-starts'><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg><svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M0 0h24v24H0z' fill='none'/><path class='wpd-star' d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/><path d='M0 0h24v24H0z' fill='none'/></svg></div></div>
+            <div class='wpd-rating-right'></div></div></div>    <div id="wpdcom" class="wpdiscuz_unauth wpd-dark wpd-layout-2 wpd-comments-open">
+                    <div class="wc_social_plugin_wrapper">
+                            </div>
+            <div class="wpd-form-wrap">
+                <div class="wpd-form-head">
+                                            <div class="wpd-sbs-toggle">
+                            <i class="far fa-envelope"></i> <span
+                                class="wpd-sbs-title">Subscribe</span>
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                                            <div class="wpd-auth">
+                                                <div class="wpd-login">
+                            <a href="https://www.mustafayemural.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.mustafayemural.com%2Fc-my000001%2F"><i class='fas fa-sign-in-alt'></i> Login</a>                        </div>
+                    </div>
+                </div>
+                                                    <div class="wpdiscuz-subscribe-bar wpdiscuz-hidden">
+                                                    <form action="https://www.mustafayemural.com/wp-admin/admin-ajax.php?action=wpdAddSubscription"
+                                  method="post" id="wpdiscuz-subscribe-form">
+                                <div class="wpdiscuz-subscribe-form-intro">Bildir </div>
+                                <div class="wpdiscuz-subscribe-form-option"
+                                     style="width:40%;">
+                                    <select class="wpdiscuz_select" name="wpdiscuzSubscriptionType">
+                                                                                    <option value="post">Bu yazıya yeni bir yorum yapıldığında</option>
+                                                                                                                                <option
+                                                value="all_comment" >Benim yorumuma yeni yanıt geldiğinde</option>
+                                                                                </select>
+                                </div>
+                                                                    <div class="wpdiscuz-item wpdiscuz-subscribe-form-email">
+                                        <input class="email" type="email" name="wpdiscuzSubscriptionEmail"
+                                               required="required" value=""
+                                               placeholder="E-Posta"/>
+                                    </div>
+                                                                    <div class="wpdiscuz-subscribe-form-button">
+                                    <input id="wpdiscuz_subscription_button" class="wpd-prim-button wpd_not_clicked"
+                                           type="submit"
+                                           value="&rsaquo;"
+                                           name="wpdiscuz_subscription_button"/>
+                                </div>
+                                <input type="hidden" id="wpdiscuz_subscribe_form_nonce" name="wpdiscuz_subscribe_form_nonce" value="d9648a870e" /><input type="hidden" name="_wp_http_referer" value="/c-my000001/" />                            </form>
+                                                </div>
+                            <div
+            class="wpd-form wpd-form-wrapper wpd-main-form-wrapper" id='wpd-main-form-wrapper-0_0'>
+                                        <form  method="post" enctype="multipart/form-data" data-uploading="false" class="wpd_comm_form wpd_main_comm_form"                >
+                                        <div class="wpd-field-comment">
+                        <div class="wpdiscuz-item wc-field-textarea">
+                            <div class="wpdiscuz-textarea-wrap ">
+                                                                                                        <div class="wpd-avatar">
+                                        <img alt='guest' src='https://secure.gravatar.com/avatar/26926c1a136c810c914db79035f624e44873428475c385a91916b4627eb5a5ce?s=56&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/26926c1a136c810c914db79035f624e44873428475c385a91916b4627eb5a5ce?s=112&#038;d=mm&#038;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' decoding='async'/>                                    </div>
+                                                <div id="wpd-editor-wraper-0_0" style="display: none;">
+                <div id="wpd-editor-char-counter-0_0"
+                     class="wpd-editor-char-counter"></div>
+                <label style="display: none;" for="wc-textarea-0_0">Label</label>
+                <textarea id="wc-textarea-0_0" name="wc_comment"
+                          class="wc_comment wpd-field"></textarea>
+                <div id="wpd-editor-0_0"></div>
+                        <div id="wpd-editor-toolbar-0_0">
+                            <button title="Bold"
+                        class="ql-bold"  ></button>
+                                <button title="Italic"
+                        class="ql-italic"  ></button>
+                                <button title="Underline"
+                        class="ql-underline"  ></button>
+                                <button title="Strike"
+                        class="ql-strike"  ></button>
+                                <button title="Ordered List"
+                        class="ql-list" value='ordered' ></button>
+                                <button title="Unordered List"
+                        class="ql-list" value='bullet' ></button>
+                                <button title="Blockquote"
+                        class="ql-blockquote"  ></button>
+                                <button title="Code Block"
+                        class="ql-code-block"  ></button>
+                                <button title="Link"
+                        class="ql-link"  ></button>
+                                <button title="Source Code"
+                        class="ql-sourcecode"  data-wpde_button_name='sourcecode'>{}</button>
+                                <button title="Spoiler"
+                        class="ql-spoiler"  data-wpde_button_name='spoiler'>[+]</button>
+                            <div class="wpd-editor-buttons-right">
+                <span class='wmu-upload-wrap' wpd-tooltip='Attach an image to this comment' wpd-tooltip-position='left'><label class='wmu-add'><i class='far fa-image'></i><input style='display:none;' class='wmu-add-files' type='file' name='wmu_files'  accept='image/*'/></label></span>            </div>
+        </div>
+                    </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="wpd-form-foot" style='display:none;'>
+                        <div class="wpdiscuz-textarea-foot">
+                                                        <div class="wpdiscuz-button-actions"><div class='wmu-action-wrap'><div class='wmu-tabs wmu-images-tab wmu-hide'></div><div class='wmu-tabs wmu-videos-tab wmu-hide'></div><div class='wmu-tabs wmu-files-tab wmu-hide'></div></div></div>
+                        </div>
+                                <div class="wpd-form-row">
+                    <div class="wpd-form-col-left">
+                        <div class="wpdiscuz-item wc_name-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i
+                            class="fas fa-user"></i>
+                    </div>
+                                    <input id="wc_name-0_0" value="" required='required' aria-required='true'                       class="wc_name wpd-field" type="text"
+                       name="wc_name"
+                       placeholder="Ad:*"
+                       maxlength="50" pattern='.{3,50}'                       title="">
+                <label for="wc_name-0_0"
+                       class="wpdlb">Ad:*</label>
+                            </div>
+                        <div class="wpdiscuz-item wc_email-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i
+                            class="fas fa-at"></i>
+                    </div>
+                                    <input id="wc_email-0_0" value="" required='required' aria-required='true'                       class="wc_email wpd-field" type="email"
+                       name="wc_email"
+                       placeholder="E-Posta*"/>
+                <label for="wc_email-0_0"
+                       class="wpdlb">E-Posta*</label>
+                            </div>
+                            <div class="wpdiscuz-item wc_website-wrapper wpd-has-icon">
+                                            <div class="wpd-field-icon"><i
+                                class="fas fa-link"></i>
+                        </div>
+                                        <input id="wc_website-0_0" value=""
+                           class="wc_website wpd-field" type="text"
+                           name="wc_website"
+                           placeholder="Website"/>
+                    <label for="wc_website-0_0"
+                           class="wpdlb">Website</label>
+                                    </div>
+                        </div>
+                <div class="wpd-form-col-right">
+                    <div class="wc-field-submit">
+                                                <label class="wpd_label"
+                           wpd-tooltip="Bu yoruma cevap geldiğinde bana bildir">
+                        <input id="wc_notification_new_comment-0_0"
+                               class="wc_notification_new_comment-0_0 wpd_label__checkbox"
+                               value="comment" type="checkbox"
+                               name="wpdiscuz_notification_type" />
+                        <span class="wpd_label__text">
+                                <span class="wpd_label__check">
+                                    <i class="fas fa-bell wpdicon wpdicon-on"></i>
+                                    <i class="fas fa-bell-slash wpdicon wpdicon-off"></i>
+                                </span>
+                            </span>
+                    </label>
+                            <input id="wpd-field-submit-0_0"
+                   class="wc_comm_submit wpd_not_clicked wpd-prim-button" type="submit"
+                   name="submit" value="Yorumu Onayla"
+                   aria-label="Yorumu Onayla"/>
+        </div>
+                </div>
+                    <div class="clearfix"></div>
+        </div>
+                            </div>
+                                        <input type="hidden" class="wpdiscuz_unique_id" value="0_0"
+                           name="wpdiscuz_unique_id">
+                    <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="f9267c459d" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="9"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>                </form>
+                        </div>
+                <div id="wpdiscuz_hidden_secondary_form" style="display: none;">
+                    <div
+            class="wpd-form wpd-form-wrapper wpd-secondary-form-wrapper" id='wpd-secondary-form-wrapper-wpdiscuzuniqueid' style='display: none;'>
+                            <div class="wpd-secondary-forms-social-content"></div>
+                <div class="clearfix"></div>
+                                        <form  method="post" enctype="multipart/form-data" data-uploading="false" class="wpd_comm_form wpd-secondary-form-wrapper"                >
+                                        <div class="wpd-field-comment">
+                        <div class="wpdiscuz-item wc-field-textarea">
+                            <div class="wpdiscuz-textarea-wrap ">
+                                                                                                        <div class="wpd-avatar">
+                                        <img alt='guest' src='https://secure.gravatar.com/avatar/6aaed2dd28099571a0262377460117f98429680d23cf905e00cb6cc45c9dc68f?s=56&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6aaed2dd28099571a0262377460117f98429680d23cf905e00cb6cc45c9dc68f?s=112&#038;d=mm&#038;r=g 2x' class='avatar avatar-56 photo' height='56' width='56' decoding='async'/>                                    </div>
+                                                <div id="wpd-editor-wraper-wpdiscuzuniqueid" style="display: none;">
+                <div id="wpd-editor-char-counter-wpdiscuzuniqueid"
+                     class="wpd-editor-char-counter"></div>
+                <label style="display: none;" for="wc-textarea-wpdiscuzuniqueid">Label</label>
+                <textarea id="wc-textarea-wpdiscuzuniqueid" name="wc_comment"
+                          class="wc_comment wpd-field"></textarea>
+                <div id="wpd-editor-wpdiscuzuniqueid"></div>
+                        <div id="wpd-editor-toolbar-wpdiscuzuniqueid">
+                            <button title="Bold"
+                        class="ql-bold"  ></button>
+                                <button title="Italic"
+                        class="ql-italic"  ></button>
+                                <button title="Underline"
+                        class="ql-underline"  ></button>
+                                <button title="Strike"
+                        class="ql-strike"  ></button>
+                                <button title="Ordered List"
+                        class="ql-list" value='ordered' ></button>
+                                <button title="Unordered List"
+                        class="ql-list" value='bullet' ></button>
+                                <button title="Blockquote"
+                        class="ql-blockquote"  ></button>
+                                <button title="Code Block"
+                        class="ql-code-block"  ></button>
+                                <button title="Link"
+                        class="ql-link"  ></button>
+                                <button title="Source Code"
+                        class="ql-sourcecode"  data-wpde_button_name='sourcecode'>{}</button>
+                                <button title="Spoiler"
+                        class="ql-spoiler"  data-wpde_button_name='spoiler'>[+]</button>
+                            <div class="wpd-editor-buttons-right">
+                <span class='wmu-upload-wrap' wpd-tooltip='Attach an image to this comment' wpd-tooltip-position='left'><label class='wmu-add'><i class='far fa-image'></i><input style='display:none;' class='wmu-add-files' type='file' name='wmu_files'  accept='image/*'/></label></span>            </div>
+        </div>
+                    </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="wpd-form-foot" style='display:none;'>
+                        <div class="wpdiscuz-textarea-foot">
+                                                        <div class="wpdiscuz-button-actions"><div class='wmu-action-wrap'><div class='wmu-tabs wmu-images-tab wmu-hide'></div><div class='wmu-tabs wmu-videos-tab wmu-hide'></div><div class='wmu-tabs wmu-files-tab wmu-hide'></div></div></div>
+                        </div>
+                                <div class="wpd-form-row">
+                    <div class="wpd-form-col-left">
+                        <div class="wpdiscuz-item wc_name-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i
+                            class="fas fa-user"></i>
+                    </div>
+                                    <input id="wc_name-wpdiscuzuniqueid" value="" required='required' aria-required='true'                       class="wc_name wpd-field" type="text"
+                       name="wc_name"
+                       placeholder="Ad:*"
+                       maxlength="50" pattern='.{3,50}'                       title="">
+                <label for="wc_name-wpdiscuzuniqueid"
+                       class="wpdlb">Ad:*</label>
+                            </div>
+                        <div class="wpdiscuz-item wc_email-wrapper wpd-has-icon">
+                                    <div class="wpd-field-icon"><i
+                            class="fas fa-at"></i>
+                    </div>
+                                    <input id="wc_email-wpdiscuzuniqueid" value="" required='required' aria-required='true'                       class="wc_email wpd-field" type="email"
+                       name="wc_email"
+                       placeholder="E-Posta*"/>
+                <label for="wc_email-wpdiscuzuniqueid"
+                       class="wpdlb">E-Posta*</label>
+                            </div>
+                            <div class="wpdiscuz-item wc_website-wrapper wpd-has-icon">
+                                            <div class="wpd-field-icon"><i
+                                class="fas fa-link"></i>
+                        </div>
+                                        <input id="wc_website-wpdiscuzuniqueid" value=""
+                           class="wc_website wpd-field" type="text"
+                           name="wc_website"
+                           placeholder="Website"/>
+                    <label for="wc_website-wpdiscuzuniqueid"
+                           class="wpdlb">Website</label>
+                                    </div>
+                        </div>
+                <div class="wpd-form-col-right">
+                    <div class="wc-field-submit">
+                                                <label class="wpd_label"
+                           wpd-tooltip="Bu yoruma cevap geldiğinde bana bildir">
+                        <input id="wc_notification_new_comment-wpdiscuzuniqueid"
+                               class="wc_notification_new_comment-wpdiscuzuniqueid wpd_label__checkbox"
+                               value="comment" type="checkbox"
+                               name="wpdiscuz_notification_type" />
+                        <span class="wpd_label__text">
+                                <span class="wpd_label__check">
+                                    <i class="fas fa-bell wpdicon wpdicon-on"></i>
+                                    <i class="fas fa-bell-slash wpdicon wpdicon-off"></i>
+                                </span>
+                            </span>
+                    </label>
+                            <input id="wpd-field-submit-wpdiscuzuniqueid"
+                   class="wc_comm_submit wpd_not_clicked wpd-prim-button" type="submit"
+                   name="submit" value="Yorumu Onayla"
+                   aria-label="Yorumu Onayla"/>
+        </div>
+                </div>
+                    <div class="clearfix"></div>
+        </div>
+                            </div>
+                                        <input type="hidden" class="wpdiscuz_unique_id" value="wpdiscuzuniqueid"
+                           name="wpdiscuz_unique_id">
+                    <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="f9267c459d" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_2" name="ak_js" value="231"/><script>document.getElementById( "ak_js_2" ).setAttribute( "value", ( new Date() ).getTime() );</script></p>                </form>
+                        </div>
+                </div>
+                    </div>
+                        <div id="wpd-threads" class="wpd-thread-wrapper">
+                <div class="wpd-thread-head">
+                    <div class="wpd-thread-info "
+                         data-comments-count="4">
+                        <span class='wpdtc' title='4'>4</span> Yorum                    </div>
+                                        <div class="wpd-space"></div>
+                    <div class="wpd-thread-filter">
+                                                    <div class="wpd-filter wpdf-reacted wpd_not_clicked "
+                                 wpd-tooltip="Most reacted comment">
+                                <i class="fas fa-bolt"></i></div>
+                                                        <div class="wpd-filter wpdf-hottest wpd_not_clicked "
+                                 wpd-tooltip="Hottest comment thread">
+                                <i class="fas fa-fire"></i></div>
+                                                        <div class="wpd-filter wpdf-sorting ">
+                                                                        <span class="wpdiscuz-sort-button wpdiscuz-date-sort-asc wpdiscuz-sort-button-active"
+                                              data-sorting="oldest">Eskiler</span>
+                                                                        <i class="fas fa-sort-down"></i>
+                                <div class="wpdiscuz-sort-buttons">
+                                                                            <span class="wpdiscuz-sort-button wpdiscuz-date-sort-desc"
+                                              data-sorting="newest">En Yeniler</span>
+                                                                                <span class="wpdiscuz-sort-button wpdiscuz-vote-sort-up"
+                                              data-sorting="by_vote">Beğenilenler</span>
+                                                                        </div>
+                            </div>
+                                                </div>
+                </div>
+                <div class="wpd-comment-info-bar">
+                    <div class="wpd-current-view"><i
+                            class="fas fa-quote-left"></i> Inline Feedbacks                    </div>
+                    <div class="wpd-filter-view-all">View all comments</div>
+                </div>
+                                <div class="wpd-thread-list">
+                    <div id='wpd-comm-2_0' class='comment even thread-even depth-1 wpd-comment wpd_comment_level-1'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div id="comment-2" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-avatar ">
+    <img alt='Metin Perdeci' src='https://secure.gravatar.com/avatar/e22e9af379b1f45837b47e91a4855202f18827efd5881f0315f830395e898a1f?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/e22e9af379b1f45837b47e91a4855202f18827efd5881f0315f830395e898a1f?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' decoding='async'/>
+</div>
+    <div class="wpd-user-info">
+    <div class="wpd-uinfo-top">
+    <div class="wpd-comment-author ">
+    Metin Perdeci
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=hocam elinize sağlık. 3. paragrafın sondan ikinci cümlesinin son kelimesi hatalı ya... &url=https%3A%2F%2Fwww.mustafayemural.com%2Fc-my000001%2F%23comment-2' title='Share On X'><i class='wpf-cta' aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z'/></svg></i></a>
+    </div>
+</div>
+    <div class="wpd-space"></div>
+</div>
+    <div class="wpd-uinfo-bottom">
+    
+    
+    <div class="wpd-comment-date" title="Eylül 9, 2018 1:59 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    7 yıl önce
+</div>
+</div>
+</div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://www.mustafayemural.com/c-my000001/#comment-2'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>hocam elinize sağlık. 3. paragrafın sondan ikinci cümlesinin son kelimesi hatalı yazılmış. saygılar hocam&#8230;</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='1'>1</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Yanıtla</span>
+</div>
+    <div class="wpd-space"></div>
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Alt Yorumları Gizle">
+    <i class='fas fa-chevron-up'></i>
+</div>
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-2_0'></div><div id='wpd-comm-3_2' class='comment byuser comment-author-fastsystem bypostauthor odd alt depth-2 wpd-comment wpd-reply wpd_comment_level-2'><div class="wpd-comment-wrap wpd-blog-user wpd-blog-administrator wpd-blog-user wpd-blog-post_author">
+    <div id="comment-3" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-avatar ">
+    <a href='https://www.mustafayemural.com/author/fastsystem/' target='_blank' rel='noreferrer ugc'><img alt='Mustafa Yemural' src='https://secure.gravatar.com/avatar/0b1bc92d460d53ccecfae3aa8fb5226e09fbd3008d604f584069f15a7aa4b688?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0b1bc92d460d53ccecfae3aa8fb5226e09fbd3008d604f584069f15a7aa4b688?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/></a>
+</div>
+    <div class="wpd-user-info">
+    <div class="wpd-uinfo-top">
+    <div class="wpd-comment-author ">
+    <a href='https://www.mustafayemural.com' rel='noreferrer ugc' target='_blank'>Mustafa Yemural</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Yazar" wpd-tooltip-position="top">
+    <span>Yazar</span>
+</div>
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Çok teşekkürler Metin&#8230; Hemen düzelttim. Yazımla veya anlatımla ilgili bir sık... &url=https%3A%2F%2Fwww.mustafayemural.com%2Fc-my000001%2F%23comment-3' title='Share On X'><i class='wpf-cta' aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z'/></svg></i></a>
+    </div>
+</div>
+    <div class="wpd-space"></div>
+</div>
+    <div class="wpd-uinfo-bottom">
+    
+    <div class="wpd-reply-to">
+    <i class='far fa-comments'></i>
+    Reply to&nbsp;
+    <a href="#comment-2">
+        Metin Perdeci
+    </a>
+</div>
+    <div class="wpd-comment-date" title="Eylül 9, 2018 2:29 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    7 yıl önce
+</div>
+</div>
+</div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://www.mustafayemural.com/c-my000001/#comment-3'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>Çok teşekkürler Metin&#8230; Hemen düzelttim. Yazımla veya anlatımla ilgili bir sıkıntı görürseniz hemen söyleyebilirsiniz 🙂 İyi çalışmalar&#8230;</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='1'>1</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Yanıtla</span>
+</div>
+    <div class="wpd-space"></div>
+    
+    
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-3_2'></div></div></div><div id='wpd-comm-56_0' class='comment even thread-odd thread-alt depth-1 wpd-comment wpd_comment_level-1'><div class="wpd-comment-wrap wpd-blog-guest">
+    <div id="comment-56" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-avatar ">
+    <img alt='Berfin' src='https://secure.gravatar.com/avatar/b74f9740b1bdaba79792c8589e6a0c7beb52f7c986dfa5030b721d0f3780cb93?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b74f9740b1bdaba79792c8589e6a0c7beb52f7c986dfa5030b721d0f3780cb93?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' decoding='async'/>
+</div>
+    <div class="wpd-user-info">
+    <div class="wpd-uinfo-top">
+    <div class="wpd-comment-author ">
+    Berfin
+</div>
+    
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=merhaba hocam acaba pointer kavramına da değinecek misiniz
+&url=https%3A%2F%2Fwww.mustafayemural.com%2Fc-my000001%2F%23comment-56' title='Share On X'><i class='wpf-cta' aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z'/></svg></i></a>
+    </div>
+</div>
+    <div class="wpd-space"></div>
+</div>
+    <div class="wpd-uinfo-bottom">
+    
+    
+    <div class="wpd-comment-date" title="Ocak 13, 2024 6:41 am">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    2 yıl önce
+</div>
+</div>
+</div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://www.mustafayemural.com/c-my000001/#comment-56'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p>merhaba hocam acaba pointer kavramına da değinecek misiniz</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='1'>1</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Yanıtla</span>
+</div>
+    <div class="wpd-space"></div>
+    
+    <div class="wpd-toggle wpd-hidden wpd_not_clicked" wpd-tooltip="Alt Yorumları Gizle">
+    <i class='fas fa-chevron-up'></i>
+</div>
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-56_0'></div><div id='wpd-comm-57_56' class='comment byuser comment-author-fastsystem bypostauthor odd alt depth-2 wpd-comment wpd-reply wpd_comment_level-2'><div class="wpd-comment-wrap wpd-blog-user wpd-blog-administrator wpd-blog-user wpd-blog-post_author">
+    <div id="comment-57" class="wpd-comment-right">
+    <div class="wpd-comment-header">
+    <div class="wpd-avatar ">
+    <a href='https://www.mustafayemural.com/author/fastsystem/' target='_blank' rel='noreferrer ugc'><img alt='Mustafa Yemural' src='https://secure.gravatar.com/avatar/0b1bc92d460d53ccecfae3aa8fb5226e09fbd3008d604f584069f15a7aa4b688?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/0b1bc92d460d53ccecfae3aa8fb5226e09fbd3008d604f584069f15a7aa4b688?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy' decoding='async'/></a>
+</div>
+    <div class="wpd-user-info">
+    <div class="wpd-uinfo-top">
+    <div class="wpd-comment-author ">
+    <a href='https://www.mustafayemural.com' rel='noreferrer ugc' target='_blank'>Mustafa Yemural</a>
+</div>
+    <div class="wpd-comment-label" wpd-tooltip="Yazar" wpd-tooltip-position="top">
+    <span>Yazar</span>
+</div>
+    
+    <div class="wpd-comment-share wpd-hidden wpd-tooltip wpd-top">
+    <i class='fas fa-share-alt' aria-hidden='true'></i>
+    <div class="wpd-tooltip-content">
+        <a class='wc_tw' rel='noreferrer' target='_blank' href='https://twitter.com/intent/tweet?text=Elbette, ancak önce C derslerini revize etmeyi tamamlamam gerekiyor.
+&url=https%3A%2F%2Fwww.mustafayemural.com%2Fc-my000001%2F%23comment-57' title='Share On X'><i class='wpf-cta' aria-hidden='true'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path d='M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z'/></svg></i></a>
+    </div>
+</div>
+    <div class="wpd-space"></div>
+</div>
+    <div class="wpd-uinfo-bottom">
+    
+    <div class="wpd-reply-to">
+    <i class='far fa-comments'></i>
+    Reply to&nbsp;
+    <a href="#comment-56">
+        Berfin
+    </a>
+</div>
+    <div class="wpd-comment-date" title="Ocak 19, 2024 8:11 pm">
+    <i class='far fa-clock' aria-hidden='true'></i>
+    2 yıl önce
+</div>
+</div>
+</div>
+    <div class="wpd-comment-link wpd-hidden">
+    <span wpd-tooltip='Comment Link' wpd-tooltip-position='left'><i class='fas fa-link' aria-hidden='true' data-wpd-clipboard='https://www.mustafayemural.com/c-my000001/#comment-57'></i></span>
+</div>
+</div>
+    <div class="wpd-comment-text">
+    <p class="wpc--darkluplite--observed wpc-darklup-observer--node">Elbette, ancak önce C derslerini revize etmeyi tamamlamam gerekiyor.</p>
+
+</div>
+    <div class="wpd-comment-footer">
+    <div class="wpd-vote">
+    <div class="wpd-vote-up wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='plus' class='svg-inline--fa fa-plus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+    <div class='wpd-vote-result wpd-up' title='1'>1</div>
+    <div class="wpd-vote-down wpd_not_clicked">
+        <svg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='minus' class='svg-inline--fa fa-minus fa-w-14' role='img' xmlns='https://www.w3.org/2000/svg' viewBox='0 0 448 512'><path d='M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z'></path></svg>
+    </div>
+</div>
+    <div class="wpd-reply-button">
+    <svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z'/><path d='M0 0h24v24H0z' fill='none'/></svg>
+    <span>Yanıtla</span>
+</div>
+    <div class="wpd-space"></div>
+    
+    
+</div>
+</div>
+</div><div id='wpdiscuz_form_anchor-57_56'></div></div></div><!-- // From wpDiscuz's Caches // -->                    <div class="wpdiscuz-comment-pagination">
+                                            </div>
+                </div>
+            </div>
+                </div>
+        </div>
+    <div id="wpdiscuz-loading-bar"
+         class="wpdiscuz-loading-bar-unauth"></div>
+    <div id="wpdiscuz-comment-message"
+         class="wpdiscuz-comment-message-unauth"></div>
+    </div></div>	</main>
+
+	<footer id="footer" class="ct-footer" data-id="type-1" itemscope="" itemtype="https://schema.org/WPFooter"><div data-row="bottom"><div class="ct-container"><div data-column="copyright">
+<div
+	class="ct-footer-copyright"
+	data-id="copyright">
+
+	<p>Copyright © 2026 Mustafa Yemural</p></div>
+</div></div></div></footer></div>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/blocksy/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<span id='wpdUserContentInfoAnchor' style='display:none;' rel='#wpdUserContentInfo' data-wpd-lity>wpDiscuz</span><div id='wpdUserContentInfo' style='overflow:auto;background:#FDFDF6;padding:20px;width:600px;max-width:100%;border-radius:6px;' class='lity-hide'></div><div id='wpd-editor-source-code-wrapper-bg'></div><div id='wpd-editor-source-code-wrapper'><textarea id='wpd-editor-source-code'></textarea><button id='wpd-insert-source-code'>Insert</button><input type='hidden' id='wpd-editor-uid' /></div> <script id="preference-link-target"> (function($) { $(function() { $(".post").find("a").each(function() { var link_href = $(this).attr("href"); if (link_href.indexOf("#") == -1) { $(this).attr("target", "_blank"); } }); }); })(jQuery); </script>  <script id="module-katex"> (function($) { $(function() { if (typeof katex !== "undefined") { if ($(".language-katex").length > 0) { $(".language-katex").parent("pre").attr("style", "text-align: center; background: none;"); $(".language-katex").addClass("katex-container").removeClass("language-katex"); $(".katex-container").each(function() { var katexText = $(this).text(); var el = $(this).get(0); if ($(this).parent("code").length == 0) { try { katex.render(katexText, el) } catch (err) { $(this).html("<span class='err'>" + err) } } }); } if ($(".katex-inline").length > 0) { $(".katex-inline").each(function() { var katexText = $(this).text(); var el = $(this).get(0); if ($(this).parent("code").length == 0) { try { katex.render(katexText, el) } catch (err) { $(this).html("<span class='err'>" + err) } } }); } } }); })(jQuery); </script>  <script id="module-mermaid"> (function($) { $(function() { if (typeof mermaid !== "undefined") { if ($(".language-mermaid").length > 0) { $(".language-mermaid").parent("pre").attr("style", "text-align: center; background: none;"); $(".language-mermaid").addClass("mermaid").removeClass("language-mermaid"); mermaid.init(); } } }); })(jQuery); </script>  <script id="module-highlight-js"> (function($) { $(function() { $("pre code").each(function(i, e) { var thisclass = $(this).attr("class"); if (typeof thisclass !== "undefined") { if ( thisclass.indexOf("katex") === -1 && thisclass.indexOf("mermaid") === -1 && thisclass.indexOf("seq") === -1 && thisclass.indexOf("flow") === -1 ) { if (typeof hljs !== "undefined") { $(this).closest("pre").addClass("hljs"); hljs.highlightBlock(e); } else { console.log("%c WP Githuber MD %c You have enabled highlight.js modules already, but you have to update this post to take effect, identifying which file should be loaded.\nGithuber MD does not load a whole-fat-packed file for every post.", "background: #222; color: #bada55", "color: #637338"); } } } }); }); })(jQuery); </script> <script id="getwid-blocks-frontend-js-js-extra">
+var Getwid = {"settings":[],"ajax_url":"https://www.mustafayemural.com/wp-admin/admin-ajax.php","isRTL":"","nonces":{"contact_form":"92d71c1daf"}};
+//# sourceURL=getwid-blocks-frontend-js-js-extra
+</script>
+<script src="https://www.mustafayemural.com/wp-content/plugins/getwid/assets/js/frontend.blocks.js?ver=2.1.3" id="getwid-blocks-frontend-js-js"></script>
+<script id="eztoc-scroll-scriptjs-js-extra">
+var eztoc_smooth_local = {"scroll_offset":"30","add_request_uri":"","add_self_reference_link":""};
+//# sourceURL=eztoc-scroll-scriptjs-js-extra
+</script>
+<script src="https://www.mustafayemural.com/wp-content/plugins/easy-table-of-contents/assets/js/smooth_scroll.min.js?ver=2.0.82.2" id="eztoc-scroll-scriptjs-js"></script>
+<script src="https://www.mustafayemural.com/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js?ver=2.2.1" id="eztoc-js-cookie-js"></script>
+<script src="https://www.mustafayemural.com/wp-content/plugins/easy-table-of-contents/vendor/sticky-kit/jquery.sticky-kit.min.js?ver=1.9.2" id="eztoc-jquery-sticky-kit-js"></script>
+<script id="eztoc-js-js-extra">
+var ezTOC = {"smooth_scroll":"1","scroll_offset":"30","fallbackIcon":"\u003Cspan class=\"\"\u003E\u003Cspan class=\"eztoc-hide\" style=\"display:none;\"\u003EToggle\u003C/span\u003E\u003Cspan class=\"ez-toc-icon-toggle-span\"\u003E\u003Csvg style=\"fill: #999;color:#999\" xmlns=\"http://www.w3.org/2000/svg\" class=\"list-377408\" width=\"20px\" height=\"20px\" viewBox=\"0 0 24 24\" fill=\"none\"\u003E\u003Cpath d=\"M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z\" fill=\"currentColor\"\u003E\u003C/path\u003E\u003C/svg\u003E\u003Csvg style=\"fill: #999;color:#999\" class=\"arrow-unsorted-368013\" xmlns=\"http://www.w3.org/2000/svg\" width=\"10px\" height=\"10px\" viewBox=\"0 0 24 24\" version=\"1.2\" baseProfile=\"tiny\"\u003E\u003Cpath d=\"M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z\"/\u003E\u003C/svg\u003E\u003C/span\u003E\u003C/span\u003E","chamomile_theme_is_on":""};
+//# sourceURL=eztoc-js-js-extra
+</script>
+<script src="https://www.mustafayemural.com/wp-content/plugins/easy-table-of-contents/assets/js/front.min.js?ver=2.0.82.2-1774785505" id="eztoc-js-js"></script>
+<script id="ct-scripts-js-extra">
+var ct_localizations = {"ajax_url":"https://www.mustafayemural.com/wp-admin/admin-ajax.php","public_url":"https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/","rest_url":"https://www.mustafayemural.com/wp-json/","search_url":"https://www.mustafayemural.com/search/QUERY_STRING/","show_more_text":"Show more","more_text":"More","search_live_results":"Search results","search_live_no_results":"No results","search_live_no_result":"No results","search_live_one_result":"You got %s result. Please press Tab to select it.","search_live_many_results":"You got %s results. Please press Tab to select one.","search_live_stock_status_texts":{"instock":"In stock","outofstock":"Out of stock"},"clipboard_copied":"Copied!","clipboard_failed":"Failed to Copy","expand_submenu":"Expand dropdown menu","collapse_submenu":"Collapse dropdown menu","dynamic_js_chunks":[{"id":"blocksy_sticky_header","selector":"header [data-sticky]","url":"https://www.mustafayemural.com/wp-content/plugins/blocksy-companion/static/bundle/sticky.js?ver=2.1.38","version":"2.1.38"}],"dynamic_styles":{"lazy_load":"https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/non-critical-styles.min.css?ver=2.1.38","search_lazy":"https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/non-critical-search-styles.min.css?ver=2.1.38","back_to_top":"https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/back-to-top.min.css?ver=2.1.38"},"dynamic_styles_selectors":[{"selector":".ct-header-cart, #woo-cart-panel","url":"https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/cart-header-element-lazy.min.css?ver=2.1.38"},{"selector":".flexy","url":"https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/flexy.min.css?ver=2.1.38"},{"selector":".ct-pagination","url":"https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/pagination.min.css?ver=2.1.38"},{"selector":"#account-modal","url":"https://www.mustafayemural.com/wp-content/plugins/blocksy-companion/static/bundle/header-account-modal-lazy.min.css?ver=2.1.38"},{"selector":".ct-header-account","url":"https://www.mustafayemural.com/wp-content/plugins/blocksy-companion/static/bundle/header-account-dropdown-lazy.min.css?ver=2.1.38"}],"login_generic_error_msg":"An unexpected error occurred. Please try again later."};
+//# sourceURL=ct-scripts-js-extra
+</script>
+<script src="https://www.mustafayemural.com/wp-content/themes/blocksy/static/bundle/main.js?ver=2.1.38" id="ct-scripts-js"></script>
+<script src="https://www.mustafayemural.com/wp-includes/js/comment-reply.min.js?ver=6.9.4" id="comment-reply-js" async data-wp-strategy="async" fetchpriority="low"></script>
+<script id="wpdiscuz-combo-js-js-extra">
+var wpdiscuzAjaxObj = {"wc_hide_replies_text":"Alt Yorumlar\u0131 Gizle","wc_show_replies_text":"Yeni Yan\u0131tlar","wc_msg_required_fields":"L\u00fctfen gerekli alanlar\u0131 doldurun","wc_invalid_field":"Some of field value is invalid","wc_error_empty_text":"Yorumlamak i\u00e7in l\u00fctfen bir\u015feyler girin","wc_error_url_text":"Ge\u00e7ersiz ba\u011flant\u0131!","wc_error_email_text":"Ge\u00e7ersiz e-posta!","wc_invalid_captcha":"Ge\u00e7ersiz Captcha Kodu","wc_login_to_vote":"You Must Be Logged In To Vote","wc_deny_voting_from_same_ip":"You are not allowed to vote for this comment","wc_self_vote":"You cannot vote for your comment","wc_vote_only_one_time":"Bu yorum i\u00e7in zaten puan verdin","wc_voting_error":"Oylama Hatayla Kar\u015f\u0131la\u015ft\u0131","wc_banned_user":"You are banned","wc_rate_limit_exceeded":"Too many requests. Please slow down.","wc_comment_edit_not_possible":"Sorry, this comment is no longer possible to edit","wc_comment_not_updated":"Sorry, the comment was not updated","wc_comment_not_edited":"Herhangi bir de\u011fi\u015fiklik yapmad\u0131n\u0131z","wc_msg_input_min_length":"Input is too short","wc_msg_input_max_length":"Input is too long","wc_spoiler_title":"Spoiler Title","wc_cannot_rate_again":"You cannot rate again","wc_not_allowed_to_rate":"You're not allowed to rate here","wc_confirm_rate_edit":"Are you sure you want to edit your rate?","wc_follow_user":"Follow this user","wc_unfollow_user":"Unfollow this user","wc_follow_success":"You started following this comment author","wc_follow_canceled":"You stopped following this comment author.","wc_follow_email_confirm":"Please check your email and confirm the user following request.","wc_follow_email_confirm_fail":"Sorry, we couldn't send confirmation email.","wc_follow_login_to_follow":"Please login to follow users.","wc_follow_impossible":"We are sorry, but you can't follow this user.","wc_follow_not_added":"Following failed. Please try again later.","is_user_logged_in":"","commentListLoadType":"0","commentListUpdateType":"0","commentListUpdateTimer":"30","liveUpdateGuests":"0","wordpressThreadCommentsDepth":"5","wordpressIsPaginate":"0","commentTextMaxLength":"0","replyTextMaxLength":"0","commentTextMinLength":"1","replyTextMinLength":"1","storeCommenterData":"100000","socialLoginAgreementCheckbox":"1","enableFbLogin":"0","fbUseOAuth2":"0","enableFbShare":"0","facebookAppID":"","facebookUseOAuth2":"0","enableGoogleLogin":"0","googleClientID":"","googleClientSecret":"","cookiehash":"bb781de8a7de126c6637027bf7184b67","isLoadOnlyParentComments":"0","scrollToComment":"1","commentFormView":"collapsed","enableDropAnimation":"1","isNativeAjaxEnabled":"1","userInteractionCheck":"1","enableBubble":"0","bubbleLiveUpdate":"0","bubbleHintTimeout":"45","bubbleHintHideTimeout":"10","cookieHideBubbleHint":"wpdiscuz_hide_bubble_hint","bubbleHintShowOnce":"1","bubbleHintCookieExpires":"7","bubbleShowNewCommentMessage":"1","bubbleLocation":"content_left","firstLoadWithAjax":"0","wc_copied_to_clipboard":"Copied to clipboard!","inlineFeedbackAttractionType":"blink","loadRichEditor":"1","wpDiscuzReCaptchaSK":"","wpDiscuzReCaptchaTheme":"light","wpDiscuzReCaptchaVersion":"2.0","wc_captcha_show_for_guest":"0","wc_captcha_show_for_members":"0","wpDiscuzIsShowOnSubscribeForm":"0","wmuEnabled":"1","wmuInput":"wmu_files","wmuMaxFileCount":"1","wmuMaxFileSize":"2097152","wmuPostMaxSize":"209715200","wmuIsLightbox":"1","wmuMimeTypes":{"jpg":"image/jpeg","jpeg":"image/jpeg","jpe":"image/jpeg","gif":"image/gif","png":"image/png","bmp":"image/bmp","tiff":"image/tiff","tif":"image/tiff","ico":"image/x-icon"},"wmuPhraseConfirmDelete":"Are you sure you want to delete this attachment?","wmuPhraseNotAllowedFile":"Not allowed file type","wmuPhraseMaxFileCount":"Maximum number of uploaded files is 1","wmuPhraseMaxFileSize":"Maximum upload file size is 2MB","wmuPhrasePostMaxSize":"Maximum post size is 200MB","wmuPhraseDoingUpload":"Uploading in progress! Please wait.","msgEmptyFile":"File is empty. Please upload something more substantial. This error could also be caused by uploads being disabled in your php.ini or by post_max_size being defined as smaller than upload_max_filesize in php.ini.","msgPostIdNotExists":"Post ID not exists","msgUploadingNotAllowed":"Sorry, uploading not allowed for this post","msgPermissionDenied":"You do not have sufficient permissions to perform this action","wmuKeyImages":"images","wmuSingleImageWidth":"auto","wmuSingleImageHeight":"200","wmuIconVideo":"https://www.mustafayemural.com/wp-content/plugins/wpdiscuz/assets/img/file-icons/video-audio-type.png","wmuIconFile":"https://www.mustafayemural.com/wp-content/plugins/wpdiscuz/assets/img/file-icons/file-type.png","previewTemplate":"\u003Cdiv class=\"wmu-preview [PREVIEW_TYPE_CLASS]\" title=\"[PREVIEW_TITLE]\" data-wmu-type=\"[PREVIEW_TYPE]\" data-wmu-attachment=\"[PREVIEW_ID]\" data-wmu-index=\"[PREVIEW_INDEX]\"\u003E\r\n    \u003Cdiv class=\"wmu-preview-remove\"\u003E\r\n        \u003Cimg class=\"wmu-preview-img\" src=\"[PREVIEW_ICON]\"\u003E\r\n        \u003Cdiv class=\"wmu-file-name\"\u003E[PREVIEW_FILENAME]\u003C/div\u003E\r\n        \u003Cdiv class=\"wmu-preview-delete\" title=\"Delete\"\u003E\u2715\u003C/div\u003E\r\n        \u003Clabel class=\"wmu-preview-replace\" title=\"Replace\"\u003E\u21bb\u003Cinput type=\"file\" style=\"display:none\" class=\"wmu-replace-input\"\u003E\u003C/label\u003E\r\n    \u003C/div\u003E\r\n\u003C/div\u003E\r\n","isUserRated":"0","version":"7.6.54","wc_post_id":"86","isCookiesEnabled":"1","loadLastCommentId":"0","dataFilterCallbacks":[],"phraseFilters":[],"scrollSize":"32","url":"https://www.mustafayemural.com/wp-admin/admin-ajax.php","customAjaxUrl":"https://www.mustafayemural.com/wp-content/plugins/wpdiscuz/utils/ajax/wpdiscuz-ajax.php","bubbleUpdateUrl":"https://www.mustafayemural.com/wp-json/wpdiscuz/v1/update","restNonce":"a73f97f979","is_rate_editable":"0","menu_icon":"https://www.mustafayemural.com/wp-content/plugins/wpdiscuz/assets/img/plugin-icon/wpdiscuz-svg.svg","menu_icon_hover":"https://www.mustafayemural.com/wp-content/plugins/wpdiscuz/assets/img/plugin-icon/wpdiscuz-svg_hover.svg","isUpdateNonceWithAjax":"1","nonceName":"wpdiscuz_nonce","postAttachmentsAsGallery":"","wmuPhraseNotAllowedFileType":"File type is not allowed","is_email_field_required":"1"};
+var wpdiscuzUCObj = {"msgConfirmDeleteComment":"Are you sure you want to delete this comment?","msgConfirmCancelSubscription":"Are you sure you want to cancel this subscription?","msgConfirmCancelFollow":"Are you sure you want to cancel this follow?","additionalTab":"0"};
+//# sourceURL=wpdiscuz-combo-js-js-extra
+</script>
+<script id="wpdiscuz-combo-js-js-before">
+var wpdiscuzEditorOptions = {
+        modules: {
+        toolbar: "",
+        counter: {
+        uniqueID: "",
+        commentmaxcount : 0,
+        replymaxcount : 0,
+        commentmincount : 1,
+        replymincount : 1,
+        },
+                },
+        wc_be_the_first_text: "\u0130lk Yorum Hakk\u0131 Senin!",
+        wc_comment_join_text: "Sende yorumda bulun",
+        theme: 'snow',
+        debug: 'error'
+        };
+        
+//# sourceURL=wpdiscuz-combo-js-js-before
+</script>
+<script src="https://www.mustafayemural.com/wp-content/plugins/wpdiscuz/assets/js/wpdiscuz-combo.min.js?ver=7.6.54" id="wpdiscuz-combo-js-js"></script>
+<script src="https://www.mustafayemural.com/wp-content/plugins/wp-featherlight/js/wpFeatherlight.pkgd.min.js?ver=1.3.4" id="wp-featherlight-js"></script>
+<script src="https://www.mustafayemural.com/wp-content/plugins/enlighter/cache/enlighterjs.min.js?ver=iJpADcYe187j3HO" id="enlighterjs-js"></script>
+<script id="enlighterjs-js-after">
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":false,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"monokai","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+//# sourceURL=enlighterjs-js-after
+</script>
+<script defer src="https://www.mustafayemural.com/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1763291482" id="akismet-frontend-js"></script>
+
+</body>
+</html>

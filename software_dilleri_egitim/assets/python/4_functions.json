@@ -1,0 +1,27 @@
+{
+  "id": "py-4-functions",
+  "title": "Fonksiyonlar (Functions)",
+  "subtopics": [
+    {
+      "id": "4.1",
+      "title": "Fonksiyon Temelleri",
+      "items": ["def ile Fonksiyon Tanımlama", "Parametreler ve Argümanlar", "return ve None Kavramı"]
+    },
+    {
+      "id": "4.2",
+      "title": "Parametre Türleri",
+      "items": ["Default (Varsayılan) Argümanlar", "Arbitrary Arguments (*args, **kwargs)"]
+    },
+    {
+      "id": "4.3",
+      "title": "Kapsam (Scope)",
+      "items": ["Local (Yerel) vs Global Değişkenler", "global ve nonlocal Anahtar Kelimeleri"]
+    },
+    {
+      "id": "4.4",
+      "title": "İleri Fonksiyonlar",
+      "items": ["Lambda Fonksiyonları (İsimsiz Fonksiyonlar)", "Recursive (Özyinelemeli) Fonksiyonlar", "Map, Filter ve Reduce"]
+    }
+  ],
+  "questions": []
+}
